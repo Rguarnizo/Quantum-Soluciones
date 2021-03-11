@@ -3,7 +3,7 @@
 
 .fpage-title {
   font: {
-    size: 4.5em;
+    size: 4em;
     family: "Montserrat", sans-serif;
     weight: 100;
   }
@@ -77,4 +77,70 @@
 .fpage-content > .row {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.fpage-video {
+  padding: 0px;
+  overflow: hidden;
+  display: block;
+  background-color: transparent;
+}
+
+.fpage-video > video {
+  height: 99vh;
+  border-radius: 1.5rem;
+  background: rgba(black, 0.5);
+}
+
+span.fpage-writing {
+  font-weight: bold;
+
+  & span {
+    border-right: 3px solid white;
+    animation-name: parpadeo;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @-moz-keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
