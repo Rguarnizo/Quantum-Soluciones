@@ -7,13 +7,33 @@ function App() {
   var camera, scene, renderer;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x6699cc);
+  
   scene.fog = new THREE.Fog(0xff00ff,0.1,8);
 
+
+  var loader = new THREE.TextureLoader();
+  loader.load("./SpaceBackgroud.jpg",function(texture){scene.background = texture});
+
+  
+
+
   camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight
+    75, //* Angulo de campo de visión,
+    window.innerWidth / window.innerHeight, //* Aspecto, aspect ratio
+    // near = 0.1
+    // far = 2000.
   );
+
+  var camera2 = new THREE.PerspectiveCamera(
+    75, //* Angulo de campo de visión,
+    window.innerWidth / window.innerHeight, //* Aspecto, aspect ratio
+    3,
+    10
+  );
+
+  var helper = new THREE.CameraHelper(camera2);
+  scene.add(helper);
+
 
   renderer = new THREE.WebGL1Renderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -25,16 +45,27 @@ function App() {
     //wireframe: true,
   });
   var cube = new THREE.Mesh(geometry, material);
-
+  cube.position.z = -5;
   scene.add(cube);
-  camera.position.z = 5;
+
+
+  //? Posicionar la camara: camera.position.z = 5;  Sacamos 5 unidades la camara de la pantalla.
 
   document.body.appendChild(renderer.domElement);
 
   renderer.render(scene, camera);
 
+
+  var i = 0;
   var animate = function () {
     requestAnimationFrame(animate);
+    
+    camera.lookAt(camera2.position)
+
+    camera.position.x = Math.cos(i) * 30;
+    camera.position.z = Math.sin(i) * 30;
+
+    i+= 0.01;
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
