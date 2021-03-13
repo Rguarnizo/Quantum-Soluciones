@@ -1,77 +1,74 @@
-import React from "react";
+import { Component } from "react";
 import * as THREE from "three";
 
+class TreeJs extends Component {
+  componentDidMount() {
+    var scene = new THREE.Scene();
 
-var TreeJs = (props) => {
-    var camera, scene, renderer;
+    var camera = new THREE.PerspectiveCamera(
+      75, //* CAMPO DE VISIÓN.
+      window.innerHeight / window.innerWidth, //* Relación de Aspecto.
+      0.1, //* Near
+      1000 //* Far
+    );
 
-    scene = new THREE.Scene();
-    
-    scene.fog = new THREE.Fog(0xff00ff,0.1,8);
-  
-  
-    var loader = new THREE.TextureLoader();
-    loader.load("./SpaceBackgroud.jpg",function(texture){scene.background = texture});
-  
-    
-  
-  
-    camera = new THREE.PerspectiveCamera(
-      75, //* Angulo de campo de visión,
-      window.innerWidth / window.innerHeight, //* Aspecto, aspect ratio
-      // near = 0.1
-      // far = 2000.
-    );
-  
-    var camera2 = new THREE.PerspectiveCamera(
-      75, //* Angulo de campo de visión,
-      window.innerWidth / window.innerHeight, //* Aspecto, aspect ratio
-      3,
-      10
-    );
-  
-    var helper = new THREE.CameraHelper(camera2);
-    scene.add(helper);
-  
-  
-    renderer = new THREE.WebGL1Renderer();
+    var renderer = new THREE.WebGL1Renderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-  
-    //? Geometry.
-    var geometry = new THREE.BoxGeometry();
+
+    //* Define donde se pondrá el Componente.
+    this.mount.appendChild(renderer.domElement);
+
+    //* SPHERE GEOMETRY
+    var geometry = new THREE.SphereGeometry(
+      1, //* Radius
+      16,//* HeightEdges
+      16 //* WeightEdges
+    );
     var material = new THREE.MeshBasicMaterial({
-      color: 0x0000ff,
-      //wireframe: true,
+      color: 0x0000bf,
+      flatShading: true,
+      wireframe: true,
     });
-    var cube = new THREE.Mesh(geometry, material);
-    cube.position.z = -5;
-    scene.add(cube);
-  
-  
-    //? Posicionar la camara: camera.position.z = 5;  Sacamos 5 unidades la camara de la pantalla.
-  
-    document.body.appendChild(renderer.domElement);
-  
-  
-    var i = 0;
-    var animate = function () {
+    var sphere = new THREE.Mesh(geometry, material);
+    sphere.position.x = -2;
+    scene.add(sphere);
+
+    //* TORUS GEOMETRY
+    var geometry = new THREE.TorusGeometry(
+      1,  //* External radius 
+      0.5,//* Internal radius
+      16, //* Radial segments
+      100 //*
+      );
+    var material = new THREE.MeshBasicMaterial({
+      color: 0x0000bf,
+      flatShading: true,
+      wireframe: true,
+    });
+    var torus = new THREE.Mesh(geometry, material);
+    torus.position.x = 2;
+    scene.add(torus);
+
+    camera.position.z = 10;
+
+    var animate = () => {
       requestAnimationFrame(animate);
-      
-      camera.lookAt(camera2.position)
-  
-      camera.position.x = Math.cos(i) * 30;
-      camera.position.z = Math.sin(i) * 30;
-  
-      i+= 0.01;
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+      scene.traverse((obj) => {
+        if (obj.isMesh) {
+          obj.rotation.x += 0.01;
+          obj.rotation.y += 0.01;
+        }
+      });
+
       renderer.render(scene, camera);
     };
-  
-    animate();
-  
-    return <></>; 
-}
 
+    animate();
+  }
+
+  render() {
+    return <div ref={(ref) => (this.mount = ref)} />;
+  }
+}
 
 export default TreeJs;

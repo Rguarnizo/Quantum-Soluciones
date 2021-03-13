@@ -7,8 +7,7 @@ import TreeJs from "./Components/TreeJs";
 
 function App() {
   return <>
-  <TreeJs>
-  </TreeJs>
+  <TreeJs></TreeJs>
   </>;
 }
 
