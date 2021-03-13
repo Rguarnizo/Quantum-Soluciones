@@ -1,71 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .fpage-title {
   font: {
     size: 4em;
     family: "Montserrat", sans-serif;
-    weight: 100;
-  }
-  position: absolute;
-  transform: translate(0%, -100%);
-  margin: 0;
-  color: #fff;
-
-  &:before,
-  &:after {
-    display: block;
-    content: attr(data-glitch);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.8;
-  }
-  &:after {
-    color: #f0f;
-    z-index: -2;
-  }
-  &:before {
-    color: #0ff;
-    z-index: -1;
-  }
-  &:hover {
-    cursor: pointer;
-    &:before {
-      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
-    }
-    &:after {
-      animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .fpage-title {
-    font-size: 3em;
-  }
-}
-
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-5px, 5px);
-  }
-  40% {
-    transform: translate(-5px, -5px);
-  }
-  60% {
-    transform: translate(5px, 5px);
-  }
-  80% {
-    transform: translate(5px, -5px);
-  }
-  to {
-    transform: translate(0);
+    weight: 900;
   }
 }
 
@@ -74,22 +14,75 @@
   font-size: 25px;
 }
 
+@keyframes text-entry {
+  0% {
+    margin-top: 19rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.fpage-content-container {
+  animation: text-entry 2s ease-in-out;
+}
+
 .fpage-content > .row {
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-.fpage-video {
-  padding: 0px;
-  overflow: hidden;
-  display: block;
-  background-color: transparent;
+.fpage-image {
+  margin: 0;
+  border-radius: 1rem;
+  border: none;
+  // animation: enter 0.875s ease;
+  // background-image: url("https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDSC05649.jpg?alt=media&token=3759de40-714c-4196-86de-49842da6d397");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: scale;
+
+  & > .img-card-2 {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    top: 10%;
+    left: 80%;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
 }
 
-.fpage-video > video {
-  height: 99vh;
-  border-radius: 1.5rem;
-  background: rgba(black, 0.5);
+.img-card-1 {
+  width: 150px;
+  height: 220px;
+  background-color: white;
+  position: relative;
+  top: 40%;
+  right: 55%;
+  color: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes enter {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 span.fpage-writing {

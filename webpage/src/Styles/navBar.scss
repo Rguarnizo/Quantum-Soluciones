@@ -1,0 +1,26 @@
+
+
+.navbar {
+  background-color: rgba($color: #282c34, $alpha: 0.5);
+  position: fixed;
+  top: 0;
+  height: 65px;
+
+  & > .navbar-content {
+    & > .company-logo {
+      height: 45px;
+      width: 150px;
+      background-color: white;
+      border-radius: 5px;
+      padding-left: 5px;
+      & > img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    & > .menu {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+    }
+  }
+}
