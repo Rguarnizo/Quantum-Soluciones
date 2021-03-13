@@ -1,5 +1,6 @@
 import { Component } from "react";
 import * as THREE from "three";
+import {OrbitControls} from "../OrbitControls";
 
 class TreeJs extends Component {
   componentDidMount() {
@@ -38,7 +39,7 @@ class TreeJs extends Component {
       1,  //* External radius 
       0.5,//* Internal radius
       16, //* Radial segments
-      100 //*
+      100 //* Tabular segments
       );
     var material = new THREE.MeshBasicMaterial({
       color: 0x0000bf,
@@ -49,6 +50,8 @@ class TreeJs extends Component {
     torus.position.x = 2;
     scene.add(torus);
 
+
+    var controls = new OrbitControls(camera,renderer.domElement);
     camera.position.z = 10;
 
     var animate = () => {
