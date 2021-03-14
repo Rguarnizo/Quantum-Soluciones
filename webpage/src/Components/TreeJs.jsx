@@ -1,9 +1,13 @@
 import { Component } from "react";
 import * as THREE from "three";
 import {OrbitControls} from "../OrbitControls";
+import { MTLLoader, OBJLoader } from "three-obj-mtl-loader";
+
+
 
 class TreeJs extends Component {
   componentDidMount() {
+    
     var scene = new THREE.Scene();
 
     var camera = new THREE.PerspectiveCamera(
@@ -59,6 +63,19 @@ class TreeJs extends Component {
     console.log(controls.maxPolarAngle);
     camera.position.z = 10;
 
+    const loader = new OBJLoader();
+    loader.load("./CameraLens.obj",obj => scene.add(obj),function ( xhr ) {
+
+      console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+  
+    },
+    function ( error ) {
+
+      console.log( 'An error happened' + error );
+  
+    });
+    
+
     var animate = () => {
       requestAnimationFrame(animate);
       scene.traverse((obj) => {
@@ -74,6 +91,7 @@ class TreeJs extends Component {
     window.onresize = () => {
       renderer.setSize(window.innerWidth,window.innerHeight);
       camera.aspect = window.innerHeight / window.innerWidth;
+      camera.updateProjectionMatrix();
     }
 
     animate();
