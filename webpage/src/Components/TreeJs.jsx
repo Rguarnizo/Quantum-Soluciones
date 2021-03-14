@@ -52,6 +52,11 @@ class TreeJs extends Component {
 
 
     var controls = new OrbitControls(camera,renderer.domElement);
+    controls.maxDistance = 10;  //* Max distance Zoom 
+    controls.minDistance = 5;   //* Min distance Zoom 
+    controls.maxPolarAngle = Math.PI/2; //* Polar Angle of rotation.
+    
+    console.log(controls.maxPolarAngle);
     camera.position.z = 10;
 
     var animate = () => {
@@ -65,6 +70,11 @@ class TreeJs extends Component {
 
       renderer.render(scene, camera);
     };
+
+    window.onresize = () => {
+      renderer.setSize(window.innerWidth,window.innerHeight);
+      camera.aspect = window.innerHeight / window.innerWidth;
+    }
 
     animate();
   }
