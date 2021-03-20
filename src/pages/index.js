@@ -1,7 +1,28 @@
 import React,{useState,useRef} from "react";
 import "./style.css";
-import { Canvas, useFrame} from "react-three-fiber";
+import { Canvas, useFrame,extend,useThree} from "react-three-fiber";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {useSpring,a} from 'react-spring/three';
+
+extend({OrbitControls});
+
+const Controls = () => {
+
+  const {camera,gl} = useThree();
+  const orbitControlsRef = useRef();
+
+  useFrame(()=>{
+    orbitControlsRef.current.update()
+  });
+
+  return(
+    <orbitControls
+    args={[camera,gl.domElement]}
+    ref={orbitControlsRef}
+    autoRotate
+    />
+  )
+}
 
 
 const Box = () => {
@@ -25,6 +46,7 @@ const Box = () => {
   useFrame(()=>{
     meshRef.current.rotation.y+=0.01;
     meshRef.current.rotation.x+=0.01;
+
   });
 
   return (
@@ -47,6 +69,7 @@ const Box = () => {
 export default function Home() {
   return (
     <Canvas>
+      <Controls/>
       <Box />
     </Canvas>
   )
