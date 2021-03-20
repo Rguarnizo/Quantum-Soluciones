@@ -1,20 +1,20 @@
 import React from "react"
-import {Canvas} from "react-three-fiber";
+import "./style.css"
+import { Canvas } from "react-three-fiber"
 
 export default function Home() {
-  return <Canvas>
-    <Box/>
-  </Canvas>
+  return (
+    <Canvas>
+      <Box />
+    </Canvas>
+  )
 }
 
-
 const Box = () => {
-
-  
-
-  return <mesh>
-    <boxGeometry args={[10,10,1]}/>
-  </mesh>;
-  
-
+  return (
+    <mesh>
+      <boxBufferGeometry args={[1, 1, 1]} attach="geometry" />
+      <meshBasicMaterial color={"red"} attach="materials"/>
+    </mesh>
+  )
 }
