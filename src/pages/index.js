@@ -47,7 +47,7 @@ const Box = () => {
 
   //* Each frame execute this code.
   useFrame(()=>{
-    // meshRef.current.rotation.y+=0.01;
+     meshRef.current.rotation.y+=0.01;
      meshRef.current.rotation.x+=0.01;
 
   });
@@ -55,6 +55,7 @@ const Box = () => {
   return (
     <a.mesh
       ref={meshRef} 
+      position={[0,0,5]}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
@@ -70,13 +71,25 @@ const Box = () => {
   )
 }
 
+const Plane = () => (
+  <mesh>
+     <planeBufferGeometry args={[100, 100]} attach="geometry" />
+      <meshPhysicalMaterial //* Material need light to work
+        color="black"
+        attach="material"
+      />
+  </mesh>
+);
+
 export default function Home() {
   return (
     <Canvas>
-      <ambientLight/>
-      <spotLight position={[0,5,10]}/>
       <Controls/>
+      <ambientLight/>
+      <spotLight penumbra={1} />
+      <fog attach="fog" args={['white',5,1]} />
       <Box />
+      <Plane/>
     </Canvas>
   )
 }
