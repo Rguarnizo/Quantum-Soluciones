@@ -17,10 +17,10 @@ const Controls = () => {
 
   return(
     <orbitControls
-    autoRotate
-    maxPolarAngle = {Math.PI / 3}  //* max  Rotate angle y axis
-    //?  If max and min is the same, maintain static in the angle
-    minPolarAngle = {Math.PI / 3}  //* min  Rotate angle y axis
+    //autoRotate
+    // maxPolarAngle = {Math.PI / 3}  //* max  Rotate angle y axis
+    // //?  If max and min is the same, maintain static in the angle
+    // minPolarAngle = {Math.PI / 3}  //* min  Rotate angle y axis
     args={[camera,gl.domElement]}
     ref={orbitControlsRef}
     />
@@ -41,14 +41,14 @@ const Box = () => {
   //* Animate with react Spring the parameters scale and color.
   const props = useSpring({
     scale: active? [1,1,1]:[1.5,1.5,1.5],
-    color: hovered? "hotpink" : "red",
+    color: hovered? "hotpink" : "blue",
   });
 
 
   //* Each frame execute this code.
   useFrame(()=>{
     // meshRef.current.rotation.y+=0.01;
-    // meshRef.current.rotation.x+=0.01;
+     meshRef.current.rotation.x+=0.01;
 
   });
 
@@ -60,8 +60,9 @@ const Box = () => {
       onClick={() => setActive(!active)}
       scale={props.scale}
     >
+      
       <boxBufferGeometry args={[1, 1, 1]} attach="geometry" />
-      <a.meshBasicMaterial
+      <a.meshPhysicalMaterial //* Material need light to work
         color={props.color}
         attach="material"
       />
@@ -72,6 +73,8 @@ const Box = () => {
 export default function Home() {
   return (
     <Canvas>
+      <ambientLight/>
+      <spotLight position={[0,5,10]}/>
       <Controls/>
       <Box />
     </Canvas>
