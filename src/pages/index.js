@@ -17,9 +17,12 @@ const Controls = () => {
 
   return(
     <orbitControls
+    autoRotate
+    maxPolarAngle = {Math.PI / 3}  //* max  Rotate angle y axis
+    //?  If max and min is the same, maintain static in the angle
+    minPolarAngle = {Math.PI / 3}  //* min  Rotate angle y axis
     args={[camera,gl.domElement]}
     ref={orbitControlsRef}
-    autoRotate
     />
   )
 }
@@ -44,8 +47,8 @@ const Box = () => {
 
   //* Each frame execute this code.
   useFrame(()=>{
-    meshRef.current.rotation.y+=0.01;
-    meshRef.current.rotation.x+=0.01;
+    // meshRef.current.rotation.y+=0.01;
+    // meshRef.current.rotation.x+=0.01;
 
   });
 
