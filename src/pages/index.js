@@ -1,11 +1,20 @@
-import React,{useState,useRef} from "react";
+import React,{useState,useRef,useEffect} from "react";
 import "./style.css";
 import { Canvas, useFrame,extend,useThree} from "react-three-fiber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {useSpring,a} from 'react-spring/three';
-import * as Three from 'three';
 
 extend({OrbitControls});
+
+const CameraLens =  () => {
+  const [model, setModel] = useState();
+  useEffect(() => {
+      new GLTFLoader().load('/cameraModel/scene.gltf',setModel); 
+    });
+
+  return model? <primitive object={model.scene} /> : null
+}
 
 const Controls = () => {
 
@@ -61,7 +70,6 @@ const Box = () => {
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
       scale={props.scale}
-      castShadow
     >
       
       <boxBufferGeometry args={[1, 1, 1]} attach="geometry" />
@@ -85,18 +93,14 @@ const Plane = () => (
 
 export default function Home() {
   return (
-    <Canvas 
-    onCreated={({ gl }) => {
-      gl.shadowMap.enabled = true;
-      gl.shadowMap.type = Three.PCFSoftShadowMap;
-    }}
-    >
+    <Canvas>
       <Controls/>
       <ambientLight intensity={0.5}/>
-      <spotLight penumbra={1} castShadow/>
+      <spotLight penumbra={1}/>
       <fog attach="fog" args={['white',5,1]} />
       <Box />
       <Plane/>
+      <CameraLens/>
     </Canvas>
   )
 }
