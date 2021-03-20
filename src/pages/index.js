@@ -3,6 +3,7 @@ import "./style.css";
 import { Canvas, useFrame,extend,useThree} from "react-three-fiber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import {useSpring,a} from 'react-spring/three';
+import * as Three from 'three';
 
 extend({OrbitControls});
 
@@ -55,11 +56,12 @@ const Box = () => {
   return (
     <a.mesh
       ref={meshRef} 
-      position={[0,0,5]}
+      position={[0,0,2]}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
       onClick={() => setActive(!active)}
       scale={props.scale}
+      castShadow
     >
       
       <boxBufferGeometry args={[1, 1, 1]} attach="geometry" />
@@ -72,10 +74,10 @@ const Box = () => {
 }
 
 const Plane = () => (
-  <mesh>
+  <mesh receiveShadow>
      <planeBufferGeometry args={[100, 100]} attach="geometry" />
       <meshPhysicalMaterial //* Material need light to work
-        color="black"
+        color="white"
         attach="material"
       />
   </mesh>
@@ -83,10 +85,15 @@ const Plane = () => (
 
 export default function Home() {
   return (
-    <Canvas>
+    <Canvas 
+    onCreated={({ gl }) => {
+      gl.shadowMap.enabled = true;
+      gl.shadowMap.type = Three.PCFSoftShadowMap;
+    }}
+    >
       <Controls/>
-      <ambientLight/>
-      <spotLight penumbra={1} />
+      <ambientLight intensity={0.5}/>
+      <spotLight penumbra={1} castShadow/>
       <fog attach="fog" args={['white',5,1]} />
       <Box />
       <Plane/>
