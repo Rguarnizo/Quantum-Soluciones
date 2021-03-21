@@ -25,9 +25,12 @@ const Box = ({position}) => {
       onPointerOut={() => setHovered(false)}
       scale={props.scale}
       ref={meshRef}
+      castShadow
+      recieveShadow
     >
       <boxBufferGeometry args={[1, 1, 1]} attach="geometry"/>
-      <a.meshPhysicalMaterial color={props.color} attach="material" />
+      <a.meshPhongMaterial color={props.color} attach="material" />
+      
     </a.mesh>
   );
 };

@@ -9,16 +9,16 @@ const divRoot = document.querySelector("#root")
 
 
 ReactDOM.render(
-<Canvas>
+<Canvas onCreated={({gl})=> gl.shadowMap.enabled = true}>
     <ambientLight/>
     <Box position={[5,0,0]}/>
     <Box position={[-5,0,0]}/>
     <Controlls/>
-    <fog attach="fog" args={["white",4.5,6]}/>
-    <spotLight penumbra={1}/>
-    <mesh rotation={[-Math.PI/2,0,0]}>
-        <planeBufferGeometry attach="geometry" args={[200,200]}/>
-        <meshPhysicalMaterial attach="material" color="black"/>
+    
+    <spotLight penumbra={1} castShadow position={[0,10,15]} intensity={1}/>
+    <mesh rotation={[-Math.PI/2,0,0]} position={[0,-2,0]} receiveShadow>
+        <planeBufferGeometry attach="geometry" args={[200,200]} />
+        <meshPhysicalMaterial attach="material" color="white"/>
     </mesh>
     <Box/>
 </Canvas>,
