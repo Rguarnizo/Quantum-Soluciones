@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 .fpage-title {
@@ -14,18 +14,10 @@
   font-size: 25px;
 }
 
-@keyframes text-entry {
-  0% {
-    margin-top: 19rem;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
+
 .fpage-content-container {
   animation: text-entry 2s ease-in-out;
+  z-index: 20;
 }
 
 .fpage-content > .row {
@@ -76,14 +68,6 @@
   justify-content: center;
 }
 
-@keyframes enter {
-  0% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 span.fpage-writing {
   font-weight: bold;
@@ -135,5 +119,78 @@ span.fpage-writing {
     100% {
       opacity: 1;
     }
+  }
+}
+
+#fpage-social-buttons {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+}
+.social-button {
+  &-facebook {
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, #2980b9, #2c3e50);
+      border: none;
+      transition: 1s ease;
+    }
+  }
+  &-instagram {
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, #bc4e9c, #f80759);
+      border: none;
+      transition: 1s ease;
+    }
+  }
+
+  &-youtube {
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to right, #e52d27, #b31217);
+      border: none;
+      transition: 1s ease;
+    }
+  }
+}
+
+
+.fpage-container {
+  //   background-color: #282c34;
+
+  // background: linear-gradient(147deg, #000000 0%, #04619f 74%);
+  background: linear-gradient(
+    147deg,
+    #000000,
+    #434343
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  min-height: 90vh;
+  // max-width: 100vw;
+  margin: 0 auto;
+  color: white;
+
+  & > #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

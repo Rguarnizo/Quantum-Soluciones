@@ -1,6 +1,10 @@
 import React, { Suspense } from "react";
 import "../Styles/firstPage.scss";
 import { useTransition, animated, config } from "react-spring";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 /*eslint no-unused-vars: "off"*/
 
@@ -39,52 +43,80 @@ const ImageCard = (props) => {
     leave: { opacity: 0 },
     config: config.molasses,
   });
-  React.useEffect(
-    () => void setInterval(() => set((state) => (state + 1) % 4), 10000),
-    []
+  React.useEffect(() => {
+    void setInterval(() => set((state) => (state + 1) % 4), 10000);
+  }, []);
+
+  const timeout = (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  };
+
+  return transitions.map(({ item, props, key }) => {
+    // timeout(1000).then(() => {
+    //   console.log("Eso cabronaaa");
+    // });
+
+    // console.log(props);
+    // if (props.opacity) {
+    //   setTimeout(() => {
+    //     "Hola";
+    //   }, 1000);
+    //   return (
+    //     <React.Fragment key={key}>
+    //       <svg
+    //         class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+    //         xmlns="http://www.w3.org/2000/svg"
+    //         fill="none"
+    //         viewBox="0 0 24 24"
+    //       >
+    //         <circle
+    //           class="opacity-25"
+    //           cx="12"
+    //           cy="12"
+    //           r="10"
+    //           stroke="currentColor"
+    //           stroke-width="4"
+    //         ></circle>
+    //         <path
+    //           class="opacity-75"
+    //           fill="currentColor"
+    //           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    //         ></path>
+    //       </svg>
+    //     </React.Fragment>
+    //   );
+    // }
+    return (
+      <animated.div
+        key={key}
+        class="fpage-image h-3/4 xl:w-3/4 w-3/4 z-0"
+        style={{
+          ...props,
+          backgroundImage: `url(${item.url})`,
+        }}
+      />
+    );
+  });
+};
+
+const SocialButton = (props) => {
+  return (
+    <div
+      className={`border border-gray-100 rounded-lg shadow social-button-${props.social}`}
+      style={{ height: 60, width: 60 }}
+    >
+      <img
+        src={props.img}
+        alt="..."
+        style={{ filter: "brightness(0) invert(1)", transform: "scale(0.5)" }}
+      />
+    </div>
   );
-  return transitions.map(({ item, props, key }) => (
-    <animated.div
-      key={key}
-      class="fpage-image h-3/4 xl:w-3/4 w-3/4 z-0"
-      style={{
-        ...props,
-        backgroundImage: `url(${item.url})`,
-      }}
-    />
-  ));
-
-  // const [index, set] = React.useState(0);
-  // const transitions = useTransition(photosSource[index], (item) => item.id, {
-  //   config: config.molasses,
-  // });
-  // React.useEffect(
-  //   () => void setInterval(() => set((state) => (state + 1) % 2), 10000),
-  //   []
-  // );
-  // return transitions.map(({ item, props, key }) => (
-  //   <animated.div
-  //     key={key}
-  //     class="fpage-image h-3/4 xl:w-3/4 w-3/4 z-0"
-  //     style={{
-  //       ...props,
-  //       backgroundImage: `url(${item.url})`,
-  //     }}
-  //   />
-  // ));
-
-  // return (
-
-  // );
 };
 
 const FirstPage = () => {
   const [showLetters, setshowLetters] = React.useState("");
   const [actualIndex, setactualIndex] = React.useState(0);
-
-  // const [actualVideo, setactualVideo] = React.useState(videosSource[1]);
-  // const [videoCounter, setvideoCounter] = React.useState(1);
-  // const [showVideo, setshowVideo] = React.useState(true);
 
   const wait = async (ms) => {
     return new Promise((resolve) => {
@@ -128,10 +160,30 @@ const FirstPage = () => {
   }, []);
 
   return (
-    <>
+    <section className="fpage-container" id="home">
+      <video
+        className="hidden lg:flex"
+        play
+        autoPlay
+        muted
+        loop
+        id="myVideo"
+        src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/videos%2FTV_Studio_Camera_Sweep_In.mp4?alt=media&token=dc56a9b6-529f-41b7-a4c5-4731bd1feb2a"
+      ></video>
+
       <div className="grid grid-cols-2 gap-4 h-screen">
         <div className="fpage-content flex flex-wrap content-center justify-center col-span-2 md:col-span-1 p-8 ">
-          <div className="fpage-content-container">
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="0"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top"
+            className="fpage-content-container"
+          >
             <h1 className="fpage-title">Soluciones Quantum</h1>
             <p id="fpage-description">
               Servicio técnico especializado en
@@ -141,51 +193,37 @@ const FirstPage = () => {
                 <span>&#160;</span>
               </span>
             </p>
+            {/* <br/>
+            <p id="fpage-social-buttons">
+              Síguenos en nuestras redes sociales!
+            </p> */}
+            <div className="fpage-social-buttons flex content-start gap-6 mt-9">
+              <SocialButton
+                social={"facebook"}
+                img={
+                  "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Ffacebook-app-symbol.svg?alt=media&token=1c01ce6d-20b6-4c9c-8448-b7c03b7433b1"
+                }
+              />
+              <SocialButton
+                social={"instagram"}
+                img={
+                  "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Finstagram.svg?alt=media&token=dbcd5810-5ee9-4e04-8339-c3f6c4bd0afb"
+                }
+              />
+              <SocialButton
+                social={"youtube"}
+                img={
+                  "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fyoutube.svg?alt=media&token=456619db-09a2-4ca2-88af-2b4911a7b579"
+                }
+              />
+            </div>
           </div>
         </div>
         <div className="h-screen hidden lg:flex flex-wrap content-center justify-center">
           <ImageCard />
-          {/* <div className="img-card-1 z-10">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FSaly-22.svg?alt=media&token=de0782d3-8808-4162-b46e-e56bb0f40edc"
-              alt="test"
-              width="130"
-              height="130"
-            />
-          </div> */}
         </div>
       </div>
-      {/* <div className="col-12 col-lg-6 col-xl-6 fpage-content">
-        <div className="row">
-          <h1 className="fpage-title" data-glitch="Soluciones Quantum">
-            Soluciones Quantum
-          </h1>
-          <p id="fpage-description">
-            Servicio técnico especializado en
-            <span className="fpage-writing">
-              {" "}
-              {showLetters}
-              <span>&#160;</span>
-            </span>
-          </p>
-        </div>
-      </div>
-      <div className="d-none col-md-6 col-lg-6 fpage-image p-5 d-flex justify-content-center ">
-        <div className="img-container">
-          <div className="img-card-1">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FSaly-22.svg?alt=media&token=de0782d3-8808-4162-b46e-e56bb0f40edc"
-              alt="test"
-              width="130"
-              height="130"
-            />
-          </div>
-          <div className="img-card-2">
-            <strong>This is a test</strong>
-          </div>
-        </div>
-      </div> */}
-    </>
+    </section>
   );
 };
 
