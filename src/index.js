@@ -5,6 +5,7 @@ import {Canvas} from "react-three-fiber";
 import Box from "./components/Box";
 import Controlls from "./components/Controls";
 import Model from "./components/Model";
+import Drone from "./components/Drone"
 
 const divRoot = document.querySelector("#root")
 
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Controlls />
     <Suspense fallback={null}>
         <Model path={'/camera-lens/scene.glb'} />
+        <Drone/>
     </Suspense>
 </Canvas>,
 divRoot
