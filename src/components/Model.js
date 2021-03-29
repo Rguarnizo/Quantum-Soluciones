@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei/core/useGLTF'
+import {useFrame} from "react-three-fiber";
+
 
 var file;
 
@@ -10,8 +12,15 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF(props.path);
 
+
+  
+  useFrame(()=> {
+    group.current.rotation.x +=0.01;
+    group.current.rotation.y +=0.01;
+  });
+
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[0, 26.25, 0]} rotation={[0, 0, 0]}>

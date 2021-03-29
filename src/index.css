@@ -8,3 +8,12 @@ canvas{
     margin: 0;
     padding:  0;
 }
+
+
+#htmlScene{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 200;
+    height: 200;
+}
