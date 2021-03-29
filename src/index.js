@@ -1,17 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
+
+
+let root = document.getElementById('root');
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <>
+    <button></button>
+    <div className="brands"><img src="Logos/Canon.png" width={800} height={500} alt=""/></div>
+    <div className="brands"><img src="Logos/Nikon.jpeg" width={800} height={800} alt=""/></div>
+    <div className="brands"><img src="Logos/Sony.png" width={800} height={800} alt=""/></div>
+    <div className="brands"><img src="Logos/GoPro.png" width={800} height={800} alt=""/></div>
+    </>,
+    root
+)
