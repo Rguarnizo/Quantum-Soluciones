@@ -1,0 +1,29 @@
+.navbar {
+    background-color: rgba($color: #282c34, $alpha: 0.5);
+    position: fixed;
+    top: 0;
+    height: 65px;
+    z-index: 20;
+  
+    & > .navbar-content {
+      & > .company-logo {
+        
+        width: 190px;
+        align-self: center;
+        margin-bottom: 5px;
+        // padding-left: 5px;
+        // & > img {
+        //   max-height: 100%;
+        //   max-width: 100%;
+        // }
+      }
+      & > .menu {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .options:hover{
+    cursor: pointer;
+  }
