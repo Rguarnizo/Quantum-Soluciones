@@ -21,10 +21,10 @@ let BrandName = () => {
 
     return <>
       <div className="brands">
-        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-3 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Canon.png" ></img></a>
-        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-3 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Nikon.jpeg" ></img></a>
-        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-3 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Sony.png" ></img></a>
-        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-3 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/GoPro.png" ></img></a>
+        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-6 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Canon.png" ></img></a>
+        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-6 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Nikon.jpeg" ></img></a>
+        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-6 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/Sony.png" ></img></a>
+        <a onMouseOver={onMouseOver } onMouseOut={onMouseOut} className="brand m-6 p-0 block w-28" href=""><img className="m-0 p-0"  src="Logos/GoPro.png" ></img></a>
       </div> 
     </>
 }
