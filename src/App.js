@@ -6,16 +6,33 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 function App() {
   gsap.registerPlugin(ScrollTrigger);
 
-  let tl; 
 
   useEffect(() => {
     
     let sections = gsap.utils.toArray("section");
-    tl = gsap.timeline();
+
+
     sections.forEach((section) => {
-      tl.to(section, { scrollTrigger: { pin: section, end: "100%" } });
+      let boxes =  section.querySelectorAll('.box');
+
+      
+      let tl = gsap.timeline(
+        {
+          scrollTrigger:{
+            trigger:section,
+            pin:section,
+            scrub:0.5,
+            start:'top top',
+            end: '+=100%'
+          }
+        }
+      ).to(boxes,{y:section.offsetHeight/2,stagger:0.6})
+     
+      
+
+      
     });
-  });
+  },[]);
 
   return (
     <>
