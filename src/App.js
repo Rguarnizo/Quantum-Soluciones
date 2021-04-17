@@ -4,6 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {Canvas,useThree,useFrame} from 'react-three-fiber';
 import EscenaProductos from "./components/EscenaProductos";
+import Marcas from "./components/Marcas";
 
 
 
@@ -47,9 +48,9 @@ function App() {
         <Canvas className="EscenaProductos h-screen w-3/6">
           <EscenaProductos tweenCallback={setTween}/>
         </Canvas>
-        <Canvas className="EscenaProductos h-screen w-3/6">
-          <EscenaProductos tweenCallback={setTween}/>
-        </Canvas>
+        <div className="EscenaProductos h-screen w-3/6">
+          <Marcas/>
+        </div>
       </section>
       <section className="Ubicacion   h-screen bg-yellow-500  ">
         <div className="box bg-white h-32 w-32"></div>
