@@ -2,26 +2,25 @@ import gsap from "gsap/gsap-core";
 import React, { useEffect, useRef } from "react";
 import { Canvas, useThree, useFrame } from "react-three-fiber";
 
-let EscenaProductos = () => {
+let EscenaProductos = ({tweenCallback}) => {
 
   let cube = useRef();
+  let tween = useRef();
 
   useEffect(() => {
-    gsap.to(cube.current.rotation, {
-      x: 1,
-      y: 1,
+    tween.current = gsap.to(cube.current.rotation, {
+      x: 5,
+      y: 5,
       scrollTrigger: {
         trigger: '.Productos',
         scrub: 1, 
-        start: 'top',
+        start: 'top top',
         end: '200%'
       },
     });
-  });
+    tweenCallback(tween.current);
+  },[]);
 
-  useFrame(() => {
-
-  });
 
   return (
     <>

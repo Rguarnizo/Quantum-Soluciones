@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {Canvas,useThree,useFrame} from 'react-three-fiber';
@@ -9,14 +9,11 @@ import EscenaProductos from "./components/EscenaProductos";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
-
+  const[tween,setTween] = useState();
   
 
   useEffect(() => {
-    
     let sections = gsap.utils.toArray("section");
-
-
     sections.forEach((section) => {
       let boxes =  section.querySelectorAll('.box');
 
@@ -31,11 +28,8 @@ function App() {
             end: '+=100%'
           }
         }
-      ).to(boxes,{y:section.offsetHeight/2,stagger:0.6})
-     
-      
-
-      
+      )
+      tl.add(tween);
     });
   },[]);
 
@@ -51,10 +45,10 @@ function App() {
       </section>
       <section className="Productos flex flex-row h-screen bg-red-500     ">
         <Canvas className="EscenaProductos h-screen w-3/6">
-          <EscenaProductos/>
+          <EscenaProductos tweenCallback={setTween}/>
         </Canvas>
         <Canvas className="EscenaProductos h-screen w-3/6">
-          <EscenaProductos/>
+          <EscenaProductos tweenCallback={setTween}/>
         </Canvas>
       </section>
       <section className="Ubicacion   h-screen bg-yellow-500  ">
