@@ -3,27 +3,9 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {Canvas,useThree,useFrame} from 'react-three-fiber';
+import EscenaProductos from "./components/EscenaProductos";
 
 
-let EscenaProductos = () => {
-
-  let cube = useRef();
-
-
-  useFrame(() => {
-    cube.current.rotation.x += 0.01
-    cube.current.rotation.y += 0.01
-  });
-
-  return <>
-  <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-          <mesh ref={cube}>
-            <boxGeometry/>
-            <meshBasicMaterial/>
-          </mesh>
-  </>
-}
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -67,8 +49,11 @@ function App() {
       <section className="Promociones h-screen bg-blue-500    ">
         <div className="box bg-red-500 h-32 w-32"></div>
       </section>
-      <section className="Productos h-screen w-3/6 bg-red-500     ">
-        <Canvas className="EscenaProductos h-screen">
+      <section className="Productos flex flex-row h-screen bg-red-500     ">
+        <Canvas className="EscenaProductos h-screen w-3/6">
+          <EscenaProductos/>
+        </Canvas>
+        <Canvas className="EscenaProductos h-screen w-3/6">
           <EscenaProductos/>
         </Canvas>
       </section>
