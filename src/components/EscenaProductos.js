@@ -5,10 +5,10 @@ import { Canvas, useThree, useFrame } from "react-three-fiber";
 let EscenaProductos = () => {
 
   let cube = useRef();
-  let tween = useRef();
+  
 
   useEffect(() => {
-    tween.current = gsap.to(cube.current.rotation, {
+  gsap.to(cube.current.rotation, {
       x: 5,
       y: 5,
       scrollTrigger: {

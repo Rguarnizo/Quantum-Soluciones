@@ -14,15 +14,18 @@ let Marcas = () => {
 
   useEffect(() => {
     brandsRef.current = gsap.utils.toArray(".brand");
-    gsap.set(brandsRef.current,{autoAlpha:0,scale:0})
-    gsap.timeline({
+    gsap.set(brandsRef.current, { autoAlpha: 0, scale: 0 });
+    gsap.to(brandsRef.current, {
+      autoAlpha: 1,
+      scale: 1,
+      stagger: 0.1,
+      delay:5,
       scrollTrigger: {
-        trigger: ".brands",
+        trigger: ".Ubicacion",
         scrub: 1,
-        start: "top buttom",
-        onEnter: () => {
-          gsap.to(brandsRef.current, { autoAlpha: 1, scale: 1, duration: 0.2 });
-        },
+        start: "top top",
+        markers: true,
+        end: "100%",
       },
     });
   }, []);

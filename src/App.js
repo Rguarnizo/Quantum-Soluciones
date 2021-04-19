@@ -23,8 +23,7 @@ function App() {
             pin:section,
             scrub:0.5,
             start:'top top',
-            end: '+=100%',
-            markers:true
+            end: '+=100%',            
           }
         }
       );
@@ -42,7 +41,7 @@ function App() {
         <div className="box bg-red-500 h-32 w-32"></div>
       </section>
       <section className="Productos flex flex-row h-screen bg-red-500     ">
-        <Canvas className="EscenaProductos h-screen w-screen">
+        <Canvas className="EscenaProductos h-screen w-3/6">
           <EscenaProductos />
         </Canvas>
         <div className="Marcas h-screen w-3/6 bg-white">
