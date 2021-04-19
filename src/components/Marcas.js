@@ -1,32 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-let Marcas = ({ setTween }) => {
-  let tween = useRef();
-  let brandsRef = useRef([]);
-  brandsRef.current = [];
+let Marcas = () => {
+  let brandsRef = useRef();
 
   let onMouseOver = (el) => {
-    gsap.to(el.target, { duration: 1, scale: 1.3, ease: "power4" });
+    gsap.to(el.target, { duration: 0.5, scale: 1.3, ease: "power4" });
   };
 
   let onMouseOut = (el) => {
-    gsap.to(el.target, { duration: 1, scale: 1, ease: "power4" });
+    gsap.to(el.target, { duration: 0.5, scale: 1, ease: "power4" });
   };
 
   useEffect(() => {
-    tween.current = gsap.fromTo(
-      ".brand",
-      { opacity: 0, scale: 0 },
-      {
-        opacity: 1,
-        scale: 1,
-        stagger: 0.05,
-        ease: "power4",
-        scrollTrigger: { trigger: ".Marcas", scrub: 1, start: "top top"},
-      }
-    );
-    setTween(tween.current);
+    brandsRef.current = gsap.utils.toArray(".brand");
+    gsap.set(brandsRef.current,{autoAlpha:0,scale:0})
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".brands",
+        scrub: 1,
+        start: "top buttom",
+        onEnter: () => {
+          gsap.to(brandsRef.current, { autoAlpha: 1, scale: 1, duration: 0.2 });
+        },
+      },
+    });
   }, []);
 
   return (

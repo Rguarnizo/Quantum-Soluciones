@@ -2,7 +2,7 @@ import gsap from "gsap/gsap-core";
 import React, { useEffect, useRef } from "react";
 import { Canvas, useThree, useFrame } from "react-three-fiber";
 
-let EscenaProductos = ({tweenCallback}) => {
+let EscenaProductos = () => {
 
   let cube = useRef();
   let tween = useRef();
@@ -18,7 +18,6 @@ let EscenaProductos = ({tweenCallback}) => {
         end: '200%'
       },
     });
-    tweenCallback(tween.current);
   },[]);
 
 

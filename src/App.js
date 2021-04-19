@@ -15,12 +15,8 @@ function App() {
 
   useEffect(() => {
     let sections = gsap.utils.toArray("section");
-    let timeline;
-    sections.forEach((section) => {
-      let boxes =  section.querySelectorAll('.box');
-
-      
-      timeline = gsap.timeline(
+    sections.forEach((section) => {      
+      gsap.to(section,
         {
           scrollTrigger:{
             trigger:section,
@@ -31,12 +27,8 @@ function App() {
             markers:true
           }
         }
-      )
-    
-
+      );
     });
-    timeline.add(tween);
-    console.log(tween);
   },[]);
 
 
@@ -51,10 +43,10 @@ function App() {
       </section>
       <section className="Productos flex flex-row h-screen bg-red-500     ">
         <Canvas className="EscenaProductos h-screen w-screen">
-          <EscenaProductos tweenCallback={setTween}/>
+          <EscenaProductos />
         </Canvas>
         <div className="Marcas h-screen w-3/6 bg-white">
-          <Marcas setTween={setTween}/>
+          <Marcas />
         </div>
       </section>
       <section className="Ubicacion h-screen bg-yellow-500  ">
