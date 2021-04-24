@@ -18,7 +18,7 @@ let Marcas = () => {
     gsap.to(brandsRef.current, {
       autoAlpha: 1,
       scale: 1,
-      stagger: 0.1,
+      
       delay:5,
       scrollTrigger: {
         trigger: ".Ubicacion",
@@ -32,11 +32,13 @@ let Marcas = () => {
 
   return (
     <>
-      <div className="brands">
+      
+      <div className="brands content-center ">
+        <h1>Camaras</h1>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 block w-28"
+          className="brand m-6 p-0 block w-40"
           href=""
         >
           <img className="m-0 p-0" src="Logos/Canon.png"></img>
@@ -44,7 +46,7 @@ let Marcas = () => {
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 block w-28"
+          className="brand m-6 p-0 block w-40"
           href=""
         >
           <img className="m-0 p-0" src="Logos/Nikon.jpeg"></img>
@@ -52,7 +54,7 @@ let Marcas = () => {
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 block w-28"
+          className="brand m-6 p-0 block w-40"
           href=""
         >
           <img className="m-0 p-0" src="Logos/Sony.png"></img>
@@ -61,7 +63,7 @@ let Marcas = () => {
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
           id="GoPro"
-          className="brand m-6 p-0 block w-28"
+          className="brand m-6 p-0 block w-40"
           href=""
         >
           <img className="m-0 p-0" src="Logos/GoPro.png"></img>

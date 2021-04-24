@@ -1,6 +1,7 @@
 import gsap from "gsap/gsap-core";
 import React, { useEffect, useRef } from "react";
 import { Canvas, useThree, useFrame } from "react-three-fiber";
+import Drone from "./Drone";
 
 let EscenaProductos = () => {
 
@@ -27,7 +28,8 @@ let EscenaProductos = () => {
       <pointLight position={[10, 10, 10]} />
       <mesh ref={cube}>
         <boxGeometry />
-        <meshBasicMaterial />
+        <meshBasicMaterial color={'hotpink'} />
+        <Drone/>
       </mesh>
     </>
   );

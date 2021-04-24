@@ -37,14 +37,14 @@ function App() {
       <section className="Home h-screen bg-green-500   ">
         <div className="box bg-white h-32 w-32"></div>
       </section>
-      <section className="Promociones h-screen bg-blue-500    ">
+      <section className="Promociones h-screen bg-blue-500">
         <div className="box bg-red-500 h-32 w-32"></div>
       </section>
-      <section className="Productos flex flex-row h-screen bg-red-500     ">
-        <Canvas className="EscenaProductos h-screen w-3/6">
+      <section className="Productos flex flex-row h-screen bg-white">
+        <Canvas className="EscenaProductos w-2/6">
           <EscenaProductos />
         </Canvas>
-        <div className="Marcas h-screen w-3/6 bg-white">
+        <div className="Marcas w-4/6 bg-red-500">
           <Marcas />
         </div>
       </section>
