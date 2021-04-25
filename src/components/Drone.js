@@ -9,7 +9,7 @@ title: Buster Drone
 import * as THREE from 'three'
 import React, { useRef, useState, useEffect } from 'react'
 import { useFrame } from 'react-three-fiber'
-import { useGLTF } from '@react-three/drei/'
+import { useGLTF } from '@react-three/drei/core/useGLTF'
 
 
 

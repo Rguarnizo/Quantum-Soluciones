@@ -4,12 +4,13 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
+    "@react-three/drei": "^4.3.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "gsap": "^3.6.1",
     "react": "^17.0.1",
-    "react-dom": "^16.8",
+    "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "react-three-fiber": "^5.3.22",
     "web-vitals": "^1.1.0"
