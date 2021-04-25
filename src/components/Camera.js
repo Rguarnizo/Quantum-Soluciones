@@ -15,13 +15,12 @@ export default function Camera(props) {
 
   useEffect(() => {
     gsap.to(group.current.rotation,{
-      x:5,
       y:5,
       scrollTrigger: {
         trigger:".Productos",
         scrub: 1, 
         start: 'top top',
-        end: '200%'
+        end: '100%'
       }
     })
   })

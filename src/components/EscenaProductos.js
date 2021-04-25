@@ -5,31 +5,11 @@ import Camera from "./Camera";
 
 let EscenaProductos = () => {
 
-  let cube = useRef();
-  
-
-  useEffect(() => {
-  gsap.to(cube.current.rotation, {
-      x: 5,
-      y: 5,
-      scrollTrigger: {
-        trigger: '.Productos',
-        scrub: 1, 
-        start: 'top top',
-        end: '200%'
-      },
-    });
-  },[]);
-
 
   return (
     <>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <mesh ref={cube}>
-        <boxGeometry />
-        <meshBasicMaterial color={'hotpink'} />        
-      </mesh>
       <Camera/>
     </>
   );
