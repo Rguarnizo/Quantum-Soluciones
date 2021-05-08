@@ -13,17 +13,20 @@ import gsap from "gsap";
 export default function Camera(props) {
   const group = useRef();
 
-  useEffect(() => {
-    gsap.to(group.current.rotation,{
-      y:5,
-      scrollTrigger: {
-        trigger:".Productos",
-        scrub: 1, 
-        start: 'top top',
-        end: '100%'
-      }
-    })
-  })
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     gsap.to(group.current.rotation,{
+  //       y:5,
+  //       delay:6,
+  //       scrollTrigger: {
+  //         trigger:".Productos",
+  //         scrub: 1, 
+  //         start: 'top top',
+  //         end: '100%'
+  //       }
+  //     })
+  //   });
+  // })
 
   const { nodes, materials } = useGLTF('Models/Camera/scene.gltf');
   return (

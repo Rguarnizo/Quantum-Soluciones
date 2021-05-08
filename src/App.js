@@ -1,10 +1,11 @@
 import "./App.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {Canvas,useThree,useFrame} from 'react-three-fiber';
 import EscenaProductos from "./components/EscenaProductos";
 import Marcas from "./components/Marcas";
+import Tokyo from "./components/Tokyo";
 
 
 
@@ -43,6 +44,9 @@ function App() {
       <section className="Productos flex flex-row h-screen bg-white">
         <Canvas className="EscenaProductos w-2/6" camera={{position: [0,0,5]}}>
           <EscenaProductos />
+          <Suspense fallback={null}>
+            <Tokyo/>
+          </Suspense>
         </Canvas>
         <div className="Marcas w-4/6 bg-red-500">
           <Marcas />
