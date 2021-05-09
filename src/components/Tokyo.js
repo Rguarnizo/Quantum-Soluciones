@@ -12,16 +12,35 @@ import { useFrame } from 'react-three-fiber'
 import { useGLTF } from '@react-three/drei/core/useGLTF'
 
 import { useAnimations } from '@react-three/drei/core/useAnimations'
+import gsap from "gsap";
 
 export default function Tokyo(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Models/Tokyo/scene.gltf')
-  const { actions } = useAnimations(animations, group)
 
-  useEffect(()=>{
+  //! ERROR Cargando animaciones en el modelo.
+  //TODO: Arreglar.
+  const { actions } = useAnimations(animations);
+
+  useEffect(() => {
+
     console.log(actions);
+
+    setTimeout(() => {
+      gsap.to(group.current.rotation,{
+        
+        y:Math.PI/2,
+        delay:6,
+        scrollTrigger: {
+          trigger:".Productos",
+          scrub: 1, 
+          start: 'top top',
+          end: '100%'
+        }
+      })
+    });
   });
-  
+
   return (
     <group ref={group} {...props} dispose={null}  scale={[0.01,0.01,0.01]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
