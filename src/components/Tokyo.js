@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei/core/useGLTF'
 
 import { useAnimations } from '@react-three/drei/core/useAnimations'
 
-export default function Model(props) {
+export default function Tokyo(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Models/Tokyo/scene.gltf')
   const { actions } = useAnimations(animations, group)
@@ -23,7 +23,7 @@ export default function Model(props) {
   });
   
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null}  scale={[0.01,0.01,0.01]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[0, 0, 0]}>
           <group rotation={[Math.PI / 2, 0, 0]}>

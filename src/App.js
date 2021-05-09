@@ -9,6 +9,7 @@ import Tokyo from "./components/Tokyo";
 
 
 
+
 function App() {
   gsap.registerPlugin(ScrollTrigger);
   const[tween,setTween] = useState();
@@ -43,7 +44,7 @@ function App() {
       </section>
       <section className="Productos flex flex-row h-screen bg-white">
         <Canvas className="EscenaProductos w-2/6" camera={{position: [0,0,5]}}>
-          <EscenaProductos />
+          <EscenaProductos/>
           <Suspense fallback={null}>
             <Tokyo/>
           </Suspense>

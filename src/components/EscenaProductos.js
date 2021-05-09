@@ -1,5 +1,5 @@
 import gsap from "gsap/gsap-core";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Suspense} from "react";
 import { Canvas, useThree, useFrame } from "react-three-fiber";
 import Camera from "./Camera";
 
@@ -10,7 +10,9 @@ let EscenaProductos = () => {
     <>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <Camera/>
+      <Suspense fallback={null}>
+        <Camera/>
+      </Suspense>
     </>
   );
 };
