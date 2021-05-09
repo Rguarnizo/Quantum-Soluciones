@@ -1,11 +1,47 @@
 import React from "react";
 import "../Styles/navBar.scss";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+
+const Group640 = (props) => {
+  const { text2, text1, text4, text3 } = props;
+
+  return (
+    <div className="group-640">
+      <div className="text-2 valign-text-middle montserrat-bold-geyser-21px">
+        {text2}
+      </div>
+      <div className="text-1 valign-text-middle montserrat-bold-geyser-21px">
+        {text1}
+      </div>
+      <div className="text-4 valign-text-middle montserrat-bold-geyser-21px">
+        {text4}
+      </div>
+      <div className="text-3 valign-text-middle montserrat-bold-geyser-21px">
+        {text3}
+      </div>
+    </div>
+  );
+};
+
+const ButtonButtonSmall = (props) => {
+  const { children } = props;
+
+  return (
+    <div className="button-button-small border-2px-blue-ribbon">
+      <div className="overlap-group">
+        <div className="frame-692"></div>
+        <div className="get-in-touch-i66665 valign-text-middle montserrat-bold-blue-ribbon-14px">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const NavBar = () => {
   return (
     <>
-      <div className="w-screen hidden lg:flex justify-center items-center navbar ">
+      {/* <div className="w-screen hidden lg:flex justify-center items-center navbar ">
         <div className="navbar-content flex justify-between items-center w-3/4 ">
           <div className="company-logo flex justify-center items-center">
             <img
@@ -50,6 +86,17 @@ const NavBar = () => {
               </span>
             </div>
           </div>
+        </div>
+      </div> */}
+      <div className="nav-bar">
+        <div className="components-header">
+          <Group640
+            text2="Inicio"
+            text1="Servicios"
+            text4="Tienda"
+            text3="Promos"
+          />
+          <ButtonButtonSmall>Rastrea tu orden</ButtonButtonSmall>
         </div>
       </div>
     </>

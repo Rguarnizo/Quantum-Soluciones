@@ -1,0 +1,165 @@
+:root {
+  --blue-ribbon: #0e6eff;
+  --geyser: #d1dbe5;
+
+  --font-size-s: 14px;
+  --font-size-xl: 21px;
+
+  --font-family-montserrat: "Montserrat", Helvetica;
+  --shark: #222329;
+
+  --font-size-xxxl: 30px;
+  --font-size-xxxxxl: 26px;
+  --font-size-xxxxxxxxxl: 80px;
+
+  --font-family-lato: "Lato", Helvetica;
+
+  --shark: #222329;
+  --vulcan: #11121e33;
+  --white: #ffffff;
+
+  --font-size-xl2: 21px;
+  --font-size-xxxxxxxl: 64px;
+  --font-size-xxl: 22px;
+  --font-size-xxxxxxl: 44px;
+  --font-size-xxxxxxxxxxxxxxxxxl: 72px;
+
+  --font-size-xl2: 28px;
+  --font-size-xxl2: 30px;
+  --font-size-xxxxl: 24px;
+  --font-size-xxxxxxxl: 64px;
+}
+.montserrat-bold-geyser-21px {
+  color: var(--geyser);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-bold-blue-ribbon-14px {
+  color: var(--blue-ribbon);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-medium-geyser-26px {
+  color: var(--geyser);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-bold-shark-80px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-medium-shark-44px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-normal-shark-22px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-bold-vulcan-21px {
+  color: var(--vulcan);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-bold-shark-64px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-medium-shark-44px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-normal-shark-22px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-bold-vulcan-21px {
+  color: var(--vulcan);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.montserrat-bold-shark-30px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxl2);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-normal-shark-24px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-medium-shark-23px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 500;
+}
+.montserrat-bold-shark-64px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-normal-shark-28px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-bold-shark-52px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-normal-shark-28px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-2px-blue-ribbon {
+  border: 2px solid var(--blue-ribbon);
+}
