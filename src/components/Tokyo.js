@@ -18,7 +18,7 @@ export default function Tokyo(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Models/Tokyo/scene.gltf')
 
-  //! ERROR Cargando animaciones en el modelo.
+  //! ERROR Cargando animaciones en el modelo. dK4v5adR Discord code
   //TODO: Arreglar.
   const { actions } = useAnimations(animations);
 
