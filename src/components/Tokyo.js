@@ -9,9 +9,9 @@ title: Vaporwave Littlest Tokyo - 3D Editor Challenge
 import * as THREE from 'three'
 import React, { useRef, useState, useEffect } from 'react'
 import { useFrame } from 'react-three-fiber'
-import { useGLTF } from '@react-three/drei/core/useGLTF'
+import { useGLTF } from '@react-three/drei'
 
-import { useAnimations } from '@react-three/drei/core/useAnimations'
+import { useAnimations } from '@react-three/drei'
 import gsap from "gsap";
 
 export default function Tokyo(props) {
@@ -20,11 +20,11 @@ export default function Tokyo(props) {
 
   //! ERROR Cargando animaciones en el modelo. dK4v5adR Discord code
   //TODO: Arreglar.
-  const { actions } = useAnimations(animations);
+  //const { actions } = useAnimations(animations,group);
 
   useEffect(() => {
 
-    console.log(actions);
+    //console.log(actions)
 
     setTimeout(() => {
       gsap.to(group.current.rotation,{

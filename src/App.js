@@ -6,6 +6,7 @@ import {Canvas,useThree,useFrame} from 'react-three-fiber';
 import EscenaProductos from "./components/EscenaProductos";
 import Marcas from "./components/Marcas";
 import Tokyo from "./components/Tokyo";
+import Drone from "./components/Drone";
 
 
 
@@ -44,9 +45,12 @@ function App() {
       </section>
       <section className="Productos flex flex-row h-screen bg-white">
         <Canvas className="EscenaProductos w-2/6" camera={{position: [0,0,5]}}>
-          <EscenaProductos/>
+          {/* <EscenaProductos/>
           <Suspense fallback={null}>
             <Tokyo/>
+          </Suspense> */}
+          <Suspense fallback={null}>
+            <Drone/>
           </Suspense>
         </Canvas>
         <div className="Marcas w-4/6 bg-red-500">
