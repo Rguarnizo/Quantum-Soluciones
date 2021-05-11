@@ -3,6 +3,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {Canvas,useThree,useFrame} from 'react-three-fiber';
+import {OrbitControls} from '@react-three/drei';
 import EscenaProductos from "./components/EscenaProductos";
 import Marcas from "./components/Marcas";
 import Tokyo from "./components/Tokyo";
@@ -49,9 +50,9 @@ function App() {
           <Suspense fallback={null}>
             <Tokyo/>
           </Suspense> */}
-          <Suspense fallback={null}>
-            <Drone/>
-          </Suspense>
+          
+
+          
         </Canvas>
         <div className="Marcas w-4/6 bg-red-500">
           <Marcas />
