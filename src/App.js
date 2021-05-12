@@ -50,6 +50,9 @@ function App() {
           <Suspense fallback={null}>
             <Tokyo/>
           </Suspense> */}
+          <Suspense fallback={null}>
+            <Tokyo/>
+          </Suspense>
           
 
           
