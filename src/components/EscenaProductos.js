@@ -1,6 +1,6 @@
 import gsap from "gsap/gsap-core";
 import React, { useEffect, useRef, Suspense} from "react";
-import { Canvas, useThree, useFrame } from "react-three-fiber";
+import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import Camera from "./Camera";
 
 let EscenaProductos = () => {

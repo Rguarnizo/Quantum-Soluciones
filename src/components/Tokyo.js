@@ -8,7 +8,7 @@ title: Vaporwave Littlest Tokyo - 3D Editor Challenge
 
 import * as THREE from 'three'
 import React, { useRef, useState, useEffect } from 'react'
-import { useFrame } from 'react-three-fiber'
+import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 
 import { useAnimations } from '@react-three/drei'
