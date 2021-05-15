@@ -17,3 +17,24 @@ code {
 }
 
 
+@layer base{
+  @font-face {
+    font-family: nikon;
+    src: url('Fonts/Nikon/OpenSans-ExtraBoldItalic.ttf') format('ttf');
+  }
+
+  @font-face {
+    font-family: sony;
+    src: url('Fonts/Sony/Clarendon-Regular.otf') format('otf');
+  }
+
+  @font-face {
+    font-family: canon;
+    src: url('Fonts/CANON.ttf') format('tff');
+  }
+
+  @font-face {
+    font-family: go-pro;
+    src: url('Fonts/Go-Pro/neuropol.ttf') format('tff');
+  }
+}

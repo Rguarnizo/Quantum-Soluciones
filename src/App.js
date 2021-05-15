@@ -55,6 +55,9 @@ function App() {
           <Suspense fallback={null}>
             <Camara/>
           </Suspense>
+          
+
+
         </Canvas>
         <div className="Marcas w-4/6 bg-red-500">
           <Marcas />
