@@ -6,38 +6,60 @@ source: https://sketchfab.com/3d-models/1982-sony-betacam-2278728ec0a2456b879321
 title: 1982 Sony Betacam
 */
 
-import React, { useRef, useEffect } from 'react'
-import { useGLTF } from '@react-three/drei/core/useGLTF'
+import React, { useRef, useEffect } from "react";
+import { useGLTF } from "@react-three/drei/core/useGLTF";
 import gsap from "gsap";
+import { useThree } from "@react-three/fiber";
 
 export default function Camera(props) {
   const group = useRef();
+  const { camera } = useThree();
+
+  
 
   useEffect(() => {
     setTimeout(() => {
-      gsap.to(group.current.rotation,{
-        y:5,
-        delay:6,
-        scrollTrigger: {
-          trigger:".Productos",
-          scrub: 1, 
-          start: 'top top',
-          end: '100%'
-        }
-      })
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".Productos",
+        scrub: 1,
+        start: "top top",
+        end: "100%",
+      },
     });
-  })
+      tl.to(group.current.rotation, {
+        y: 5,
+      }).fromTo(
+        camera.position,{z:5},
+        {
+          z: 10,
+          x:5,
+        },
+        0
+      );
+    });
+  },[]);
 
-  const { nodes, materials } = useGLTF('Models/Camera/scene.gltf');
+  const { nodes, materials } = useGLTF("Models/Camera/scene.gltf");
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.1,0.1,0.1]}>
+    <group ref={group} {...props} dispose={null} scale={[0.1, 0.1, 0.1]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group position={[4.08, 1.01, 5.9]} rotation={[-0.27, 0.6, 1.93]} scale={[0.1, 0.1, 0.1]} />
-        <mesh material={materials.camcorder} geometry={nodes.camcorder_0.geometry} />
-        <mesh material={materials.cam_lens} geometry={nodes.camcorder_1.geometry} />
+        <group
+          position={[4.08, 1.01, 5.9]}
+          rotation={[-0.27, 0.6, 1.93]}
+          scale={[0.1, 0.1, 0.1]}
+        />
+        <mesh
+          material={materials.camcorder}
+          geometry={nodes.camcorder_0.geometry}
+        />
+        <mesh
+          material={materials.cam_lens}
+          geometry={nodes.camcorder_1.geometry}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('Models/Camera/scene.gltf')
+useGLTF.preload("Models/Camera/scene.gltf");

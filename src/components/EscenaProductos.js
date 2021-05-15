@@ -4,8 +4,6 @@ import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import Camera from "./Camera";
 
 let EscenaProductos = () => {
-
-
   return (
     <>
       <ambientLight />
