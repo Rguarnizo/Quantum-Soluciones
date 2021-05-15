@@ -1,41 +1,49 @@
 import React from "react";
-import "../Styles/fourthPageQuantum.scss";
+import "../../Styles/Desktop/fourthPageQuantum.scss";
+import FourthPageQuantumMobile from "../Mobile/FourthPageQuantumMobile";
 
 const FourthPageQuantum = () => {
   return (
-    <div class="container-center-horizontal">
-      <div className="tienda screen">
-        <div className="overlap-group1">
-          <ComponentsInfo
-            experiencedTeamI95="Visita nuestra tienda"
-            frame689Props={componentsInfoData.frame689Props}
-            baseComponentsImageImageLargeProps={
-              componentsInfoData.baseComponentsImageImageLargeProps
-            }
-          />
-          <img
-            className="vector-3"
-            src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60972002678c03d79e779bf1/img/vector-3@1x.png"
-            alt=""
-          />
-          <Saly12 src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/saly-12@1x.png" />
-        </div>
-        <div className="overlap-group1">
-          <ComponentsInfo2
-            theBestDesignFor="Explora nuestro catálogo"
-            convallisTurpisEra="Te ofrecemos las mejores marcas en equipos como cámaras, lentes, flashes, drones y también en accesorios."
-            baseComponentsImageImageLargeProps={
-              componentsInfo2Data.baseComponentsImageImageLargeProps
-            }
-          />
-          <img
-            className="vector-2"
-            src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609719ce678c03d79e779be9/img/vector-2@2x.png"
-            alt=""
-          />
+    <section id="fourth">
+      <div className="hidden xl:block">
+        <div className="container-center-horizontal">
+          <div className="tienda screen">
+            <div className="overlap-group1">
+              <ComponentsInfo
+                experiencedTeamI95="Visita nuestra tienda"
+                frame689Props={componentsInfoData.frame689Props}
+                baseComponentsImageImageLargeProps={
+                  componentsInfoData.baseComponentsImageImageLargeProps
+                }
+              />
+              <img
+                className="vector-3"
+                src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60972002678c03d79e779bf1/img/vector-3@1x.png"
+                alt=""
+              />
+              <Saly12 src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/saly-12@1x.png" />
+            </div>
+            <div className="overlap-group1">
+              <ComponentsInfo2
+                theBestDesignFor="Explora nuestro catálogo"
+                convallisTurpisEra="Te ofrecemos las mejores marcas en equipos como cámaras, lentes, flashes, drones y también en accesorios."
+                baseComponentsImageImageLargeProps={
+                  componentsInfo2Data.baseComponentsImageImageLargeProps
+                }
+              />
+              <img
+                className="vector-2"
+                src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609719ce678c03d79e779be9/img/vector-2@2x.png"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="block xl:hidden">
+        <FourthPageQuantumMobile />
+      </div>
+    </section>
   );
 };
 
@@ -182,8 +190,7 @@ const frame689Data = {
 };
 
 const baseComponentsImageImageLargeData = {
-  src:
-    "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/rectangle@1x.png",
+  src: "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/rectangle@1x.png",
 };
 
 const componentsInfoData = {
@@ -192,8 +199,7 @@ const componentsInfoData = {
 };
 
 const baseComponentsImageImageLarge2Data = {
-  src:
-    "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/rectangle@1x.png",
+  src: "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/rectangle@1x.png",
 };
 
 const componentsInfo2Data = {

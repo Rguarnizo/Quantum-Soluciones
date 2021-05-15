@@ -1,0 +1,117 @@
+.sobre-nosotros {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1122px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .components-info {
+    align-items: flex-start;
+    display: flex;
+    height: 1139px;
+    padding: 45px 269px;
+    width: 1920px;
+    flex-wrap: wrap;
+
+    .auto-added-frame {
+      align-items: flex-start;
+      align-self: center;
+      border-radius: 12px;
+      display: flex;
+      height: 794px;
+      justify-content: center;
+      margin-bottom: 9px;
+      margin-left: 64px;
+      overflow: hidden;
+      width: 414px;
+
+      .peter-olexa-p-l-agy-unsplash-8 {
+        height: 858px;
+        margin-top: -32px;
+        mix-blend-mode: normal;
+        object-fit: cover;
+        width: 588px;
+      }
+    }
+
+    .frame-16 {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      min-height: 1040px;
+      width: 904px;
+
+      .frame-677 {
+        align-items: center;
+        display: flex;
+        min-width: 904px;
+        .peter-olexa-p-l-agy-unsplash-10 {
+          height: 417px;
+          mix-blend-mode: normal;
+          object-fit: cover;
+          width: 510px;
+          top: 0;
+          left: 0;
+        }
+        .peter-olexa-p-l-agy-unsplash-5 {
+          height: 541px;
+          margin-left: 64px;
+          mix-blend-mode: normal;
+          object-fit: cover;
+          width: 330px;
+        }
+      }
+
+      .frame-14 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+        min-height: 288px;
+        width: 784px;
+        .requirements-gatheri {
+          letter-spacing: -2.88px;
+          line-height: 70.4px;
+          margin-left: 2px;
+          min-height: 70px;
+          min-width: 786px;
+          mix-blend-mode: normal;
+          white-space: nowrap;
+          width: 786px;
+        }
+        .text-1 {
+          letter-spacing: -0.28px;
+          line-height: 33.6px;
+          margin-left: 2px;
+          margin-top: 48px;
+          min-height: 170px;
+          min-width: 772px;
+          mix-blend-mode: normal;
+          width: 772px;
+        }
+      }
+    }
+  }
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.screen a {
+  text-decoration: none;
+  display: contents;
+}

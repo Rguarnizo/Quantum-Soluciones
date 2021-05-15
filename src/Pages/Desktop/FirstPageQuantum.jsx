@@ -1,6 +1,7 @@
 import React from "react";
-import "../Styles/firstPageQuantum.scss";
-import ImagesCarousel from "../Components/ImagesCarousel";
+import "../../Styles/Desktop/firstPageQuantum.scss";
+import ImagesCarousel from "../../Components/ImagesCarousel";
+import FirstPageQuantumMobile from "../Mobile/FirstPageQuantumMobile";
 const ComponentsHero = (props) => {
   const { text5, text6, text7 } = props;
 
@@ -76,12 +77,19 @@ const ComponentsHero = (props) => {
 
 const FirstPageQuantum = () => {
   return (
-    <ComponentsHero
-      text5="SOLUCIONES QUANTUM"
-      text6="Servicio técnico especializado"
-      text7="En reparación de "
-      peterOlexaPl7Irex9AgyUnsplash10="peter-olexa-pl7irex9agy-unsplash-10.png"
-    />
+    <>
+      <div className="hidden xl:block">
+        <ComponentsHero
+          text5="SOLUCIONES QUANTUM"
+          text6="Servicio técnico especializado"
+          text7="en reparación de "
+          peterOlexaPl7Irex9AgyUnsplash10="peter-olexa-pl7irex9agy-unsplash-10.png"
+        />
+      </div>
+      <div className="block xl:hidden w-100">
+        <FirstPageQuantumMobile />
+      </div>
+    </>
   );
 };
 

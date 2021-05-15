@@ -1,28 +1,34 @@
 :root {
-  --blue-ribbon: #0e6eff;
-  --geyser: #d1dbe5;
-
   --font-size-s: 14px;
   --font-size-xl: 21px;
 
   --font-family-montserrat: "Montserrat", Helvetica;
-  --shark: #222329;
+  --font-family-sarina: "Sarina", Helvetica;
 
   --font-size-xxxl: 30px;
   --font-size-xxxxxl: 26px;
   --font-size-xxxxxxxxxl: 80px;
+  --font-size-l: 42px;
 
   --font-family-lato: "Lato", Helvetica;
 
   --shark: #222329;
   --vulcan: #11121e33;
   --white: #ffffff;
+  --black: #000000;
+  --blue-ribbon: #0e6eff;
+  --geyser: #d1dbe5;
 
   --font-size-xl2: 21px;
   --font-size-xxxxxxxl: 64px;
   --font-size-xxl: 22px;
   --font-size-xxxxxxl: 44px;
   --font-size-xxxxxxxxxxxxxxxxxl: 72px;
+
+  --font-size-l2: 18px;
+  --font-size-xxs: 15px;
+  --font-size-xxxxs: 19px;
+  --font-size-xxxxxl: 35px;
 
   --font-size-xl2: 28px;
   --font-size-xxl2: 30px;
@@ -36,6 +42,21 @@
   font-style: normal;
   font-weight: 700;
 }
+.montserrat-bold-geyser-15px {
+  color: var(--geyser);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-bold-blue-ribbon-15px {
+  color: var(--blue-ribbon);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
 .montserrat-bold-blue-ribbon-14px {
   color: var(--blue-ribbon);
   font-family: var(--font-family-montserrat);
@@ -156,6 +177,50 @@
   color: var(--shark);
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-normal-shark-24px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-shark-24px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-bold-shark-18px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l2);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-semi-bold-shark-24px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 600;
+}
+.sarina-normal-shark-35px {
+  color: var(--shark);
+  font-family: var(--font-family-sarina);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.montserrat-normal-shark-19px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxs);
   font-style: normal;
   font-weight: 400;
 }

@@ -1,14 +1,14 @@
 .components-hero {
   align-items: flex-start;
   display: flex;
-  height: 100vh;
-  width: 100%;
+  height: 85vh;
+  width: 90%;
 
   .overlap-group {
     height: 763px;
     position: relative;
     width: 100%;
-    margin-top: -100px
+    margin-top: -100px;
   }
 }
 .frame-686 {
@@ -19,7 +19,7 @@
   min-height: 481px;
   position: absolute;
   top: 290px;
-  width: 906px;
+  //width: 100%;
 
   .text-1 {
     height: 31px;
@@ -36,7 +36,7 @@
     margin-top: 66px;
     min-height: 176px;
     mix-blend-mode: normal;
-    width: 623px;
+    max-width: 623px;
   }
   .text-3 {
     color: var(--shark);
@@ -59,7 +59,7 @@
   object-fit: cover;
   position: relative;
   top: 212px;
-  width: 40%;
+  width: 50%;
 }
 
 span.fpage-writing {

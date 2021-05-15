@@ -1,124 +1,3 @@
-// .navbar {
-//   background-color: rgba($color: #282c34, $alpha: 0.5);
-//   position: fixed;
-//   top: 0;
-//   height: 65px;
-//   z-index: 20;
-
-//   & > .navbar-content {
-//     & > .company-logo {
-
-//       width: 190px;
-//       align-self: center;
-//       margin-bottom: 5px;
-//       // padding-left: 5px;
-//       // & > img {
-//       //   max-height: 100%;
-//       //   max-width: 100%;
-//       // }
-//     }
-//     & > .menu {
-//       font-family: "Montserrat", sans-serif;
-//       font-weight: 500;
-//     }
-//   }
-// }
-
-// .options:hover{
-//   cursor: pointer;
-// }
-
-.group-640 {
-  align-items: center;
-  align-self: center;
-  display: flex;
-  margin-bottom: 1px;
-  min-width: 468px;
-
-  .text-1 {
-    height: 32px;
-    letter-spacing: -0.21px;
-    line-height: 28.4px;
-    margin-left: 46px;
-    min-height: 32px;
-    min-width: 106px;
-    mix-blend-mode: normal;
-    text-align: center;
-    white-space: nowrap;
-    width: 106px;
-  }
-  .text-2 {
-    height: 32px;
-    letter-spacing: -0.21px;
-    line-height: 28.4px;
-    min-height: 32px;
-    min-width: 62px;
-    mix-blend-mode: normal;
-    text-align: center;
-    white-space: nowrap;
-    width: 62px;
-  }
-  .text-3 {
-    height: 27px;
-    letter-spacing: -0.21px;
-    line-height: 28.4px;
-    margin-left: 19px;
-    min-height: 27px;
-    min-width: 102px;
-    mix-blend-mode: normal;
-    text-align: center;
-    white-space: nowrap;
-    width: 102px;
-  }
-  .text-4 {
-    height: 27px;
-    letter-spacing: -0.21px;
-    line-height: 28.4px;
-    margin-left: 36px;
-    min-height: 27px;
-    min-width: 90px;
-    mix-blend-mode: normal;
-    text-align: center;
-    white-space: nowrap;
-    width: 90px;
-  }
-}
-
-.button-button-small {
-  align-items: center;
-  border-radius: 4px;
-  display: flex;
-  height: 41px;
-  margin-left: 40px;
-  overflow: hidden;
-  padding: 0 14px;
-  width: 164px;
-}
-
-.overlap-group {
-  height: 39px;
-  position: relative;
-  width: 133px;
-  .frame-692 {
-    height: 32px;
-    left: 1px;
-    position: absolute;
-    top: 4px;
-    width: 95px;
-  }
-
-  .get-in-touch-i66665 {
-    height: 39px;
-    left: 0;
-    letter-spacing: -0.42px;
-    line-height: 16.8px;
-    mix-blend-mode: normal;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 133px;
-  }
-}
 .components-header {
   align-items: flex-start;
   display: flex;
@@ -126,7 +5,100 @@
   height: 116px;
   padding: 37px;
   position: relative;
-  // width: 1920px;
+  z-index: 10;
+  width: 90vw;
+
+  .group-640 {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    margin-bottom: 1px;
+    min-width: 468px;
+
+    .text-1 {
+      height: 32px;
+      letter-spacing: -0.21px;
+      line-height: 28.4px;
+      margin-left: 46px;
+      min-height: 32px;
+      min-width: 106px;
+      mix-blend-mode: normal;
+      text-align: center;
+      white-space: nowrap;
+      width: 106px;
+    }
+    .text-2 {
+      height: 32px;
+      letter-spacing: -0.21px;
+      line-height: 28.4px;
+      min-height: 32px;
+      min-width: 62px;
+      mix-blend-mode: normal;
+      text-align: center;
+      white-space: nowrap;
+      width: 62px;
+    }
+    .text-3 {
+      height: 27px;
+      letter-spacing: -0.21px;
+      line-height: 28.4px;
+      margin-left: 19px;
+      min-height: 27px;
+      min-width: 102px;
+      mix-blend-mode: normal;
+      text-align: center;
+      white-space: nowrap;
+      width: 102px;
+    }
+    .text-4 {
+      height: 27px;
+      letter-spacing: -0.21px;
+      line-height: 28.4px;
+      margin-left: 36px;
+      min-height: 27px;
+      min-width: 90px;
+      mix-blend-mode: normal;
+      text-align: center;
+      white-space: nowrap;
+      width: 90px;
+    }
+  }
+
+  .button-button-small {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    height: 41px;
+    margin-left: 40px;
+    overflow: hidden;
+    padding: 0 14px;
+    width: 164px;
+
+    .overlap-group {
+      height: 39px;
+      position: relative;
+      width: 133px;
+      .frame-692 {
+        height: 32px;
+        left: 1px;
+        position: absolute;
+        top: 4px;
+        width: 95px;
+      }
+
+      .get-in-touch-i66665 {
+        height: 39px;
+        left: 0;
+        letter-spacing: -0.42px;
+        line-height: 16.8px;
+        mix-blend-mode: normal;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 133px;
+      }
+    }
+  }
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,500|Lato:400");

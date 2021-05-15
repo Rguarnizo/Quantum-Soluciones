@@ -1,12 +1,33 @@
 import React from "react";
 import "../Styles/imagesCarousel.scss";
 
-const ImagesCarousel = () => {
+const ImagesCarousel = (props) => {
+  console.log(props);
   return (
     <div className="container">
+      {/* {props.mobile ? (
+        <>
+          <input
+            type="radio"
+            name="slider"
+            id="item-1"
+            disabled
+            defaultChecked
+          />
+          <input type="radio" name="slider" id="item-2" disabled />
+          <input type="radio" name="slider" id="item-3" disabled />
+        </>
+      ) : (
+        <>
+          <input type="radio" name="slider" id="item-1" defaultChecked />
+          <input type="radio" name="slider" id="item-2" />
+          <input type="radio" name="slider" id="item-3" />
+        </>
+      )} */}
       <input type="radio" name="slider" id="item-1" defaultChecked />
       <input type="radio" name="slider" id="item-2" />
       <input type="radio" name="slider" id="item-3" />
+
       <div className="cards">
         <label className="card" htmlFor="item-1" id="song-1">
           <img

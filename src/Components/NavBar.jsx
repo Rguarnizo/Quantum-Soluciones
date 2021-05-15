@@ -1,23 +1,54 @@
 import React from "react";
 import "../Styles/navBar.scss";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
+import * as Scroll from "react-scroll";
 
 const Group640 = (props) => {
   const { text2, text1, text4, text3 } = props;
+  let scroll = Scroll.animateScroll;
 
   return (
     <div className="group-640">
-      <div className="text-2 valign-text-middle montserrat-bold-geyser-21px">
+      <div
+        className="text-2 valign-text-middle montserrat-bold-geyser-21px"
+        onClick={() => {
+          scroll.scrollTo(0);
+        }}
+      >
         {text2}
       </div>
       <div className="text-1 valign-text-middle montserrat-bold-geyser-21px">
-        {text1}
+        <Link
+          className="options hover:text-blue-100"
+          to="second"
+          smooth
+          duration={1200}
+          delay={150}
+        >
+          {text1}
+        </Link>
       </div>
       <div className="text-4 valign-text-middle montserrat-bold-geyser-21px">
-        {text4}
+        <Link
+          className="options hover:text-blue-100"
+          to="fourth"
+          smooth
+          duration={1200}
+          delay={150}
+        >
+          {text4}
+        </Link>
       </div>
       <div className="text-3 valign-text-middle montserrat-bold-geyser-21px">
-        {text3}
+        <Link
+          className="options hover:text-blue-100"
+          to="sixth"
+          smooth
+          duration={1200}
+          delay={150}
+        >
+          {text3}
+        </Link>
       </div>
     </div>
   );
@@ -88,18 +119,36 @@ const NavBar = () => {
           </div>
         </div>
       </div> */}
-      <div className="nav-bar">
-        <div className="components-header">
-          <Group640
-            text2="Inicio"
-            text1="Servicios"
-            text4="Tienda"
-            text3="Promos"
-          />
-          <ButtonButtonSmall>Rastrea tu orden</ButtonButtonSmall>
+      <div className="hidden lg:block">
+        <div className="nav-bar">
+          <div className="components-header">
+            <Group640
+              text2="Inicio"
+              text1="Servicios"
+              text4="Tienda"
+              text3="Nosotros"
+            />
+            <ButtonButtonSmall>Rastrea tu orden</ButtonButtonSmall>
+          </div>
         </div>
       </div>
+      <div className="lg:hidden">
+        <NavBarMobile />
+      </div>
     </>
+  );
+};
+
+const NavBarMobile = () => {
+  return (
+    <div className="nav-mobile flex w-100 items-center mx-10 my-5 justify-center text-center">
+      {/* <div className="montserrat-bold-geyser-15px flex-auto items-center">
+        Inicio
+      </div> */}
+      <div className=" montserrat-bold-geyser-15px flex-auto"></div>
+      <div className=" montserrat-bold-geyser-15px flex-auto">Menu</div>
+      <div className=" montserrat-bold-blue-ribbon-15px flex-auto">Rastrea tu orden</div>
+    </div>
   );
 };
 

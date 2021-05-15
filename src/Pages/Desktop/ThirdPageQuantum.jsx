@@ -1,15 +1,23 @@
 import React from "react";
-import "../Styles/thirdPageQuantum.scss";
+import "../../Styles/Desktop/thirdPageQuantum.scss";
+import ThirdPageQuantumMobile from "../Mobile/ThirdPageQuantumMobile";
 
 const ThirdPageQuantum = () => {
   return (
-    <Reparaciones
-      iconfinder_Lens_4067241="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/iconfinder-lens-406724-1@2x.png"
-      image1="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/image-1@2x.png"
-      iconfinder_App_Icons_Photography___="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/iconfinder-app-icons-photography---cam-camera-video-movie-media-@2x.png"
-      image2="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/image-2@2x.png"
-      componentsInfoProps={reparacionesData.componentsInfoProps}
-    />
+    <>
+      <div className="hidden xl:block">
+        <Reparaciones
+          iconfinder_Lens_4067241="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/iconfinder-lens-406724-1@2x.png"
+          image1="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/image-1@2x.png"
+          iconfinder_App_Icons_Photography___="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/iconfinder-app-icons-photography---cam-camera-video-movie-media-@2x.png"
+          image2="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/image-2@2x.png"
+          componentsInfoProps={reparacionesData.componentsInfoProps}
+        />
+      </div>
+      <div className="block xl:hidden">
+        <ThirdPageQuantumMobile />
+      </div>
+    </>
   );
 };
 
@@ -35,7 +43,7 @@ function Reparaciones(props) {
             frame6452Props={componentsInfoProps.frame6452Props}
             frame6453Props={componentsInfoProps.frame6453Props}
           />
-          <img
+          {/* <img
             className="iconfinderlens406724-1"
             src={iconfinder_Lens_4067241}
             alt=""
@@ -46,7 +54,7 @@ function Reparaciones(props) {
             src={iconfinder_App_Icons_Photography___}
             alt=""
           />
-          <img className="image-2" src={image2} alt="" />
+          <img className="image-2" src={image2} alt="" /> */}
         </div>
       </div>
     </div>

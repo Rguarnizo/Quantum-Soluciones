@@ -1,13 +1,21 @@
 import React from "react";
-import "../Styles/secondPageQuantum.scss";
+import "../../Styles/Desktop/secondPageQuantum.scss";
+import SecondPageQuantumMobile from "../Mobile/SecondPageQuantumMobile";
 
-function SecondPageQuantum() {
+const SecondPageQuantum = () => {
   return (
-    <NuestrosServicios
-      vector2="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097044c6842df4f40142662/img/vector-2@1x.png"
-      componentsCardProps={nuestrosServiciosData.componentsCardProps}
-      saly22Props={nuestrosServiciosData.saly22Props}
-    />
+    <section id="second">
+      <div className="hidden xl:block">
+        <NuestrosServicios
+          vector2="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097044c6842df4f40142662/img/vector-2@1x.png"
+          componentsCardProps={nuestrosServiciosData.componentsCardProps}
+          saly22Props={nuestrosServiciosData.saly22Props}
+        />
+      </div>
+      <div className="block xl:hidden">
+        <SecondPageQuantumMobile />
+      </div>
+    </section>
   );
 }
 
@@ -17,7 +25,7 @@ function NuestrosServicios(props) {
   const { vector2, componentsCardProps, saly22Props } = props;
 
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="nuestros-servicios screen">
         <div className="overlap-group">
           <ComponentsCard {...componentsCardProps} />
@@ -183,8 +191,7 @@ const componentsCardData = {
 };
 
 const saly22Data = {
-  src:
-    "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097044c6842df4f40142662/img/saly-22@2x.png",
+  src: "https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097044c6842df4f40142662/img/saly-22@2x.png",
 };
 
 const nuestrosServiciosData = {

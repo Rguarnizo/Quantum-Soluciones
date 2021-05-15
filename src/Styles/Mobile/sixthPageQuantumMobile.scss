@@ -1,0 +1,128 @@
+.sobre-nosotros-phone {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 682px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 30px;
+  width: 100%;
+
+  .flex-row {
+    align-items: flex-start;
+    display: flex;
+    height: 273px;
+    margin-left: 9px;
+    min-width: 460px;
+
+    .peter-olexa-p-l-agy-unsplash-20 {
+      height: 201px;
+      mix-blend-mode: normal;
+      object-fit: cover;
+      width: 180px;
+      margin-left: 40px;
+    }
+    .peter-olexa-p-l-agy-unsplash-21 {
+      align-self: flex-end;
+      height: 234px;
+      margin-left: 23px;
+      mix-blend-mode: normal;
+      object-fit: cover;
+      width: 170px;
+    }
+  }
+
+  .title {
+    letter-spacing: -1.57px;
+    line-height: 38.5px;
+    margin-left: 50px;
+    //margin-right: 24px;
+    margin-top: 52px;
+    min-height: 39px;
+    min-width: 427px;
+    mix-blend-mode: normal;
+    white-space: nowrap;
+    width: 427px;
+  }
+
+  .text-1 {
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-top: 31px;
+    min-height: 163px;
+    // min-width: 431px;
+    mix-blend-mode: normal;
+    width: 380px;
+    font-size: 17px;
+  }
+
+  .overlap-group {
+    align-self: flex-start;
+    height: 29px;
+    margin-top: 361px;
+    position: relative;
+    width: 16px;
+
+    .group-655 {
+      height: 29px;
+      left: 1px;
+      position: absolute;
+      top: 0;
+      width: 15px;
+    }
+    .group-656 {
+      height: 29px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 15px;
+    }
+  }
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+* {
+  box-sizing: border-box;
+}
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+
+:root {
+  --shark: #222329;
+  --white: #ffffff;
+
+  --font-size-xl: 20px;
+  --font-size-xxxxxl: 35px;
+
+  --font-family-montserrat: "Montserrat", Helvetica;
+}
+.montserrat-bold-shark-35px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+.montserrat-normal-shark-20px {
+  color: var(--shark);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,101 @@
+.mas-servicios {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 135vh;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .components-info {
+    align-items: flex-start;
+    display: flex;
+    height: 1049px;
+    margin-top: 21px;
+    padding: 0 269px;
+    width: 1920px;
+    flex-wrap: wrap;
+
+    .auto-added-frame {
+      align-items: flex-start;
+      align-self: center;
+      display: flex;
+      height: 794px;
+      margin-bottom: 90px;
+      width: 440px;
+
+      .peter-olexa-p-l-agy-unsplash-8 {
+        height: 518px;
+        mix-blend-mode: normal;
+        object-fit: cover;
+        width: 440px;
+      }
+    }
+    .frame-16 {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: 32px;
+      min-height: 1040px;
+      width: 910px;
+
+      .frame-14 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 428px;
+        width: 784px;
+        .requirements-gatheri {
+          letter-spacing: -2.88px;
+          line-height: 70.4px;
+          margin-left: 2px;
+          min-height: 210px;
+          min-width: 786px;
+          mix-blend-mode: normal;
+          width: 786px;
+        }
+        .text-1 {
+          letter-spacing: -0.28px;
+          line-height: 33.6px;
+          margin-left: 2px;
+          margin-top: 48px;
+          min-height: 170px;
+          min-width: 772px;
+          mix-blend-mode: normal;
+          width: 772px;
+        }
+      }
+
+      img.peter-olexa-p-l-agy-unsplash-10 {
+        height: 518px;
+        // margin-top: 64px;
+        mix-blend-mode: normal;
+        object-fit: cover;
+        width: 910px;
+        left: 0;
+      }
+    }
+  }
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+* {
+  box-sizing: border-box;
+}
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
