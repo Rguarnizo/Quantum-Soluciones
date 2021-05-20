@@ -1,9 +1,12 @@
 import React from "react";
 import "../../Styles/Mobile/footerMobile.scss";
+import { Link } from "react-scroll";
+import * as Scroll from "react-scroll";
 
 const FooterMobile = () => {
+  let scroll = Scroll.animateScroll;
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="footer-phone screen">
         <div className="overlap-group2">
           <div className="group-681">
@@ -41,28 +44,61 @@ const FooterMobile = () => {
               <div className="pages valign-text-middle montserrat-bold-shark-18px">
                 Páginas
               </div>
-              <div className="inicio valign-text-middle montserrat-bold-shark-18px">
+              <div
+                className="inicio valign-text-middle montserrat-bold-shark-18px hover:text-blue-100 cursor-pointer"
+                onClick={() => {
+                  scroll.scrollTo(0);
+                }}
+              >
                 Inicio
               </div>
-              <div className="price valign-text-middle montserrat-bold-shark-18px">
-                Servicios
+              <div className="price valign-text-middle montserrat-bold-shark-18px cursor-pointer">
+                <Link
+                  className="options hover:text-blue-100"
+                  to="second"
+                  smooth
+                  duration={1200}
+                  delay={150}
+                >
+                  Servicios
+                </Link>
               </div>
-              <div className="help valign-text-middle montserrat-bold-shark-18px">
-                Tienda
+              <div className="help valign-text-middle montserrat-bold-shark-18px cursor-pointer">
+                <Link
+                  className="options hover:text-blue-100"
+                  to="fourth"
+                  smooth
+                  duration={1200}
+                  delay={150}
+                >
+                  Tienda
+                </Link>
               </div>
-              <div className="contacto valign-text-middle montserrat-bold-shark-18px">
-                Contacto
+              <div className="contacto valign-text-middle montserrat-bold-shark-18px cursor-pointer">
+                <Link
+                  className="options hover:text-blue-100"
+                  to="sixth"
+                  smooth
+                  duration={1200}
+                  delay={150}
+                >
+                  Contacto
+                </Link>
               </div>
             </div>
             <div className="flex-col-1">
-              <div className="demos valign-text-middle montserrat-bold-shark-18px">
+              <div className="demos valign-text-middle montserrat-bold-shark-18px ">
                 Quantum App
               </div>
               <div className="dark-theme valign-text-middle montserrat-bold-shark-18px">
-                Acceso
+                <a href="https://app.solucionesquantum.com/quantum/login">
+                  Acceso
+                </a>
               </div>
               <div className="light-theme valign-text-middle montserrat-bold-blue-ribbon-18px">
-                Rastrea tu orden
+                <a href="https://app.solucionesquantum.com/quantum/tracker">
+                  Rastrea tu orden
+                </a>
               </div>
             </div>
           </div>

@@ -2,9 +2,9 @@ import React from "react";
 import "../../Styles/Desktop/thirdPageQuantum.scss";
 import ThirdPageQuantumMobile from "../Mobile/ThirdPageQuantumMobile";
 
-const ThirdPageQuantum = () => {
+const ThirdPageQuantum = (props) => {
   return (
-    <>
+    <div data-aos="fade-down" data-aos-duration="1500" className={`${props.setDark}`}>
       <div className="hidden xl:block">
         <Reparaciones
           iconfinder_Lens_4067241="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/60970b3e9d7a46414d9b746a/img/iconfinder-lens-406724-1@2x.png"
@@ -17,7 +17,7 @@ const ThirdPageQuantum = () => {
       <div className="block xl:hidden">
         <ThirdPageQuantumMobile />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -33,9 +33,9 @@ function Reparaciones(props) {
   } = props;
 
   return (
-    <div class="container-center-horizontal">
-      <div className="reparaciones screen">
-        <div className="overlap-group">
+    <div className="container-center-horizontal ">
+      <div className="reparaciones screen bg-white dark:bg-gray-900 ">
+        <div className="overlap-group ">
           <ComponentsInfo
             frame8Props={componentsInfoProps.frame8Props}
             frame691Props={componentsInfoProps.frame691Props}
@@ -71,7 +71,7 @@ function ComponentsInfo(props) {
   } = props;
 
   return (
-    <div className="components-info">
+    <div className="components-info ">
       <Frame8
         text1={frame8Props.text1}
         text2={frame8Props.text2}
@@ -110,10 +110,10 @@ function Frame8(props) {
   const { text1, text2, text3 } = props;
 
   return (
-    <div className="frame-8">
-      <div className="text-1 montserrat-medium-shark-23px">{text1}</div>
-      <h1 className="text-2 montserrat-bold-shark-64px">{text2}</h1>
-      <div className="text-3 montserrat-normal-shark-28px">{text3}</div>
+    <div className="frame-8 ">
+      <div className="text-1 montserrat-medium-shark-23px dark:text-white">{text1}</div>
+      <h1 className="text-2 montserrat-bold-shark-64px dark:text-white">{text2}</h1>
+      <div className="text-3 montserrat-normal-shark-28px dark:text-white">{text3}</div>
     </div>
   );
 }
@@ -123,8 +123,8 @@ function Frame691(props) {
 
   return (
     <div className="frame-691">
-      <div className="text-4 montserrat-bold-shark-30px">{text4}</div>
-      <div className="text-5 montserrat-normal-shark-24px">{text5}</div>
+      <div className="text-4 montserrat-bold-shark-30px dark:text-white">{text4}</div>
+      <div className="text-5 montserrat-normal-shark-24px dark:text-white">{text5}</div>
     </div>
   );
 }
@@ -134,10 +134,10 @@ function Frame645(props) {
 
   return (
     <div className={`frame-645 ${className || ""}`}>
-      <div className="lentes-i90453591 montserrat-bold-shark-30px">
+      <div className="lentes-i90453591 montserrat-bold-shark-30px dark:text-white">
         {text18}
       </div>
-      <div className="text-6 montserrat-normal-shark-24px">{text19}</div>
+      <div className="text-6 montserrat-normal-shark-24px dark:text-white">{text19}</div>
     </div>
   );
 }

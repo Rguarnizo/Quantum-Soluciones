@@ -225,6 +225,17 @@
   font-weight: 400;
 }
 
+.montserrat-bold-white-25px {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .border-2px-blue-ribbon {
   border: 2px solid var(--blue-ribbon);
+}
+::-webkit-scrollbar {
+  display: none;
 }

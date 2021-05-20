@@ -2,12 +2,12 @@ import React from "react";
 import "../../Styles/Desktop/fifthPageQuantum.scss";
 import FifthPageQuantumMobile from "../Mobile/FifthPageQuantumMobile";
 
-const FifthPageQuantum = () => {
+const FifthPageQuantum = (props) => {
   return (
-    <>
+    <div data-aos="fade-down" data-aos-duration="1500" className={`${props.setDark}`}>
       <div className="hidden xl:block">
         <div className="container-center-horizontal">
-          <div className="mas-servicios screen">
+          <div className="mas-servicios screen bg-white dark:bg-gray-900">
             <ComponentsInfo
               peterOlexaPl7Irex9AgyUnsplash8="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609083139fffd20f5d421d93/img/peter-olexa-pl7irex9agy-unsplash-8-1@1x.png"
               requirementsGatheri="Nuestros servicios en automatización y sistemas"
@@ -20,7 +20,7 @@ const FifthPageQuantum = () => {
       <div className="block xl:hidden">
         <FifthPageQuantumMobile />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -45,10 +45,10 @@ function ComponentsInfo(props) {
       </div>
       <div className="frame-16">
         <div className="frame-14">
-          <h1 className="requirements-gatheri montserrat-bold-shark-64px">
+          <h1 className="requirements-gatheri montserrat-bold-shark-64px dark:text-white">
             {requirementsGatheri}
           </h1>
-          <div className="text-1 montserrat-normal-shark-28px">{text1}</div>
+          <div className="text-1 montserrat-normal-shark-28px dark:text-white">{text1}</div>
         </div>
         <img
           className="peter-olexa-p-l-agy-unsplash-10"

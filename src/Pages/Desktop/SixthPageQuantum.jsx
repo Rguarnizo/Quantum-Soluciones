@@ -2,9 +2,9 @@ import React from "react";
 import "../../Styles/Desktop/sixthPageQuantum.scss";
 import SixthPageQuantumMobile from "../Mobile/SixthPageQuantumMobile";
 
-const SixthPageQuantum = () => {
+const SixthPageQuantum = (props) => {
   return (
-    <section id="sixth">
+    <section id="sixth" data-aos="fade-down" data-aos-duration="1500" className={`${props.setDark}`}>
       <div className="hidden xl:block">
         <SobreNosotros
           componentsInfoProps={sobreNosotrosData.componentsInfoProps}
@@ -24,7 +24,7 @@ function SobreNosotros(props) {
 
   return (
     <div class="container-center-horizontal">
-      <div className="sobre-nosotros screen">
+      <div className="sobre-nosotros screen bg-white dark:bg-gray-900">
         <ComponentsInfo
           peterOlexaPl7Irex9AgyUnsplash8={
             componentsInfoProps.peterOlexaPl7Irex9AgyUnsplash8
@@ -92,10 +92,10 @@ function Frame14(props) {
 
   return (
     <div className="frame-14">
-      <h1 className="requirements-gatheri montserrat-bold-shark-64px">
+      <h1 className="requirements-gatheri montserrat-bold-shark-64px dark:text-white">
         {requirementsGatheri}
       </h1>
-      <div className="text-1 montserrat-normal-shark-28px">{text1}</div>
+      <div className="text-1 montserrat-normal-shark-28px dark:text-white">{text1}</div>
     </div>
   );
 }

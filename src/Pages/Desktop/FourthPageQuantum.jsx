@@ -2,12 +2,12 @@ import React from "react";
 import "../../Styles/Desktop/fourthPageQuantum.scss";
 import FourthPageQuantumMobile from "../Mobile/FourthPageQuantumMobile";
 
-const FourthPageQuantum = () => {
+const FourthPageQuantum = (props) => {
   return (
-    <section id="fourth">
+    <section id="fourth" data-aos="fade-down" data-aos-duration="1500" className={`${props.setDark}`}>
       <div className="hidden xl:block">
         <div className="container-center-horizontal">
-          <div className="tienda screen">
+          <div className="tienda screen bg-white dark:bg-gray-900">
             <div className="overlap-group1">
               <ComponentsInfo
                 experiencedTeamI95="Visita nuestra tienda"
@@ -74,8 +74,8 @@ function Frame689(props) {
 
   return (
     <div className="frame-689">
-      <h1 className="text-1 montserrat-bold-shark-52px">{text1}</h1>
-      <div className="text-2 montserrat-normal-shark-28px">{text2}</div>
+      <h1 className="text-1 montserrat-bold-shark-52px dark:text-white">{text1}</h1>
+      <div className="text-2 montserrat-normal-shark-28px dark:text-white">{text2}</div>
     </div>
   );
 }
@@ -115,15 +115,15 @@ function ComponentsInfo2(props) {
         className="base-components-age-image-large-1"
       />
       <div className="frame-606">
-        <div className="the-best-design-for montserrat-bold-shark-52px">
+        <div className="the-best-design-for montserrat-bold-shark-52px dark:text-white">
           {theBestDesignFor}
         </div>
-        <div className="convallis-turpis-era montserrat-normal-shark-28px">
+        <div className="convallis-turpis-era montserrat-normal-shark-28px dark:text-white">
           {convallisTurpisEra}
         </div>
         <div className="grid grid-cols-4 gap-3 justify-items-center p-2">
           {" "}
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-2 flex justify-center items-center ">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-2 flex justify-center items-center ">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fcanon_white.png?alt=media&token=d0125797-5944-49d0-8750-b14579f76735"
               alt=""
@@ -131,7 +131,7 @@ function ComponentsInfo2(props) {
               style={{ width: "90%", height: "75%" }}
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 flex justify-center items-center p-2">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 flex justify-center items-center p-2">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fsony-logo-png-transparent-13_c.png?alt=media&token=5e8bab26-5452-4a0f-aefd-cfdd3da3f71e"
               alt=""
@@ -139,21 +139,21 @@ function ComponentsInfo2(props) {
               style={{ width: "80%", height: "50%" }}
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FPikPng.com_panasonic-logo-png_1400111.png?alt=media&token=6bdcb1f4-298f-4aea-8f9f-9b1c581f7cc5"
               alt=""
               className="rounded-none"
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_77293.png?alt=media&token=cc928a8c-579f-417f-8532-185b0a3a50fe"
               alt=""
               className="rounded-none"
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5061982.png?alt=media&token=a7855dad-9c47-4655-ad9b-d16a801bb40c"
               alt=""
@@ -161,7 +161,7 @@ function ComponentsInfo2(props) {
               style={{ width: "100%", height: "80%" }}
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fgopro_logo_PNG12.png?alt=media&token=8e381300-40c0-485b-918a-e6aaac18d6d0"
               alt=""
@@ -169,7 +169,7 @@ function ComponentsInfo2(props) {
               style={{ width: "100%", height: "90%" }}
             />
           </button>
-          <button class="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
+          <button className="focus:outline-none w-24 rounded-md bg-gray-600 ring ring-gray-300 p-3 flex justify-center items-center">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5295857.png?alt=media&token=c8170945-dc21-4a56-8bdc-dd7ae39c1d23"
               alt=""

@@ -8,6 +8,7 @@ import FifthPageQuantum from "./Pages/Desktop/FifthPageQuantum";
 import SixthPageQuantum from "./Pages/Desktop/SixthPageQuantum";
 import SeventhPageQuantum from "./Pages/Desktop/SeventhPageQuantum";
 import Footer from "./Pages/Desktop/Footer";
+import DarkButton from "./Components/DarkButton";
 import "./Styles/app.scss";
 import * as Scroll from "react-scroll";
 import React from "react";
@@ -19,26 +20,21 @@ const App = () => {
     scroll.scrollTo(0);
   }, []);
 
+  const [setDark, setsetDark] = React.useState("");
+
   return (
     <>
-      <NavBar />
-      <FirstPageQuantum />
-      <SecondPageQuantum />
-      <ThirdPageQuantum />
-      <FourthPageQuantum />
-      <FifthPageQuantum />
-      <SixthPageQuantum />
-      <SeventhPageQuantum />
-      <Footer />
-      {/* <FirstPageQuantum />
-      <SecondPageQuantum />
-      <ThirdPageQuantum />
-      <FourthPageQuantum />
-      <FifthPageQuantum />
-      <SixthPageQuantum />
-      <SeventhPageQuantum />
-      <Footer /> */}
+      <NavBar setDark={setDark} />
+      <FirstPageQuantum setDark={setDark} />
+      <SecondPageQuantum setDark={setDark} />
+      <ThirdPageQuantum setDark={setDark} />
+      <FourthPageQuantum setDark={setDark} />
+      <FifthPageQuantum setDark={setDark} />
+      <SixthPageQuantum setDark={setDark} />
+      <SeventhPageQuantum setDark={setDark} />
+      <Footer setDark={setDark} />
       <WhatsAppButton />
+      <DarkButton setDark={setDark} setsetDark={setsetDark} />
     </>
   );
 };

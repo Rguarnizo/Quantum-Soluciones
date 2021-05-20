@@ -1,12 +1,15 @@
 import React from "react";
 import "../../Styles/Desktop/footer.scss";
 import FooterMobile from "../Mobile/FooterMobile";
-const Footer = () => {
+import { Link } from "react-scroll";
+import * as Scroll from "react-scroll";
+
+const Footer = (props) => {
   return (
-    <>
+    <div data-aos="fade-down" data-aos-duration="2000" className={`${props.setDark}`}>
       <div className="hidden xl:block">
-        <div class="container-center-horizontal">
-          <div className="footer screen">
+        <div class="container-center-horizontal ">
+          <div className="footer screen bg-white dark:bg-gray-900">
             <div className="overlap-group">
               <ComponentsFooter {...componentsFooterData} />
               <IconsNumber1 src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097721342748e933a55297c/img/1@2x.png" />
@@ -18,7 +21,7 @@ const Footer = () => {
       <div className="block xl:hidden">
         <FooterMobile />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -49,6 +52,8 @@ function ComponentsFooter(props) {
     frame1Props,
   } = props;
 
+  let scroll = Scroll.animateScroll;
+
   return (
     <div className="components-footer">
       <div className="overlap-group1">
@@ -57,15 +62,15 @@ function ComponentsFooter(props) {
           <div className="frame-2">
             <div className="flex-col-1">
               <div className="group-664">
-                <h1 className="text-1 valign-text-middle sarina-normal-shark-35px">
+                <h1 className="text-1 valign-text-middle sarina-normal-shark-35px dark:text-white">
                   {text1}
                 </h1>
-                <div className="the-best-design-for montserrat-semi-bold-shark-24px">
-                  <span className="span0 montserrat-semi-bold-shark-24px">
+                <div className="the-best-design-for montserrat-semi-bold-shark-24px dark:text-white">
+                  <span className="span0 montserrat-semi-bold-shark-24px dark:text-white">
                     {spanText}
                   </span>
-                  <span className="span1 ">{spanText2}</span>
-                  <span className="span2 ">{spanText3}</span>
+                  <span className="span1 dark:text-white">{spanText2}</span>
+                  <span className="span2 dark:text-white">{spanText3}</span>
                 </div>
               </div>
               <div className="group-681">
@@ -100,32 +105,65 @@ function ComponentsFooter(props) {
               </div>
             </div>
             <div className="group-665">
-              <div className="flex-col">
-                <div className="pages-i1218763840 valign-text-middle montserrat-bold-shark-18px">
+              <div className="flex-col cursor-pointer hover:text-blue-100 dark:text-white">
+                <div className="pages-i1218763840 valign-text-middle montserrat-bold-shark-18px dark:text-white ">
                   {pagesI1218763840}
                 </div>
-                <div className="x-i121876 valign-text-middle montserrat-bold-shark-18px">
+                <div
+                  className="x-i121876 valign-text-middle montserrat-bold-shark-18px hover:text-blue-100 dark:text-white"
+                  onClick={() => {
+                    scroll.scrollTo(0);
+                  }}
+                >
                   {templatesI1218763}
                 </div>
-                <div className="x-i121876384 valign-text-middle montserrat-bold-shark-18px">
-                  {priceI1218763846}
+                <div className="x-i121876384 valign-text-middle montserrat-bold-shark-18px cursor-pointer hover:text-blue-100 dark:text-white">
+                  <Link
+                    className="options hover:text-blue-100"
+                    to="second"
+                    smooth
+                    duration={1200}
+                    delay={150}
+                  >
+                    {priceI1218763846}
+                  </Link>
                 </div>
-                <div className="x-i121876384 valign-text-middle montserrat-bold-shark-18px">
-                  {helpI1218763844}
+                <div className="x-i121876384 valign-text-middle montserrat-bold-shark-18px cursor-pointer hover:text-blue-100 dark:text-white">
+                  <Link
+                    className="options hover:text-blue-100"
+                    to="fourth"
+                    smooth
+                    duration={1200}
+                    delay={150}
+                  >
+                    {helpI1218763844}
+                  </Link>
                 </div>
-                <div className="contact-i12187638 valign-text-middle montserrat-bold-shark-18px">
-                  {contactI12187638}
+                <div className="contact-i12187638 valign-text-middle montserrat-bold-shark-18px cursor-pointer hover:text-blue-100 dark:text-white">
+                  <Link
+                    className="options hover:text-blue-100"
+                    to="sixth"
+                    smooth
+                    duration={1200}
+                    delay={150}
+                  >
+                    {contactI12187638}
+                  </Link>
                 </div>
               </div>
               <div className="flex-col-2">
-                <div className="demos-i1218763839 valign-text-middle montserrat-bold-shark-18px">
+                <div className="demos-i1218763839 valign-text-middle montserrat-bold-shark-18px dark:text-white">
                   {demosI1218763839}
                 </div>
-                <div className="x-i121876 valign-text-middle montserrat-bold-shark-18px">
-                  {darkThemeI121876}
+                <div className="x-i121876 valign-text-middle montserrat-bold-shark-18px dark:text-white">
+                  <a href="https://app.solucionesquantum.com/quantum/login">
+                    {darkThemeI121876}
+                  </a>
                 </div>
                 <div className="light-theme-i121876 valign-text-middle">
-                  {lightThemeI121876}
+                  <a href="https://app.solucionesquantum.com/quantum/tracker">
+                    {lightThemeI121876}
+                  </a>
                 </div>
               </div>
             </div>
@@ -145,10 +183,10 @@ function Frame1(props) {
 
   return (
     <div className="frame-1">
-      <div className="x2019-2021-all-righ montserrat-bold-shark-18px">
+      <div className="x2019-2021-all-righ montserrat-bold-shark-18px dark:text-white">
         {x20192021AllRigh}
       </div>
-      <div className="terms-of-service-i12 valign-text-middle montserrat-bold-shark-18px">
+      <div className="terms-of-service-i12 valign-text-middle montserrat-bold-shark-18px dark:text-white">
         {termsOfServiceI12}
       </div>
     </div>

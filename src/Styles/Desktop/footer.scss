@@ -23,7 +23,7 @@
       .overlap-group1 {
         height: 375px;
         position: relative;
-        width: 2232px;
+        width: 100%;
         .line-1 {
           height: 2px;
           left: 0;
@@ -75,19 +75,19 @@
                   min-height: 96px;
                   mix-blend-mode: normal;
                   opacity: 0.5;
-                  width: 560px;
+                  width: 100%;
                   .span0 {
                     letter-spacing: -0.12px;
                   }
                   .span1 {
-                    color: var(--shark);
+                    // color: var(--shark);
                     font-family: var(--font-family-montserrat);
                     font-size: var(--font-size-xxxxs);
                     letter-spacing: -0.07px;
                     line-height: 24.7px;
                   }
                   .span2 {
-                    color: var(--shark);
+                    // color: var(--shark);
                     font-family: var(--font-family-montserrat);
                     font-size: var(--font-size-xxs);
                     letter-spacing: -0.04px;

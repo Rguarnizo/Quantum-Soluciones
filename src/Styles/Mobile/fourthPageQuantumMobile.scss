@@ -19,10 +19,10 @@
 
     .overlap-group {
       height: 720px;
-      left: 45px;
+      left: 50px;
       position: absolute;
       top: 0;
-      width: 553px;
+      width: 500px;
 
       .frame-695 {
         align-items: flex-start;
@@ -41,7 +41,7 @@
           margin-top: 32px;
           min-height: 72px;
           mix-blend-mode: normal;
-          width: 410px;
+          width: 350px;
           font-size: 17px;
         }
         .text-1 {
@@ -52,7 +52,7 @@
           height: 20px;
           letter-spacing: -0.15px;
           line-height: 20.3px;
-          margin-top: 5px;
+          margin-top: 20px;
           min-height: 20px;
           mix-blend-mode: normal;
           text-decoration: underline;
@@ -84,7 +84,7 @@
           margin-top: 5px;
           min-height: 72px;
           mix-blend-mode: normal;
-          width: 410px;
+          width: 350px;
           font-size: 17px;
         }
         .text-5 {
@@ -98,10 +98,14 @@
       }
       .vector-4 {
         height: 526px;
-        left: 339px;
+        left: 289px;
         position: absolute;
         top: 183px;
         width: 214px;
+      }
+      .grid.grid-brands {
+        position: absolute;
+        top: 733px;
       }
     }
 

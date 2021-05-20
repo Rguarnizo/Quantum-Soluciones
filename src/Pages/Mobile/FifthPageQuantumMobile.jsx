@@ -2,7 +2,7 @@ import React from "react";
 import "../../Styles/Mobile/fifthPageQuantumMobile.scss";
 const FifthPageQuantumMobile = () => {
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="mas-servicios-phone screen">
         <h1 className="text-2 montserrat-bold-shark-35px">
           Nuestros servicios en automatización y sistemas

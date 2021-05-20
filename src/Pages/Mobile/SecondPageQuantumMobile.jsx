@@ -27,7 +27,7 @@ function NuestosServiciosPhone(props) {
   } = props;
 
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="nuestos-servicios-phone screen">
         <div className="overlap-group">
           <img className="vector-3" src={vector3} alt="" />

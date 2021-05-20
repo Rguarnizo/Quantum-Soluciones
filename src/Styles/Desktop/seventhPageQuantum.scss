@@ -1,8 +1,8 @@
 .ubicacion {
   align-items: flex-start;
-  background-color: var(--white);
+  // background-color: var(--white);
   display: flex;
-  height: 100vh;
+  height: 150vh;
   mix-blend-mode: normal;
   overflow: hidden;
   width: 100%;
@@ -138,6 +138,18 @@
           }
         }
       }
+    }
+  }
+  .map-container {
+    position: absolute;
+    left: 270px;
+    top: 500px;
+    height: 70vh;
+    width: 72.5%;
+    border-radius: 50px;
+    
+    .card-location > p {
+      font-size: 12px;
     }
   }
 }

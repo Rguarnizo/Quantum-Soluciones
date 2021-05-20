@@ -22,7 +22,7 @@ function SobreNosotrosPhone(props) {
   } = props;
 
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="sobre-nosotros-phone screen">
         <div className="flex-row">
           <img

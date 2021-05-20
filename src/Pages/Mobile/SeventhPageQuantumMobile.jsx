@@ -1,8 +1,19 @@
 import React from "react";
 import "../../Styles/Mobile/seventhPageQuantumMobile.scss";
+import Map from "../../Components/Map";
 const SeventhPageQuantumMobile = () => {
+  let defaultProps = {
+    center: {
+      lat: 4.66430205309855,
+      lng: -74.05867751000919,
+    },
+    zoom: 15,
+  };
+
+  const [location, setlocation] = React.useState(defaultProps);
+
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="ubicacion-phone screen">
         <div className="overlap-group">
           <img
@@ -17,16 +28,43 @@ const SeventhPageQuantumMobile = () => {
             <span className="span montserrat-normal-shark-20px">
               Estamos ubicados en el Centro de Alta Tecnología: <br />
             </span>
-            <span className="span montserrat-semi-bold-shark-20px">
+            <span
+              className="span montserrat-semi-bold-shark-20px cursor-pointer"
+              onClick={() => {
+                setlocation((state) => {
+                  return {
+                    center: {
+                      lat: 4.66430205309855,
+                      lng: -74.05867751000919,
+                    },
+                    zoom: 15,
+                  };
+                });
+              }}
+            >
               &nbsp;&nbsp;&nbsp;&nbsp; Carrera 15 # 77-05. Segundo Piso, Local
               2-64
               <br />
             </span>
-            <span className="span montserrat-normal-shark-20px">
+            <span className="span montserrat-normal-shark-20px ">
               También nos encuentras en el Barrio Carvajal Osorio:
               <br />
             </span>
-            <span className="span montserrat-semi-bold-shark-20px">
+            <span
+              className="span montserrat-semi-bold-shark-20px cursor-pointer"
+              onClick={() => {
+                setlocation((state) => {
+                  console.log("Hola");
+                  return {
+                    center: {
+                      lat: 4.607711126602565,
+                      lng: -74.14074388887656,
+                    },
+                    zoom: 15,
+                  };
+                });
+              }}
+            >
               &nbsp;&nbsp;&nbsp;&nbsp; Calle 39 Sur #68L-75
               <br />
             </span>
@@ -41,6 +79,11 @@ const SeventhPageQuantumMobile = () => {
             className="vector-3"
             src="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/609f3bd3be9def8884f64ad5/img/vector-3@2x.png"
             alt=""
+          />
+          <Map
+            center={location.center}
+            zoom={location.zoom}
+            className="mobile"
           />
         </div>
         <div className="overlap-group1">

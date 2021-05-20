@@ -3,7 +3,7 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 1202px;
+  height: 160vh;
   mix-blend-mode: normal;
   overflow: hidden;
   width: 100%;
@@ -112,6 +112,19 @@
       position: absolute;
       top: 430px;
       width: 181px;
+    }
+
+    .map-container.mobile {
+      position: absolute;
+      left:   0px;
+      top: 700px;
+      height: 70vh;
+      width: 100%;
+      
+      
+      .card-location > p {
+        font-size: 12px;
+      }
     }
   }
   .overlap-group1 {

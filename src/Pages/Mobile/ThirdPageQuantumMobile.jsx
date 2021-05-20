@@ -3,7 +3,7 @@ import "../../Styles/Mobile/thirdPageQuantumMobile.scss";
 
 const ThirdPageQuantumMobile = () => {
   return (
-    <div class="container-center-horizontal">
+    <div className="container-center-horizontal">
       <div className="reparaciones-phone screen">
         <div className="overlap-group5">
           <h1 className="text-1">

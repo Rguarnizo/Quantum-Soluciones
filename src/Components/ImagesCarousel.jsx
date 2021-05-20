@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/imagesCarousel.scss";
 
 const ImagesCarousel = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="container">
       {/* {props.mobile ? (
