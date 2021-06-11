@@ -40,10 +40,10 @@ function App() {
       <section className="Promociones h-screen bg-blue-500">
         <div className="box bg-red-500 h-32 w-32"></div>
       </section>
-      <section className="Productos flex flex-row h-screen bg-white">
+      <section className="Productos flex flex-col w-screen h-screen bg-white">
         <Scene/>
-        <div className="Marcas w-4/6 bg-red-500">
-          <Marcas />
+        <div className="Marcas w-screen bg-red-500">
+          <Marcas/>
         </div>
       </section>
       <section className="Ubicacion h-screen bg-yellow-500  ">

@@ -21,7 +21,7 @@ function Model() {
       trigger: ".Productos",
       scrub: 1,
       start: "top top",
-      end: "100%",
+      end: "400%",
     },
   });
 
@@ -32,7 +32,7 @@ function Model() {
     
     tl.to(
       animation.current,
-      { time: 23, onUpdate: function() {mixer.update(0.01)}},
+      { time: 23, onUpdate: function() {mixer.update(0.1)}},
       0
     );
   }, []);
@@ -63,8 +63,7 @@ function Model() {
 
 export default function Scene() {
   return (
-    <Canvas className="EscenaProductos w-2/6" color={0x000000}>
-      <OrbitControls />
+    <Canvas className="EscenaProductos h-4/6" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, -5, 0]} intensity={10} castShadow />
