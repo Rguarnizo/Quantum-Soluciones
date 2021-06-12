@@ -53,16 +53,15 @@ const ComponentsHero = (props) => {
   }, []);
 
   return (
-    <div className="components-hero">
-      <div className="overlap-group">
-        <div className="frame-686">
-          <div className="text-1 valign-text-middle montserrat-medium-geyser-26px">
+    <div className="flex flex-col lg:flex-row">
+        <div className="frame-686 container">
+          <div className="text-1 montserrat-medium-geyser-26px">
             {text5}
           </div>
-          <h1 className="text-2 valign-text-middle montserrat-bold-shark-80px dark:text-white">
+          <h1 className="text-2 montserrat-bold-shark-80px dark:text-white">
             {text6}
           </h1>
-          <div className="text-3 valign-text-middle ">
+          <div className="text-3 ">
             <p className="dark:text-white">
               {text7}
               <span className="fpage-writing ">
@@ -70,11 +69,10 @@ const ComponentsHero = (props) => {
               </span>
             </p>
           </div>
-        </div>
-        <div className="peter-olexa-p-l-agy-unsplash-10">
-          <ImagesCarousel />
-        </div>
-      </div>
+        </div>       
+        
+        <ImagesCarousel />
+        
     </div>
   );
 };
@@ -82,7 +80,7 @@ const ComponentsHero = (props) => {
 const FirstPageQuantum = (props) => {
   return (
     <div className={`${props.setDark}`}>
-      <div className="hidden xl:block bg-white dark:bg-gray-900">
+      <div className="xl:block bg-white dark:bg-gray-900">
         <ComponentsHero
           text5="SOLUCIONES QUANTUM"
           text6="Servicio técnico especializado"
@@ -90,9 +88,9 @@ const FirstPageQuantum = (props) => {
           peterOlexaPl7Irex9AgyUnsplash10="peter-olexa-pl7irex9agy-unsplash-10.png"
         />
       </div>
-      <div className="block xl:hidden w-100">
+      {/* <div className="block xl:hidden w-100">
         <FirstPageQuantumMobile />
-      </div>
+      </div> */}
     </div>
   );
 };

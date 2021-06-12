@@ -10,16 +10,16 @@ const SecondPageQuantum = (props) => {
       data-aos-duration="1500"
       className={`${props.setDark}`}
     >
-      <div className="hidden xl:block ">
+      <div className="xl:block ">
         <NuestrosServicios
           vector2="https://anima-uploads.s3.amazonaws.com/projects/608f0074bb4573608fa2b001/releases/6097044c6842df4f40142662/img/vector-2@1x.png"
           componentsCardProps={nuestrosServiciosData.componentsCardProps}
           saly22Props={nuestrosServiciosData.saly22Props}
         />
       </div>
-      <div className="block xl:hidden">
+      {/* <div className="block xl:hidden">
         <SecondPageQuantumMobile />
-      </div>
+      </div> */}
     </section>
   );
 };
@@ -29,16 +29,12 @@ export default SecondPageQuantum;
 function NuestrosServicios(props) {
   const { vector2, componentsCardProps, saly22Props } = props;
 
-  return (
-    <div className="container-center-horizontal ">
+  return (    
       <div className="nuestros-servicios screen bg-white dark:bg-gray-900">
-        <div className="overlap-group  ">
-          <ComponentsCard {...componentsCardProps} />
-          <img className="vector-2" src={vector2} alt="" />
-          <Saly22 src={saly22Props.src} />
-        </div>
-      </div>
-    </div>
+        
+          <ComponentsCard {...componentsCardProps} />          
+        
+      </div>  
   );
 }
 
@@ -60,15 +56,13 @@ function ComponentsCard(props) {
   } = props;
 
   return (
-    <div className="components-card ">
-      <div className="dark:text-white text ">
-        <h1 className="the-best-design-for ">{theBestDesignFor}</h1>
-      </div>
-      <div className="frame-6">
-        <div className="card ">
-          <div className="group-564 ">
+    <div className="flex flex-col">      
+        <h1 className="montserrat-medium-shark-44px mx-20">{theBestDesignFor}</h1> 
+      <div className="flex flex-row">
+        <div className="card">
+          <div className="group-564">
             <div
-              className="overlap-group1 "
+              className="overlap-group1"
               style={{ backgroundImage: `url(${overlapGroup1})` }}
             >
               <div className="frame-558-1">

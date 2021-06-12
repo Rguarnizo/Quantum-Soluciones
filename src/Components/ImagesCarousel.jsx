@@ -4,7 +4,7 @@ import "../Styles/imagesCarousel.scss";
 const ImagesCarousel = (props) => {
   // console.log(props);
   return (
-    <div className="container">
+    <div className="peter-olexa-p-l-agy-unsplash-10">
       {/* {props.mobile ? (
         <>
           <input

@@ -27,14 +27,14 @@ const App = () => {
       <NavBar setDark={setDark} />
       <FirstPageQuantum setDark={setDark} />
       <SecondPageQuantum setDark={setDark} />
-      <ThirdPageQuantum setDark={setDark} />
+       <ThirdPageQuantum setDark={setDark} />
       <FourthPageQuantum setDark={setDark} />
       <FifthPageQuantum setDark={setDark} />
       <SixthPageQuantum setDark={setDark} />
       <SeventhPageQuantum setDark={setDark} />
       <Footer setDark={setDark} />
       <WhatsAppButton />
-      <DarkButton setDark={setDark} setsetDark={setsetDark} />
+      <DarkButton setDark={setDark} setsetDark={setsetDark} /> 
     </>
   );
 };

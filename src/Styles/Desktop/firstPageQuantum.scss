@@ -15,12 +15,7 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  left: 266px;
-  min-height: 481px;
-  position: absolute;
-  top: 290px;
-  //width: 100%;
-
+  
   .text-1 {
     height: 31px;
     letter-spacing: 2.86px;
@@ -29,6 +24,7 @@
     mix-blend-mode: normal;
     white-space: nowrap;
   }
+
   .text-2 {
     height: 176px;
     letter-spacing: -3.6px;
@@ -54,11 +50,9 @@
 
 .peter-olexa-p-l-agy-unsplash-10 {
   height: 551px;
-  left: 1017px;
   mix-blend-mode: normal;
   object-fit: cover;
   position: relative;
-  top: 212px;
   width: 50%;
 }
 
