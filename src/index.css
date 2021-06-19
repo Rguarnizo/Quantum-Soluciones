@@ -16,25 +16,8 @@ code {
     monospace;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@layer base{
-  @font-face {
-    font-family: nikon;
-    src: url('Fonts/Nikon/OpenSans-ExtraBoldItalic.ttf') format('ttf');
-  }
-
-  @font-face {
-    font-family: sony;
-    src: url('Fonts/Sony/Clarendon-Regular.otf') format('otf');
-  }
-
-  @font-face {
-    font-family: canon;
-    src: url('Fonts/CANON.ttf') format('tff');
-  }
-
-  @font-face {
-    font-family: go-pro;
-    src: url('Fonts/Go-Pro/neuropol.ttf') format('tff');
-  }
+.font-roboto{
+  font-family: 'Roboto';
 }
