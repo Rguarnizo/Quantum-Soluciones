@@ -1,8 +1,9 @@
-import "./App.css";
 import "./carrousel.scss";
 import React, { Suspense, useEffect, useRef, useState } from "react";
+import "./App.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import LateralNav from "./components/LateralNav";
 
 import Marcas from "./components/Marcas";
 import Scene from "./components/Scene";
@@ -70,7 +71,7 @@ function App() {
           trigger: section,
           pin: section,
           scrub: 0.5,
-          start: "top +=98",
+          start: "top top",
           end: "+=100%",
           markers: true,
         },
@@ -87,51 +88,14 @@ function App() {
         alpha: 1
       }
     );
-  })
+  });
+
+
 
   return (
     <>
-      <nav
-        className="flex flex-row  w-full h-12 justify-between py-6 px-4 shadow items-center bg-white"
-        style={{ zIndex: "99999", display: "flex", position: "fixed" }}
-      >
-        <img
-          className="object-contain h-12 w-52"
-          src={
-            "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FQuantum_Logo.png?alt=media&token=6c9587a8-04f0-4b2d-813b-2dd8d99d4a5a"
-          }
-        />
-        <div className="flex flex-row justify-between items-center space-x-8 ">
-          <a
-            className=" font-roboto font-bold text-gray-500 hover:text-blue-500  text-2xl"
-            href=""
-          >
-            Home
-          </a>
-          <a
-            className=" font-roboto font-bold text-gray-500 hover:text-blue-500  text-2xl"
-            href=""
-          >
-            Servicios
-          </a>
-          <a
-            className=" font-roboto font-bold text-gray-500 hover:text-blue-500  text-2xl"
-            href=""
-          >
-            Tienda
-          </a>
-          <a
-            className=" font-roboto font-bold text-gray-500 hover:text-blue-500  text-2xl"
-            href=""
-          >
-            Promos
-          </a>
-          <button className="font-roboto text-lg text-blue-500  font-bold hover:text-white my-12 py-1 px-4 rounded-md border-2 border-blue-500 hover:border-blue-200 hover:bg-blue-500 focus:border-transparent">
-            Rastrear
-          </button>
-        </div>
-      </nav>
-      <div className="Home h-screen flex flex-col items-center sm:flex-row">
+      <LateralNav/>
+      <div id="Home" className=" h-screen flex flex-col items-center sm:flex-row">
         <div className="w-4/6 h-full py-32 px-16 flex flex-col ">
           <h1 className="anim-text text-3xl font-roboto font-semibold text-gray-500">Quantum Soluciones</h1> 
           <h1 className="anim-text text-8xl font-roboto font-bold text-black my-5">Servicio técnico especializado</h1> 
@@ -141,19 +105,16 @@ function App() {
           <ImagesCarousel/>
         </div>
       </div>
-      <section className="Promociones h-screen ">
+      <section id="Promociones" className=" h-screen ">
         <div className="box h-32 w-32"></div>
       </section>
-      {/* <section className="Productos flex flex-col w-screen h-screen ">
-        <Scene/>
-        <div className="Marcas w-screen">
-          <Marcas/>
-        </div>
-      </section> */}
-      <section className="Ubicacion h-screen w-500  ">
+      <section id="Productos" className="flex flex-col w-screen h-screen ">
+        <Scene/>        
+      </section>
+      <section id="Ubicacion" className=" h-screen w-500  ">
         <div className="box  h-32 w-32"></div>
       </section>
-      <section className="Footer h-1/6 ">
+      <section id="Footer" className="h-1/6 ">
         <div className="box  h-32 w-32"></div>
       </section>
     </>

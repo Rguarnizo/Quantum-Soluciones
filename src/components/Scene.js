@@ -1,12 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import EscenaProductos from "./EscenaProductos";
-import Drone from "./Drone";
-import DroneR from "./DroneR";
-import DJI from "./DJI";
-import DjiDrone from "./DJIDrone";
+import Marcas from "./Marcas";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import gsap from "gsap";
@@ -18,10 +13,10 @@ function Model() {
   const animation = useRef();
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".Productos",
+      trigger: "#Productos",
       scrub: 1,
       start: "top +=100",
-      end: "400%",
+      end: "+=100%",
     },
   });
 
@@ -46,6 +41,18 @@ function Model() {
         },
         0
       );
+      
+      let brands = gsap.utils.toArray(".brand");
+
+      tl.fromTo(
+        brands,
+        { autoAlpha: 0, scale: 0 },
+        {
+          autoAlpha: 1,
+          scale: 1,          
+        },
+        0        
+      ).fromTo(".brands",{x:3000},{x:0},0);
     });
   }, []);
 
@@ -62,7 +69,7 @@ function Model() {
 }
 
 export default function Scene() {
-  return (
+  return (<>
     <Canvas className="EscenaProductos h-4/6" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
@@ -80,5 +87,7 @@ export default function Scene() {
           <Tokyo/>
         </Suspense> */}
     </Canvas>
+    <Marcas/>
+    </>
   );
 }
