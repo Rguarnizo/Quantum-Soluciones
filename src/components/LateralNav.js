@@ -4,7 +4,7 @@ import { FaHome, FaInfoCircle, FaMapMarkedAlt, FaScrewdriver, FaStore, FaTools }
 
 export default function LateralNav(props){
   return <nav
-    className="flex flex-col h-screen py-6 px-4 shadow-xl items-center  justify-around"
+    className="flex flex-col h-screen py-6 px-4 shadow-xl items-center  justify-around "
     style={{ zIndex: "99999", display: "flex", position: "fixed" }}
   >
     <a
@@ -38,9 +38,6 @@ export default function LateralNav(props){
       href="#Footer"
     >
       <FaInfoCircle />
-    </a>
-    {/* <button className="font-roboto text-lg text-blue-500  font-bold hover:text-white  py-1 px-4 rounded-md border-2 border-blue-500 hover:border-blue-200 hover:bg-blue-500 focus:border-transparent">
-        Rastrear
-      </button> */}
+    </a>    
   </nav>;
 };

@@ -15,7 +15,7 @@ let Marcas = () => {
 
   return (
     <>
-      <div className="brands flex flex-row w-screen h-38">
+      <div className="brands flex flex-row w-screen h-38 px-24">
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}

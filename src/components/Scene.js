@@ -51,8 +51,9 @@ function Model() {
           autoAlpha: 1,
           scale: 1,          
         },
+        
         0        
-      ).fromTo(".brands",{x:3000},{x:0},0);
+      ).fromTo(".brands",{x:'${screen.width}+100'},{x:0},0);
     });
   }, []);
 
