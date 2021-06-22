@@ -16,7 +16,7 @@ function Model() {
       trigger: "#Productos",
       scrub: 1,
       start: "top +=100",
-      end: "+=100%",
+      end: "+=1000%",
     },
   });
 
@@ -53,7 +53,7 @@ function Model() {
         },
         
         0        
-      ).fromTo(".brands",{x:'${screen.width}+100'},{x:0},0);
+      ).fromTo(".brands",{x:'${screen.width}'},{x:0},0);
     });
   }, []);
 
