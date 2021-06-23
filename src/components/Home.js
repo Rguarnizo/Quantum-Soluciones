@@ -46,13 +46,13 @@ export default function Home(props) {
   return (
     <div id="Home" className=" h-screen flex flex-col items-center sm:flex-row">
       <div id="header" className="w-4/6 h-full py-40 px-24 flex flex-col ">
-        <h1 className="anim-text text-3xl font-roboto font-semibold text-gray-500">
+        <h1 className="anim-text text-xl lg:text-3xl font-roboto font-semibold text-gray-500">
           Quantum Soluciones
         </h1>
-        <h1 className="anim-text text-8xl font-roboto font-bold text-black my-5">
+        <h1 className="anim-text text-3xl lg:text-8xl font-roboto font-bold text-black my-5">
           Servicio técnico especializado
         </h1>
-        <h4 className="anim-text text-2xl font-roboto font text-black my-5">
+        <h4 className="anim-text text-lg lg:text-2xl font-roboto font text-black my-5">
           en reparación de{" "}
           <span className="font-bold">
             {showLetters}
@@ -63,7 +63,7 @@ export default function Home(props) {
         </h4>
       </div>
       <div className="w-2/6 h-full py-24 items-center">
-        <Carousel/>
+        <Carousel className="hidden lg:block"/>
         <button className="font-roboto absolute top-10 right-10 text-lg text-blue-500 group font-bold hover:text-white  py-1 px-4 rounded-md border-2 border-blue-500 hover:border-blue-200 hover:bg-blue-500 focus:border-transparent">
           Rastrear
           <span class="absolute top-0 right-2">

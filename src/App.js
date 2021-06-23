@@ -1,21 +1,20 @@
 import "./carrousel.scss";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import LateralNav from "./components/LateralNav";
 
-import Marcas from "./components/Marcas";
+
 import Scene from "./components/Scene";
 import Map from "./components/Map";
-import Carousel from "./components/Carousel";
 import Home from "./components/Home";
 
 let Card = (props) => {
   return (
     <div
       id="card"
-      className="w-2/6 h-3/6 shadow-2xl m-10 flex flex-col justify-around rounded-lg flex-grow ${props.className}"
+      className={`w-5/6 lg:w-2/6 h-3/6 shadow-2xl flex flex-col justify-around rounded-lg mx-2 my-10 lg:my-2 ${props.className}`}
     >
       <div className="w-full h-5/6 flex flex-col justify-around">
         <h1 className="px-6 font-roboto font-bold text-2xl">{props.title}</h1>
@@ -23,7 +22,7 @@ let Card = (props) => {
           {props.content}
         </h4>
       </div>
-      <a href="${props.url}" className="border-gray-300 border-t-2 w-full h-1/6 justify-center flex flex-col items-center group hover:bg-gray-400">
+      <a href={`${props.url}`} className="border-gray-300 border-t-2 w-full h-1/6 justify-center flex flex-col items-center group hover:bg-gray-400">
         <h3 className="text-lg font-roboto font-semibold text-gray-500 group-hover:text-white">
           {props.link}
         </h3>
@@ -127,7 +126,7 @@ function App() {
       <Home />
       <section
         id="Promociones"
-        className=" h-screen w-screen flex flex-row px-24 items-center justify-center flex-shrink"
+        className="h-screen w-screen flex flex-col lg:flex-row px-24 py-10 lg:py-0 items-center justify-between"
       >
         <h2 className="absolute top-0 font-bold font-roboto text-5xl">
           Nuestros servicios
@@ -150,7 +149,7 @@ function App() {
           url="google.com"
         />
         <Card
-          className={"flex-shrink-0"}
+          // className={"flex-shrink-0"}
           title={"Automatización y sistemas"}
           content={
             "Proveemos servicios de automatización, desarrollo de sistemas de facturación, desarrollo de páginas web y otros servicios"
@@ -159,7 +158,7 @@ function App() {
           url="google.com"
         />
         <div className="absolute top-0 right-0" id="drone">
-          <img className="object-scale-down" src="Images/Drone.png" />
+          <img className="hidden lg:block object-scale-down" src="Images/Drone.png" />
         </div>
       </section>
       <section id="Productos" className="flex flex-col w-screen h-screen ">
