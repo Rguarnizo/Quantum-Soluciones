@@ -14,9 +14,9 @@ function Model() {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#Productos",
-      scrub: 1,
-      start: "top +=100",
-      end: "+=1000%",
+      scrub: 6,
+      start: "top center",
+      end: "+=400%",
     },
   });
 
@@ -37,23 +37,19 @@ function Model() {
       tl.to(
         gltf.scene.rotation,
         {
-          y: Math.PI / 2,
+          y: Math.PI / 4,
+          scrollTrigger: {
+            end: "+=100%"
+          }
         },
         0
       );
       
-      let brands = gsap.utils.toArray(".brand");
-
-      tl.fromTo(
-        brands,
-        { autoAlpha: 0, scale: 0 },
-        {
-          autoAlpha: 1,
-          scale: 1,          
-        },
-        
-        0        
-      ).fromTo(".brands",{x:'${screen.width}'},{x:0},0);
+        tl.fromTo(".brands",{
+          xPercent: 100           
+        },{
+          xPercent: 0
+        },0)
     });
   }, []);
 
@@ -71,6 +67,8 @@ function Model() {
 
 export default function Scene() {
   return (<>
+  <Marcas className="absolute bottom-0"/>
+  <div class="tenor-gif-embed absolute bottom-10 right-0 " data-postid="13026640" data-share-method="host" data-width="100%" data-aspect-ratio="0.3940677966101695"><a href="https://tenor.com/view/mouse-scroll-arrow-down-gif-13026640">Mouse Scroll GIF</a> from <a href="https://tenor.com/search/mouse-gifs">Mouse GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <Canvas className="EscenaProductos h-screen w-3/5" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
@@ -88,7 +86,7 @@ export default function Scene() {
           <Tokyo/>
         </Suspense> */}
     </Canvas>
-    {/* <Marcas/> */}
+    
     </>
   );
 }

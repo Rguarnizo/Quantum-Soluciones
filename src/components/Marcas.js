@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-let Marcas = () => {
+let Marcas = (props) => {
 
   let onMouseOver = (el) => {
 
@@ -15,7 +15,7 @@ let Marcas = () => {
 
   return (
     <>
-      <div className="brands flex flex-row w-screen h-38 px-24">
+      <div className={`brands flex flex-row w-screen h-38 px-24 ${props.className}`}>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
@@ -48,6 +48,15 @@ let Marcas = () => {
           href=""
         >
           <img className="object-scale-down" src="Logos/GoPro.png"></img>
+        </a>
+        <a
+          onMouseOver={onMouseOver}
+          onMouseOut={onMouseOut}
+          id="GoPro"
+          className="brand m-6 p-0 w-48 flex-grow"
+          href=""
+        >
+          <img className="object-scale-down" src="Logos/Dji.png"></img>
         </a>
       </div>
     </>

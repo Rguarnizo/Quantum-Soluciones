@@ -16,19 +16,42 @@ function App() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let sections = gsap.utils.toArray("section");
-    sections.forEach((section) => {
-      gsap.to(section, {
+    gsap.fromTo(
+      ".anim-text",
+      {
+        alpha: 0,
+      },
+      {
+        alpha: 1,
+        duration: 2,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      "#carousel",
+      {
+        alpha: 0,
+      },
+      {
+        alpha: 1,
+        duration: 2,
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+      gsap.to("#Productos", {
         scrollTrigger: {
-          trigger: section,
-          pin: section,
-          scrub: 0.5,
+          trigger: "#Productos",
+          pin: "#Productos",
+          scrub: 2,
           start: "top top",
-          end: "+=100%",
+          end: "+=250%",
           markers: true,
         },
       });
-    });
   }, []);
 
   useEffect(() => {
@@ -67,29 +90,22 @@ function App() {
 
   useEffect(() => {
     gsap.fromTo(
-      ".anim-text",
-      {
-        alpha: 0,
-      },
+      "#scene-card",
+      { alpha: 0 },
       {
         alpha: 1,
-        duration: 2,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#Productos",
+          start: "center bottom",
+          markers: true,
+          
+        },
       }
     );
   }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      "#carousel",
-      {
-        alpha: 0,
-      },
-      {
-        alpha: 1,
-        duration: 2,
-      }
-    );
-  }, []);
+
 
   let defaultProps = {
     center: {
@@ -106,22 +122,19 @@ function App() {
       <Nav />
       <Home />
       <Services/>
-      <section id="Productos" className="flex flex-row w-screen h-screen ">
-      <div className=" h-screen w-1/5 flex flex-col justify-between">
-          <Card title="Reparación de Drones" content="Arreglamos los drones más especializados como el DJI Phantom,Nano,etc..." link="Rastrea tu orden"/>
-          <Card title="Reparación de Camaras" content="Arreglamos camaras profesionales y semiprofesionales, reflex, lentes y flashes" link="Rastrea tu orden"/>
+      <div id="Productos" className="relative flex flex-col w-screen h-screen ">
+      <Scene /> 
+      <div className=" absolute top-0 left-0 h-screen w-screen flex flex-row mt-10  justify-around">
+          <Card id="scene-card" title="Reparación de Drones" content="Arreglamos los drones más especializados como el DJI Phantom,Nano,etc..." link="Rastrea tu orden"/>
+          
+          <Card id="scene-card" title="Reparación de Camaras" content="Arreglamos camaras profesionales y semiprofesionales, reflex, lentes y flashes" link="Rastrea tu orden"/>
       </div>
-        <Scene /> 
-        <div className=" h-screen w-1/5 flex flex-col justify-between">
-          <Card title="Reparación de Drones" content="Arreglamos los drones más especializados como el DJI Phantom,Nano,etc..." link="Rastrea tu orden"/>
-          <Card title="Reparación de Camaras" content="Arreglamos camaras profesionales y semiprofesionales, reflex, lentes y flashes" link="Rastrea tu orden"/>
-        </div>
-      </section>
+      </div>
       <section
         id="Ubicacion"
-        className="flex h-screen w-screen items-center justify-center  "
+        className="relative flex h-screen w-screen items-center justify-center  "
       >
-      <h3 className="absolute top-0 font-bold text-4xl">¿Dónde estamos? </h3>
+      <h3 className="absolute top-0 font-bold text-4xl">¿Dónde estamos ubicados? </h3>
         <Map
           center={location.center}
           zoom={location.zoom}

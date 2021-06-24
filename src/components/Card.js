@@ -4,8 +4,8 @@ import React from 'react'
 let Card = (props) => {
     return (
       <div
-        id="card"
-        className={`w-5/6 lg:w-2/6 h-1/4 lg:h-3/6 shadow-2xl flex flex-col justify-around rounded-lg lg:mx-2 my-2 ${props.className}`}
+        id={`${props.id}`}
+        className={`w-5/6 lg:w-2/6 h-1/4 lg:h-3/6 shadow-2xl flex flex-col justify-around rounded-lg mx-4 lg:mx-2 my-2 ${props.className}`}
       >
         <div className="w-full h-5/6 flex flex-col justify-around">
           <h1 className="px-6 font-roboto font-bold text-xl lg:text-2xl">{props.title}</h1>

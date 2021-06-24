@@ -14,6 +14,7 @@ export default function Services(){
 
     <Card
       title={"Reparación de equipos"}
+      id="card"
       content={
         "Disponemos del mejor equipo para llevar a cabo la reparación de equipos como cámaras, lentes, drones, flashes, radios y otros dispositivos eléctronicos"
       }
@@ -22,6 +23,7 @@ export default function Services(){
     />
     <Card
       title={"Venta de equipos y accesorios"}
+      id="card"
       content={
         "Ofrecemos un amplio catálogo de equipos y accesorios a los mejores precios del mercado"
       }
@@ -31,6 +33,7 @@ export default function Services(){
     <Card
       // className={"flex-shrink-0"}
       title={"Automatización y sistemas"}
+      id="card"
       content={
         "Proveemos servicios de automatización, desarrollo de sistemas de facturación, desarrollo de páginas web y otros servicios"
       }
