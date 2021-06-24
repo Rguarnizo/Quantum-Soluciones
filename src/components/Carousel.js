@@ -4,7 +4,7 @@ import React from 'react';
 const Carousel = (props) => {
     // console.log(props);
     return (
-      <div id="carousel" className="container">
+      <div id="carousel" className="w-full h-full px-5">
         {/* {props.mobile ? (
           <>
             <input

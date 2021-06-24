@@ -44,33 +44,36 @@ export default function Home(props) {
   }, []);
 
   return (
-    <div id="Home" className=" h-screen flex flex-col items-center sm:flex-row">
-      <div id="header" className="w-4/6 h-full py-40 px-24 flex flex-col ">
-        <h1 className="anim-text text-xl lg:text-3xl font-roboto font-semibold text-gray-500">
+    <div id="Home" className="h-screen w-screen flex flex-col items-center justify-items-center  lg:flex-row">
+      <div id="header" className="flex flex-col items-center my-auto">
+
+        <h1 className="anim-text text-xl sm:text-3xl font-roboto font-semibold text-gray-500">
           Quantum Soluciones
         </h1>
-        <h1 className="anim-text text-3xl lg:text-8xl font-roboto font-bold text-black my-5">
+        <h1 className="anim-text text-4xl sm:text-7xl text-center font-roboto font-bold text-black mt-5">
           Servicio técnico especializado
         </h1>
-        <h4 className="anim-text text-lg lg:text-2xl font-roboto font text-black my-5">
+        <h4 className="anim-text text-lg sm:text-2xl font-roboto font text-black my-2">
           en reparación de{" "}
           <span className="font-bold">
             {showLetters}
             <span className="border-r-4 animate-pulse border-gray-900 ">
               &#160;
             </span>
-          </span>
+          </span>        
         </h4>
-      </div>
-      <div className="w-2/6 h-full py-24 items-center">
-        <Carousel className="hidden lg:block"/>
-        <button className="font-roboto absolute top-10 right-10 text-lg text-blue-500 group font-bold hover:text-white  py-1 px-4 rounded-md border-2 border-blue-500 hover:border-blue-200 hover:bg-blue-500 focus:border-transparent">
+        
+        <button className="relative font-roboto text-lg text-blue-500 group font-bold hover:text-white  py-1 px-4 mt-4 rounded-md border-2 border-blue-500 hover:border-blue-200 hover:bg-blue-500 focus:border-transparent">
           Rastrear
-          <span class="absolute top-0 right-2">
+          <span class="absolute -top-1 right-2">
             <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-blue-400  opacity-75"></span>
             <span class="absolute inline-flex rounded-full h-3 w-3 bg-blue-500 group-hover:bg-gray-100"></span>
           </span>
         </button>
+        
+      </div>
+      <div className="w-screen h-3/6 lg:h-5/6 lg:w-3/6 items-center">
+        <Carousel className=""/>        
       </div>
     </div>
   );

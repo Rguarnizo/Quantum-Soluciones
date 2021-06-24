@@ -71,7 +71,7 @@ function Model() {
 
 export default function Scene() {
   return (<>
-    <Canvas className="EscenaProductos h-4/6" color={0x000000} camera={{position:[0,0,3]}}>
+    <Canvas className="EscenaProductos h-screen w-3/5" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, -5, 0]} intensity={10} castShadow />
@@ -88,7 +88,7 @@ export default function Scene() {
           <Tokyo/>
         </Suspense> */}
     </Canvas>
-    <Marcas/>
+    {/* <Marcas/> */}
     </>
   );
 }

@@ -2,9 +2,10 @@ import React from "react";
 import { FaHome, FaInfoCircle, FaMapMarkedAlt, FaScrewdriver, FaStore, FaTools } from "react-icons/fa";
 
 
-export default function LateralNav(props){
-  return <nav
-    className="flex flex-col h-screen py-6 px-4 shadow-xl items-center  justify-around "
+export default function Nav(props){
+  return <div className="hidden lg:block">
+  <nav
+    className="flex flex-col h-screen py-6 px-4 shadow-xl items-center  justify-around bg-white "
     style={{ zIndex: "99999", display: "flex", position: "fixed" }}
   >
     <a
@@ -39,5 +40,6 @@ export default function LateralNav(props){
     >
       <FaInfoCircle />
     </a>    
-  </nav>;
+  </nav>
+  </div>;
 };
