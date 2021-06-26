@@ -123,11 +123,11 @@ function App() {
       <Home />
       <Services/>
       <div id="Productos" className="relative flex flex-col w-screen h-screen ">
+      
       <Scene /> 
-      <div className=" absolute top-0 left-0 h-screen w-screen flex flex-row mt-10  justify-around">
-          <Card id="scene-card" title="Reparación de Drones" content="Arreglamos los drones más especializados como el DJI Phantom,Nano,etc..." link="Rastrea tu orden"/>
-          
-          <Card id="scene-card" title="Reparación de Camaras" content="Arreglamos camaras profesionales y semiprofesionales, reflex, lentes y flashes" link="Rastrea tu orden"/>
+      <div className=" absolute top-0 left-0 h-screen w-screen flex flex-row mt-10  justify-around">      
+          <Card id="scene-card" title="Reparación de Drones" content="Arreglamos los drones más especializados como el DJI Phantom,Nano,etc..." link="Rastrea tu orden"/>          
+          <Card id="scene-card" title="Reparación de Camaras" content="Arreglamos camaras profesionales y semiprofesionales, reflex, lentes y flashes" link="Rastrea tu orden"/>          
       </div>
       </div>
       <section

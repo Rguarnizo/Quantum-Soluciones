@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import gsap from "gsap";
 
 function Model() {
-  const gltf = useLoader(GLTFLoader, "Models/Dji/DjiDrone.gltf");
+  const gltf = useLoader(GLTFLoader, "Models/Dji/DJIDrone.gltf");
   const mixer = new THREE.AnimationMixer();
   const clock = new THREE.Clock();
   const animation = useRef();
@@ -67,8 +67,8 @@ function Model() {
 
 export default function Scene() {
   return (<>
-  <Marcas className="absolute bottom-0"/>
-  <div class="tenor-gif-embed absolute bottom-10 right-0 " data-postid="13026640" data-share-method="host" data-width="100%" data-aspect-ratio="0.3940677966101695"><a href="https://tenor.com/view/mouse-scroll-arrow-down-gif-13026640">Mouse Scroll GIF</a> from <a href="https://tenor.com/search/mouse-gifs">Mouse GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  
+    
     <Canvas className="EscenaProductos h-screen w-3/5" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
@@ -86,6 +86,7 @@ export default function Scene() {
           <Tokyo/>
         </Suspense> */}
     </Canvas>
+    <Marcas className="hidden lg:block w-2/5 lg:absolute lg:bottom-0"/>
     
     </>
   );

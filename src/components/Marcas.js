@@ -15,48 +15,48 @@ let Marcas = (props) => {
 
   return (
     <>
-      <div className={`brands flex flex-row w-screen h-38 px-24 ${props.className}`}>
+      <div className={`brands flex flex-row w-screen lg:px-24 ${props.className}`}>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 w-48 flex-grow"
+          className="brand m-6 p-0 w-64 lg:w-48 "
           href=""
         >
-          <img className="object-scale-down " src="Logos/Canon.png"></img>
+          <img className=" lg:object-scale-down " src="Logos/Canon.png"></img>
         </a>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 w-48 flex-grow"
+          className="brand m-6 p-0 w-64 lg:w-48 "
           href=""
         >
-          <img className="object-scale-down" src="Logos/Nikon.jpeg"></img>
+          <img className=" lg:object-scale-down" src="Logos/Nikon.jpeg"></img>
         </a>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
-          className="brand m-6 p-0 w-48 flex-grow"
+          className="brand m-6 p-0 w-64 lg:w-48 "
           href=""
         >
-          <img className="object-scale-down" src="Logos/Sony.png"></img>
-        </a>
-        <a
-          onMouseOver={onMouseOver}
-          onMouseOut={onMouseOut}
-          id="GoPro"
-          className="brand m-6 p-0 w-48 flex-grow"
-          href=""
-        >
-          <img className="object-scale-down" src="Logos/GoPro.png"></img>
+          <img className=" lg:object-scale-down" src="Logos/Sony.png"></img>
         </a>
         <a
           onMouseOver={onMouseOver}
           onMouseOut={onMouseOut}
           id="GoPro"
-          className="brand m-6 p-0 w-48 flex-grow"
+          className="brand m-6 p-0 w-64 lg:w-48 "
           href=""
         >
-          <img className="object-scale-down" src="Logos/Dji.png"></img>
+          <img className=" lg:object-scale-down" src="Logos/GoPro.png"></img>
+        </a>
+        <a
+          onMouseOver={onMouseOver}
+          onMouseOut={onMouseOut}
+          id="GoPro"
+          className="brand m-6 p-0 w-64 lg:w-48 "
+          href=""
+        >
+          <img className=" lg:object-scale-down" src="Logos/Dji.png"></img>
         </a>
       </div>
     </>
