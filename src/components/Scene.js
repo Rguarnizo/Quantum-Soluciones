@@ -7,7 +7,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import gsap from "gsap";
 
 function Model() {
-  const gltf = useLoader(GLTFLoader, "Models/Dji/DJIDrone.gltf");
+  const gltf = useLoader(GLTFLoader, "Models/DronDji/DJIDrone.gltf");
   const mixer = new THREE.AnimationMixer();
   const clock = new THREE.Clock();
   const animation = useRef();
@@ -69,7 +69,7 @@ export default function Scene() {
   return (<>
   
     
-    <Canvas className="EscenaProductos h-screen w-3/5" color={0x000000} camera={{position:[0,0,3]}}>
+    <Canvas className="EscenaProductos h-2/3 lg:h-screen w-3/5" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
       <spotLight position={[-5, -5, 0]} intensity={10} castShadow />
@@ -86,7 +86,7 @@ export default function Scene() {
           <Tokyo/>
         </Suspense> */}
     </Canvas>
-    <Marcas className="hidden lg:block w-2/5 lg:absolute lg:bottom-0"/>
+    <Marcas className="hidden w-2/5 lg:absolute lg:bottom-0"/>
     
     </>
   );
