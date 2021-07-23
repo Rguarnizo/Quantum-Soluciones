@@ -142,7 +142,7 @@ function App() {
         />
       </section>
       <section id="Footer" className="h-1/6 ">
-        <div className="box  h-32 w-32"></div>
+        <div className="box h-32"></div>
       </section>
     </>
   );
