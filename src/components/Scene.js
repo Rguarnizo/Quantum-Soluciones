@@ -4,10 +4,29 @@ import * as THREE from "three";
 import Marcas from "./Marcas";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import {MeshoptDecoder} from "three/examples/jsm/libs/meshopt_decoder.module.js"
+import {KTX2Loader} from "three/examples/jsm/loaders/KTX2Loader"
+import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader"
+import {BasisTextureLoader} from "three/examples/jsm/loaders/BasisTextureLoader"
+
+
 import gsap from "gsap";
 
 function Model() {
-  const gltf = useLoader(GLTFLoader, "Models/DronDji/DJIDrone.gltf");
+
+  const dracoLoader = new DRACOLoader();
+
+  // const loader = new GLTFLoader();
+  // loader.setMeshoptDecoder(MeshoptDecoder);
+  // loader.setKTX2Loader(KTX2Loader);  
+  // loader.setDRACOLoader(dracoLoader);
+  
+  let gltf = useLoader(GLTFLoader, "Models/DronDji/DJIDrone.gltf",(loader)=>{
+    console.log(loader);
+    loader.setMeshoptDecoder(MeshoptDecoder);
+    loader.setDRACOLoader(dracoLoader);
+  });
+  
   const mixer = new THREE.AnimationMixer();
   const clock = new THREE.Clock();
   const animation = useRef();
