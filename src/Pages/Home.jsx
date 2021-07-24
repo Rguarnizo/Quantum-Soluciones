@@ -98,9 +98,9 @@ const Image = styled.img`
 `;
 
 const Home = () => {
-  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 text-gray-500 tracking-wider antialiased mb-12`;
-  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl text-gray-600`;
-  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 text-gray-500`;
+  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0`;
+  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl`;
+  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 `;
 
   const [showLetters, setshowLetters] = React.useState("");
 
@@ -145,77 +145,75 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <div className="grid xl:grid-cols-2 dark:bg-gray-800 h-screen">
-        <div className="flex items-center px-5 md:px-16">
-          <div className="flex flex-col">
-            <QuantumText className={QuantumSubtitleClasses}>
-              soluciones quantum
-            </QuantumText>
-            <QuantumText className={QuantumTitleClasses}>
-              Servicio técnico especializado{" "}
-            </QuantumText>
-            <QuantumText className={QuantumDescriptionClasses}>
-              en reparación de{" "}
-              <QuantumAltText>
-                {showLetters}
-                <Cursor>&#160; </Cursor>
-              </QuantumAltText>
-            </QuantumText>
-            <div className="flex mt-7 ">
-              <Icon.Facebook className="mr-5" color="#93C5FD" size={30} />
-              <Icon.Instagram className="mr-5" color="#93C5FD" size={30} />
-              <Icon.Twitter className="mr-5" color="#93C5FD" size={30} />
-              <Icon.Youtube className="mr-5" color="#93C5FD" size={30} />
-            </div>
+    <section className="grid xl:grid-cols-2 dark:bg-gray-800 h-screen">
+      <div className="flex items-center px-5 md:px-16">
+        <div className="flex flex-col">
+          <QuantumText className={QuantumSubtitleClasses}>
+            soluciones quantum
+          </QuantumText>
+          <QuantumText className={QuantumTitleClasses}>
+            Servicio técnico especializado{" "}
+          </QuantumText>
+          <QuantumText className={QuantumDescriptionClasses}>
+            en reparación de{" "}
+            <QuantumAltText>
+              {showLetters}
+              <Cursor>&#160; </Cursor>
+            </QuantumAltText>
+          </QuantumText>
+          <div className="flex mt-7 ">
+            <Icon.Facebook className="mr-5" color="#93C5FD" size={30} />
+            <Icon.Instagram className="mr-5" color="#93C5FD" size={30} />
+            <Icon.Twitter className="mr-5" color="#93C5FD" size={30} />
+            <Icon.Youtube className="mr-5" color="#93C5FD" size={30} />
           </div>
         </div>
-        <div className="flex items-center px-5 md:px-16">
-          <Container>
-            <input
-              type="radio"
-              name="slider"
-              id="item-1"
-              defaultChecked
-              style={{ display: "none" }}
-            />
-            <input
-              type="radio"
-              name="slider"
-              id="item-2"
-              style={{ display: "none" }}
-            />
-            <input
-              type="radio"
-              name="slider"
-              id="item-3"
-              style={{ display: "none" }}
-            />
-
-            <Cards className="cards">
-              <Card htmlFor="item-1" id="song-1">
-                <Image
-                  src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
-                  alt="img"
-                ></Image>
-              </Card>
-              <Card htmlFor="item-2" id="song-2">
-                <Image
-                  src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
-                  alt="img"
-                ></Image>
-              </Card>
-              <Card htmlFor="item-3" id="song-3">
-                <Image
-                  src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
-                  alt="img"
-                ></Image>
-              </Card>
-            </Cards>
-          </Container>
-        </div>
       </div>
-    </>
+      <div className="flex items-center px-5 md:px-16 pb-10 xl:pb-0">
+        <Container>
+          <input
+            type="radio"
+            name="slider"
+            id="item-1"
+            defaultChecked
+            style={{ display: "none" }}
+          />
+          <input
+            type="radio"
+            name="slider"
+            id="item-2"
+            style={{ display: "none" }}
+          />
+          <input
+            type="radio"
+            name="slider"
+            id="item-3"
+            style={{ display: "none" }}
+          />
+
+          <Cards className="cards">
+            <Card htmlFor="item-1" id="song-1">
+              <Image
+                src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+                alt="img"
+              ></Image>
+            </Card>
+            <Card htmlFor="item-2" id="song-2">
+              <Image
+                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                alt="img"
+              ></Image>
+            </Card>
+            <Card htmlFor="item-3" id="song-3">
+              <Image
+                src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+                alt="img"
+              ></Image>
+            </Card>
+          </Cards>
+        </Container>
+      </div>
+    </section>
   );
 };
 
