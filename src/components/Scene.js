@@ -21,7 +21,7 @@ function Model() {
   // loader.setKTX2Loader(KTX2Loader);  
   // loader.setDRACOLoader(dracoLoader);
   
-  let gltf = useLoader(GLTFLoader, "Models/DronDji/DJIDrone.gltf",(loader)=>{
+  let gltf = useLoader(GLTFLoader, "Models/Test/DJIDrone.gltf",(loader)=>{
     console.log(loader);
     loader.setMeshoptDecoder(MeshoptDecoder);
     loader.setDRACOLoader(dracoLoader);
