@@ -134,7 +134,7 @@ const AnimationCard = (props) => {
   return (
     <div
       ref={ref}
-      className={` animation-card relative w-full xl:w-4/5 h-full p-8 xl:p-0 shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900`}
+      className={` w-full xl:w-4/5  animation-card relative h-full p-8 xl:p-0 shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900 text-left`}
     >
       <div className="absolute bottom-0 left-0">
         <Rocket id="rocket" src="assets/perspaleta2_0043.png"></Rocket>
@@ -174,8 +174,8 @@ const Services = () => {
           {" "}
           <Title className={TitleClasses}>Nuestros servicios</Title>
         </div>
-        <div className="cards-wrapper h-1/2 xl:px-10 pr-10 flex justify-end mt-10 xl:mt-24">
-          <div className="grid lg:grid-cols-3 xl:gap-0 gap-10 items-center ">
+        <div className="cards-wrapper h-1/2 xl:px-10 px-5 flex justify-end mt-24">
+          <div className="grid lg:grid-cols-3 xl:gap-0 gap-10 items-center justify-items-center text-center">
             <ServiceCard
               id={1}
               title="Reparación de equipos"
