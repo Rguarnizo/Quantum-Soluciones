@@ -6,6 +6,21 @@ const Catalog = () => {
     font-family: "Montserrat", sans-serif;
   `;
 
+  const images = [
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fcanon_white.png?alt=media&token=d0125797-5944-49d0-8750-b14579f76735",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fsony-logo-png-transparent-13_c.png?alt=media&token=5e8bab26-5452-4a0f-aefd-cfdd3da3f71e",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FPikPng.com_panasonic-logo-png_1400111.png?alt=media&token=6bdcb1f4-298f-4aea-8f9f-9b1c581f7cc5",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_77293.png?alt=media&token=cc928a8c-579f-417f-8532-185b0a3a50fe",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5061982.png?alt=media&token=a7855dad-9c47-4655-ad9b-d16a801bb40c",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fgopro_logo_PNG12.png?alt=media&token=8e381300-40c0-485b-918a-e6aaac18d6d0",
+    "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5295857.png?alt=media&token=c8170945-dc21-4a56-8bdc-dd7ae39c1d23",
+  ];
+
+  const BrandImage = styled.img`
+    width: 70%;
+    height: auto;
+    padding: 7%;
+  `;
   return (
     <section className="h-screen p-5 xl:px-16 dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
@@ -19,11 +34,18 @@ const Catalog = () => {
             ¡Explora nuestro catálogo!
           </Text>
           <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-200">
-            Tenemos a tu disposición equipos y accesorios de las mejores marcas <br /> 
+            Tenemos a tu disposición equipos y accesorios de las mejores marcas{" "}
+            <br />
             ¡Haz click en una para explorar!
           </Text>
-          <div className="grid grid-cols-4 gap-5">
-              
+          <div className="grid grid-cols-4 xl:grid-cols-9 gap-3 mt-10 justify-items-center">
+            {images.map((el) => {
+              return (
+                <a href="#" className="flex items-center justify-center border-2 rounded-xl">
+                  <BrandImage src={el} key={el}></BrandImage>
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
