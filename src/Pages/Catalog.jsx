@@ -19,10 +19,11 @@ const Catalog = () => {
   const BrandImage = styled.img`
     width: 70%;
     height: auto;
+
     padding: 7%;
   `;
   return (
-    <section className="h-screen p-5 xl:px-16 dark:bg-gray-800">
+    <section className="h-screen px-5 md:px-16 dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="img-wrapper">
           {
@@ -38,10 +39,10 @@ const Catalog = () => {
             <br />
             ¡Haz click en una para explorar!
           </Text>
-          <div className="grid grid-cols-4 xl:grid-cols-9 gap-3 mt-10 justify-items-center">
+          <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-7 gap-3 mt-10 justify-items-center shadow-xl p-5 rounded bg-gray-300 dark:bg-gray-800">
             {images.map((el) => {
               return (
-                <a href="#" className="flex items-center justify-center border-2 rounded-xl">
+                <a href="#" className="flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800">
                   <BrandImage src={el} key={el}></BrandImage>
                 </a>
               );

@@ -145,7 +145,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="grid xl:grid-cols-2 dark:bg-gray-800 h-screen">
+    <section className="grid lg:grid-cols-2 dark:bg-gray-800 h-screen">
       <div className="flex items-center px-5 md:px-16">
         <div className="flex flex-col">
           <QuantumText className={QuantumSubtitleClasses}>
@@ -169,7 +169,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center px-5 md:px-16 pb-10 xl:pb-0">
+      <div className="flex items-center px-5 md:px-16 lg:py-36 ">
         <Container>
           <input
             type="radio"

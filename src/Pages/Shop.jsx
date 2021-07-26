@@ -7,7 +7,7 @@ const Shop = () => {
   `;
 
   return (
-    <section className="h-screen p-5 xl:px-16 dark:bg-gray-800">
+    <section className="h-screen px-5 md:px-16  dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="flex flex-col justify-center">
           <Text className="text-5xl font-bold tracking-tighter dark:text-blue-200">¡Conoce nuestra tienda!</Text>
