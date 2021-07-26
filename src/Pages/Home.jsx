@@ -98,9 +98,9 @@ const Image = styled.img`
 `;
 
 const Home = () => {
-  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0`;
-  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl`;
-  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 `;
+  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0 text`;
+  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl text`;
+  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 text`;
 
   const [showLetters, setshowLetters] = React.useState("");
 
@@ -169,7 +169,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center px-5 md:px-16 lg:py-36 ">
+      <div className="flex items-center px-5 md:px-16 lg:py-36 carrousel">
         <Container>
           <input
             type="radio"
