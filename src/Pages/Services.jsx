@@ -97,6 +97,7 @@ const AnimationCard = (props) => {
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
               },
             },
+
             ease: config.ease,
           },
           0
@@ -106,8 +107,14 @@ const AnimationCard = (props) => {
       },
     });
 
-    let tl = gsap.timeline();
-    tl.from("#stat1", { opacity: 0, delay: 4 });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top center",
+        toggleActions: "play none reverse reset",
+      },
+    });
+    tl.from("#stat1", { opacity: 0, delay: 2 });
     tl.counter("#count1", { end: 30, ease: "linear" }, "-=0.5");
     tl.from("#stat2", { opacity: 0 }, "+=0.5");
     tl.counter("#count2", { end: 40, increment: 2, duration: 1.6 }, "-=0.5");
@@ -167,10 +174,41 @@ const AnimationCard = (props) => {
 };
 
 const Services = () => {
+  React.useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top center",
+        toggleActions: "play none none reverse",
+      },
+    })
+    tl.fromTo(
+      ".title",
+      { alpha: 0 },
+      {
+        alpha: 1,
+        stagger: 0.4,
+        scrollTrigger: { trigger: "#services", start: "top center"},
+      }
+    );
+    tl.fromTo(
+      ".card",
+      { alpha: 0 },
+      {
+        alpha: 1,
+        stagger: 0.4,
+      },"+=0.5"
+    );
+    
+  });
+
   return (
-    <section className=" flex align-middle items-center dark:bg-gray-800">
-      <div className="wrapper my-20 ">
-        <div className="title md:px-16 px-5 ">
+    <section
+      id={"services"}
+      className="flex align-middle items-center dark:bg-gray-800"
+    >
+      <div className="wrapper mt-20">
+        <div className="title md:px-16 px-5 title">
           {" "}
           <Title className={TitleClasses}>Nuestros servicios</Title>
         </div>
@@ -178,6 +216,7 @@ const Services = () => {
           <div className="grid lg:grid-cols-3 xl:gap-0 gap-10 items-center justify-items-center text-center">
             <ServiceCard
               id={1}
+              className={"card"}
               title="Reparación de equipos"
               content="Disponemos del mejor equipo para llevar a cabo la reparación de equipos como cámaras, lentes, drones, flashes, radios y otros dispositivos electrónicos"
               url="#"
@@ -185,12 +224,13 @@ const Services = () => {
             />
             <ServiceCard
               id={2}
+              className={"card"}
               title="Venta de equipos y accesorios"
               content="Te ofrecemos un amplio catálogo de equipos y accesorios a los mejores precios del mercado"
               url="#"
               link="Ir a la tienda"
             />
-            <AnimationCard />
+            <AnimationCard className={"card"} />
           </div>
         </div>
       </div>
