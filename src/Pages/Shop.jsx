@@ -10,8 +10,8 @@ const Shop = () => {
     <section className="h-screen px-5 md:px-16  dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="flex flex-col justify-center">
-          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-200">¡Conoce nuestra tienda!</Text>
-          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-200">
+          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-100">¡Conoce nuestra tienda!</Text>
+          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-100">
             Tenemos a tu disposición cientos de equipos y accesorios de la mejor
             calidad y al mejor precio
           </Text>

@@ -36,10 +36,10 @@ const MaintenanceServices = () => {
           <div className="flex flex-col gap-10">
             <Text
               className={
-                QuantumDescriptionClasses + "font-bold max-w-xl text-md md:text-xl"
+                QuantumDescriptionClasses + "font-bold max-w-xl xl:text-xl"
               }
             >
-              Cámaras <br />
+              Camaras <br />
               <Text className={QuantumDescriptionClasses + ""}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Corporis ratione earum, enim perferendis accusantium quia animi

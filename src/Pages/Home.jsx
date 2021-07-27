@@ -161,11 +161,11 @@ const Home = () => {
               <Cursor>&#160; </Cursor>
             </QuantumAltText>
           </QuantumText>
-          <div className="flex mt-7 ">
-            <Icon.Facebook className="mr-5" color="#93C5FD" size={30} />
-            <Icon.Instagram className="mr-5" color="#93C5FD" size={30} />
-            <Icon.Twitter className="mr-5" color="#93C5FD" size={30} />
-            <Icon.Youtube className="mr-5" color="#93C5FD" size={30} />
+          <div className="flex mt-7 gap-5 ">
+            <Icon.Facebook color="#93C5FD" size={30} />
+            <Icon.Instagram color="#93C5FD" size={30} />
+            <Icon.Twitter color="#93C5FD" size={30} />
+            <Icon.Youtube color="#93C5FD" size={30} />
           </div>
         </div>
       </div>

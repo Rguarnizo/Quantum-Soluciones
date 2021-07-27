@@ -15,7 +15,7 @@ const ServiceCard = (props) => {
   return (
     <div
       id={`${props.id}`}
-      className={`w-full xl:w-4/5 h-full  shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900`}
+      className={`w-full md:w-3/5 lg:w-full xl:w-4/5 h-full  shadow-xl flex flex-col justify-around rounded-lg mx-4 xl:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900`}
     >
       <div className="w-full h-5/6 flex flex-col justify-around p-3">
         <Text className="px-6 font-semibold text-2xl lg:text-4xl dark:text-blue-100">
@@ -134,7 +134,7 @@ const AnimationCard = (props) => {
   return (
     <div
       ref={ref}
-      className={` w-full xl:w-4/5  animation-card relative h-full p-8 xl:p-0 shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900 text-left`}
+      className={` w-full md:w-3/5  xl:w-4/5  lg:w-full animation-card relative h-full p-8 xl:p-0 shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900 text-left`}
     >
       <div className="absolute bottom-0 left-0">
         <Rocket id="rocket" src="assets/perspaleta2_0043.png"></Rocket>

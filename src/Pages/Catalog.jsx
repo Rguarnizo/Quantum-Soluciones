@@ -31,10 +31,10 @@ const Catalog = () => {
           }
         </div>
         <div className="flex flex-col justify-center">
-          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-200">
+          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-100">
             ¡Explora nuestro catálogo!
           </Text>
-          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-200">
+          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-100">
             Tenemos a tu disposición equipos y accesorios de las mejores marcas{" "}
             <br />
             ¡Haz click en una para explorar!
