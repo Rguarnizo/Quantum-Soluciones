@@ -27,9 +27,7 @@ const MaintenanceServices = () => {
             </Text>
           </div>
           <div className="img-wrapper">
-            {
-              // TODO: 3D model to this section
-            }
+            <Scene/>
           </div>
         </div>
         <div className="grid xl:grid-cols-2 mt-10 xl:pl-16">
