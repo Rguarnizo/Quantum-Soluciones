@@ -26,11 +26,7 @@ const MaintenanceServices = () => {
               equipos y accesorios profesionales
             </Text>
           </div>
-          <div className="img-wrapper">
-            {
-              // TODO: 3D model to this section
-            }
-          </div>
+          <div className="img-wrapper"></div>
         </div>
         <div className="grid xl:grid-cols-2 mt-10 xl:pl-16">
           <div className="flex flex-col gap-10">

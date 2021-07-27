@@ -8,9 +8,15 @@ import Catalog from "./Pages/Catalog";
 import AboutUs from "./Pages/AboutUs";
 import CompanyLocations from "./Pages/CompanyLocations";
 import Footer from "./Pages/Footer";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
+
   const [setDark, setsetDark] = React.useState("");
+  
 
   return (
     <>

@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import "../Styles/Carrousel.scss";
 import * as Icon from "react-feather";
+import gsap from "gsap";
 
 const QuantumText = styled.span`
   font-family: "Montserrat", sans-serif;
@@ -98,9 +99,14 @@ const Image = styled.img`
 `;
 
 const Home = () => {
-  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0`;
-  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl`;
-  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 `;
+  const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0 text`;
+  const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl text`;
+  const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 text`;
+
+  useEffect(() => {
+    gsap.fromTo(".text",{alpha:0},{alpha:1,stagger:0.4,delay:2});
+    gsap.fromTo(".icon",{alpha:0},{alpha:1,stagger:0.2,delay:2});
+  },[]);
 
   const [showLetters, setshowLetters] = React.useState("");
 
@@ -169,7 +175,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center px-5 md:px-16 lg:py-36 ">
+      <div className="flex items-center px-5 md:px-16 lg:py-36 carrousel">
         <Container>
           <input
             type="radio"
