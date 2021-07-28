@@ -51,7 +51,7 @@ const Map = (props) => {
     // Important! Always set the container height explicitly
     <Container className={props.className}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDfY1aAYBAS_POVlhqlJZTvKf4HvxD6FVA" }}
+        bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API }}
         center={props.center}
         zoom={props.zoom}
         mapId="cba9cfc2eadf14f0"
