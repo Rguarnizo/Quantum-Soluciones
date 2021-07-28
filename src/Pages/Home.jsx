@@ -168,10 +168,10 @@ const Home = () => {
             </QuantumAltText>
           </QuantumText>
           <div className="flex mt-7 gap-5 ">
-            <Icon.Facebook color="#93C5FD" size={30} />
-            <Icon.Instagram color="#93C5FD" size={30} />
-            <Icon.Twitter color="#93C5FD" size={30} />
-            <Icon.Youtube color="#93C5FD" size={30} />
+            <Icon.Facebook  className="icon"color="#93C5FD" size={30} />
+            <Icon.Instagram className="icon"color="#93C5FD" size={30} />
+            <Icon.Twitter   className="icon"color="#93C5FD" size={30} />
+            <Icon.Youtube   className="icon"color="#93C5FD" size={30} />
           </div>
         </div>
       </div>

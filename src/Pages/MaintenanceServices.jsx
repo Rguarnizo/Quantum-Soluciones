@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Scene from "../Components/Scene";
 const MaintenanceServices = () => {
   const Text = styled.span`
     font-family: "DM Sans", sans-serif;
@@ -10,9 +11,9 @@ const MaintenanceServices = () => {
   const QuantumDescriptionClasses = `font-normal  tracking-tighter dark:text-blue-100 `;
 
   return (
-    <section className=" px-5 py-20 md:px-16 dark:bg-gray-800">
-      <div className="grid xl:grid-rows-2 pt-20">
-        <div className="grid grid-cols-2 ">
+    <section id="maintenance" className=" px-5 py-20 md:px-16 dark:bg-gray-800 ">
+      <div className="grid xl:grid-rows-2 pt-20 ">
+        <div className="grid grid-cols-2 w-screen h-screen ">
           <div className="flex flex-col col-span-2 xl:col-span-1">
             <Text className={QuantumSubtitleClasses}>SOLUCIONES QUANTUM</Text>
             <Text className={QuantumTitleClasses}>
@@ -26,7 +27,9 @@ const MaintenanceServices = () => {
               equipos y accesorios profesionales
             </Text>
           </div>
-          <div className="img-wrapper"></div>
+          <div className="img-wrapper h-full w-full">
+            <Scene/>
+          </div>
         </div>
         <div className="grid xl:grid-cols-2 mt-10 xl:pl-16">
           <div className="flex flex-col gap-10">

@@ -111,10 +111,10 @@ const AnimationCard = (props) => {
       scrollTrigger: {
         trigger: "#services",
         start: "top center",
-        toggleActions: "play none reverse reset",
+        toggleActions: "play none none reset",
       },
     });
-    tl.from("#stat1", { opacity: 0, delay: 2 });
+    tl.from("#stat1", { opacity: 0,delay: 1});
     tl.counter("#count1", { end: 30, ease: "linear" }, "-=0.5");
     tl.from("#stat2", { opacity: 0 }, "+=0.5");
     tl.counter("#count2", { end: 40, increment: 2, duration: 1.6 }, "-=0.5");

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Suspense} from "react";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
@@ -29,7 +29,7 @@ const App = () => {
       <AboutUs />
       <CompanyLocations />
       <Footer />
-    </>
+   </>
   );
 };
 
