@@ -105,7 +105,6 @@ const MaintenanceServices = () => {
                   teleobjetivo, Macro, Tilt-shift.
                 </Text>
               </Text>
-
             </div>
           </div>
         </div>

@@ -89,20 +89,14 @@ export default function Scene() {
   
     
     <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
-      <spotLight position={[5, 5, 0]} intensity={10} castShadow />
-      <spotLight position={[-5, 5, 0]} intensity={10} castShadow />
-      <spotLight position={[-5, -5, 0]} intensity={10} castShadow />
-      <spotLight position={[5, -5, 0]} intensity={10} castShadow />
+      <spotLight position={[5, 5, 0]} intensity={5} castShadow />
+      <spotLight position={[-5, 5, 0]} intensity={5} castShadow />
+      <spotLight position={[-5, -5, 0]} intensity={5} castShadow />
+      <spotLight position={[5, -5, 0]} intensity={5} castShadow />
       <hemisphereLight args={[0xffeeb1, 0x080820, 4]} position={[5, 5, 0]} />
-      {/* <EscenaProductos /> */}
-
       <Suspense fallback={null}>
-        {/* <Drone/> */}
         <Model />
       </Suspense>
-      {/* <Suspense fallback={null}>
-          <Tokyo/>
-        </Suspense> */}
     </Canvas>
     </>
   );
