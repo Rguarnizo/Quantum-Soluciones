@@ -12,25 +12,24 @@ const MaintenanceServices = () => {
   const QuantumTitleClasses = `font-bold text-5xl xl:text-6xl tracking-tighter mb-6 dark:text-blue-100 max-w-full title`;
   const QuantumDescriptionClasses = `font-normal  tracking-tighter dark:text-blue-100 description`;
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#maintenance",
-        scrub: 1,
-        start: "top 30%",
-        end: "+=400%",
-        markers:true,
+        scrub: 3,
+        pin: "#maintenance",
+        start: "top top",
+        end: "+=300%",
+        markers: true,
       },
-    }
-    );
+    });
 
-    tl.fromTo(".part-1",{alpha:0},{alpha:1})
-    .fromTo(".part-2",{alpha:0},{alpha:1})
-    .to(".part-1",{alpha:0},"<")
-    .fromTo(".part-3",{alpha:0},{alpha:1},"+=0.5")
-    .to(".part-2",{alpha:0},"<");
-
-  })
+    tl.fromTo(".part-1", { alpha: 0 }, { alpha: 1 })
+      .fromTo(".part-2", { alpha: 0 }, { alpha: 1 })
+      .to(".part-1", { alpha: 0 }, "<")
+      .fromTo(".part-3", { alpha: 0 }, { alpha: 1 })
+      .to(".part-2", { alpha: 0 }, "<");
+  });
 
   return (
     <div id="maintenance" className=" py-4 px-5 md:px-16 dark:bg-gray-800 ">
@@ -42,79 +41,73 @@ const MaintenanceServices = () => {
               {" "}
               Tu mejor opción en reparación de equipos profesionales
             </Text>
-            <Text className={QuantumDescriptionClasses + "text-xl md:text-2xl"}>
+            <Text className={QuantumDescriptionClasses + "text-xl md:text-4xl"}>
               {" "}
               Contamos con un experimentado equipo de trabajo quien atenderá tus
               solicitudes de reparación. <br /> Somos líderes en reparación de
               equipos y accesorios profesionales
             </Text>
           </div>
-          <div className="img-wrapper w-full h-full">
-            <Scene/>
-          </div>
-          
+          <div className="img-wrapper w-full h-full">{/* <Scene/> */}</div>
 
           <div className="grid xl:grid-cols-2 absolute">
-          <div className="flex flex-col gap-10 mt-10 h-screen xl:mt-0 xl:pl-16 part-2">
-            <Text
-              className={
-                QuantumDescriptionClasses + "font-bold max-w-xl xl:text-xl"
-              }
-            >
-              Camaras <br />
-              <Text className={QuantumDescriptionClasses + ""}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis ratione earum, enim perferendis accusantium quia animi
-                tempore, accusamus voluptatum provident similique, odit laborum
-                nulla eveniet. Vel quisquam sit obcaecati distinctio?
+            <div className="flex flex-col gap-10 mt-10 h-screen xl:mt-0 xl:pl-16 part-2">
+              <Text
+                className={
+                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                }
+              >
+                Camaras <br />
+                <Text className={QuantumDescriptionClasses + ""}>
+                  Reparación de camaras de las principales marcas, servicio
+                  tecnico especializado, mantenimiento preventivo. Reparación de
+                  cuerpos, diales, pantallas, actualizaciones de firmware,
+                  obturador, baterias, entre muchas otras.
+                </Text>
               </Text>
-            </Text>
-            <Text
-              className={
-                QuantumDescriptionClasses + "font-bold max-w-xl xl:text-xl"
-              }
-            >
-              Lentes <br />
-              <Text className={QuantumDescriptionClasses + ""}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis ratione earum, enim perferendis accusantium quia animi
-                tempore, accusamus voluptatum provident similique, odit laborum
-                nulla eveniet. Vel quisquam sit obcaecati distinctio?
+              <Text
+                className={
+                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                }
+              >
+                Drones <br />
+                <Text className={QuantumDescriptionClasses + ""}>
+                  Reparación y mantenimiento de drones profesionales, remplazos
+                  de baterias, reparación de motores, sensores, cabezales de
+                  camara, actulizaciones de software, DJI Mavic, Phantom, Mini. Parrot, Yuneec.
               </Text>
-            </Text>
-          </div>
-          <div className="flex flex-col gap-10 mt-10 xl:mt-0 xl:pl-16 h-screen absolute part-3">
-            <Text
-              className={
-                QuantumDescriptionClasses + "font-bold max-w-xl xl:text-xl"
-              }
-            >
-              Flashes <br />
-              <Text className={QuantumDescriptionClasses + ""}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis ratione earum, enim perferendis accusantium quia animi
-                tempore, accusamus voluptatum provident similique, odit laborum
-                nulla eveniet. Vel quisquam sit obcaecati distinctio?
+                </Text>
+              
+            </div>
+            <div className="flex flex-col gap-10 mt-10 xl:mt-0 xl:pl-16 h-screen absolute part-3">
+              <Text
+                className={
+                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                }
+              >
+                Flashes <br />
+                <Text className={QuantumDescriptionClasses + ""}>
+                  Reparación y mantenimiento de flashes de camara, de todo tipo:
+                  Flash integrado, angular, externo, automaticos, manuales, TTL
+                  y de muchos otros tipos de Flashes. Reparación de sensores,
+                  generadores, antorchas, reflectores, zapata, etc.
+                </Text>
               </Text>
-            </Text>
-            <Text
-              className={
-                QuantumDescriptionClasses + "font-bold max-w-xl xl:text-xl"
-              }
-            >
-              Drones <br />
-              <Text className={QuantumDescriptionClasses + ""}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis ratione earum, enim perferendis accusantium quia animi
-                tempore, accusamus voluptatum provident similique, odit laborum
-                nulla eveniet. Vel quisquam sit obcaecati distinctio?
+              <Text
+                className={
+                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                }
+              >
+                Lentes <br />
+                <Text className={QuantumDescriptionClasses + ""}>
+                  Reparación y mantenimiento de lentes fotograficos de todo
+                  tipo: Lente Ojo de pez, Gran angular, Fijos, Zoom, Telefoto o
+                  teleobjetivo, Macro, Tilt-shift.
+                </Text>
               </Text>
-            </Text>
-          </div>
-        </div>
 
-
-          
+            </div>
+          </div>
         </div>
       </div>
     </div>
