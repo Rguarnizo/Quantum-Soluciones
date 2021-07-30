@@ -53,7 +53,7 @@ const MaintenanceServices = () => {
             <div className="flex flex-col gap-10 mt-10 h-screen xl:mt-0 xl:pl-16 part-2">
               <Text
                 className={
-                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                  QuantumDescriptionClasses + "font-bold max-w-xl sm:text-xl lg:text-2xl"
                 }
               >
                 Camaras <br />
@@ -64,9 +64,14 @@ const MaintenanceServices = () => {
                   obturador, baterias, entre muchas otras.
                 </Text>
               </Text>
+              <div className="flex">
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera2.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera1.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera3.png"} />
+                </div>
               <Text
                 className={
-                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                  QuantumDescriptionClasses + "font-bold max-w-xl sm:text-xl lg:text-2xl"
                 }
               >
                 Drones <br />
@@ -76,12 +81,16 @@ const MaintenanceServices = () => {
                   camara, actulizaciones de software, DJI Mavic, Phantom, Mini. Parrot, Yuneec.
               </Text>
                 </Text>
-              
+                <div className="flex">
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron1.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron2.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron3.png"} />
+                </div>
             </div>
             <div className="flex flex-col gap-10 mt-10 xl:mt-0 xl:pl-16 h-screen absolute part-3">
               <Text
                 className={
-                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                  QuantumDescriptionClasses + "font-bold max-w-xl sm:text-xl lg:text-2xl"
                 }
               >
                 Flashes <br />
@@ -92,9 +101,14 @@ const MaintenanceServices = () => {
                   generadores, antorchas, reflectores, zapata, etc.
                 </Text>
               </Text>
+              <div className="flex">
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash1.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash2.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash3.png"} />
+                </div>
               <Text
                 className={
-                  QuantumDescriptionClasses + "font-bold max-w-xl text-2xl"
+                  QuantumDescriptionClasses + "font-bold max-w-xl sm:text-xl lg:text-2xl"
                 }
               >
                 Lentes <br />
@@ -103,6 +117,11 @@ const MaintenanceServices = () => {
                   tipo: Lente Ojo de pez, Gran angular, Fijos, Zoom, Telefoto o
                   teleobjetivo, Macro, Tilt-shift.
                 </Text>
+                <div className="flex">
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens1.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens2.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens3.png"} />
+                </div>
               </Text>
             </div>
           </div>
