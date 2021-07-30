@@ -5,6 +5,7 @@ import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import {MeshoptDecoder} from "three/examples/jsm/libs/meshopt_decoder.module.js"
 import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader"
+import Loader from "../utils/Loader";
 
 
 

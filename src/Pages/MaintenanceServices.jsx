@@ -16,8 +16,7 @@ const MaintenanceServices = () => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#maintenance",
-        scrub: 3,
-        pin: "#maintenance",
+        scrub: 3,        
         start: "top top",
         end: "+=300%",
         markers: true,
@@ -48,7 +47,7 @@ const MaintenanceServices = () => {
               equipos y accesorios profesionales
             </Text>
           </div>
-          <div className="img-wrapper w-full h-full">{/* <Scene/> */}</div>
+          <div className="img-wrapper w-full h-full"> <Scene/></div>
 
           <div className="grid xl:grid-cols-2 absolute">
             <div className="flex flex-col gap-10 mt-10 h-screen xl:mt-0 xl:pl-16 part-2">

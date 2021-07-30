@@ -2,6 +2,7 @@ import React,{Suspense} from "react";
 import styled from "styled-components";
 import Camera from "../Components/Camera";
 import { Canvas } from "@react-three/fiber";
+import Loader from "../utils/Loader";
 
 const Catalog = () => {
   const Text = styled.span`
@@ -31,7 +32,7 @@ const Catalog = () => {
           {
             //TODO: Here more resources, add an animation and a model for all the page :)
           }
-          <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
+    <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={1} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
       <spotLight position={[-5, -5, 0]} intensity={1} castShadow />

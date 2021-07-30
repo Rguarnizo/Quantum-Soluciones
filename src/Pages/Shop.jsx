@@ -2,6 +2,7 @@ import React,{Suspense} from "react";
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import Drone from "../Components/Drone";
+import Loader from "../utils/Loader";
 
 const Shop = () => {
   const Text = styled.span`
