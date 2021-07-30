@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import styled from "styled-components";
 
-const AnyReactComponent = ({ text1, text2 }) => (
+const AnyReactComponent = ({ text1, text2, image }) => (
   // <div className="card-location w-72 bg-white rounded h-12 p-2">
   //   <p className="montserrat-normal-shark-12px">{text1}</p>
   //   <p className="montserrat-normal-shark-12px">{text2}</p>
@@ -15,7 +15,7 @@ const AnyReactComponent = ({ text1, text2 }) => (
   <div className="bg-white w-64 h-44 rounded-lg">
     <div className="flex absolute w-full h-25 top-0">
       <img
-        src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+        src={image}
         alt=""
         className="absolute inset-0 w-64 h-20 object-cover rounded-t-lg object-center "
       />
@@ -61,12 +61,14 @@ const Map = (props) => {
           lng={-74.05867751000919}
           text1="Centro de Alta Tecnología"
           text2="Local 2-64: Carrera 15 # 77-05"
+          image="Images/LogoLago.jpeg"
         />
         <AnyReactComponent
           lat={4.607711126602565}
           lng={-74.14074388887656}
           text1="Barrio Carvajal Osorio"
           text2="Calle 39 Sur #68L-75"
+          image="/assets/logo.png"
         />
       </GoogleMapReact>
     </Container>
