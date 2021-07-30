@@ -1,5 +1,7 @@
-import React from "react";
+import React,{Suspense} from "react";
 import styled from "styled-components";
+import { Canvas } from "@react-three/fiber";
+import Drone from "../Components/Drone";
 
 const Shop = () => {
   const Text = styled.span`
@@ -22,6 +24,24 @@ const Shop = () => {
         <div className="img-wrapper">
            { //TODO: Here more resources, add an animation and a model for all the page :)
            }
+           <Canvas
+            id="canvas"
+            className="EscenaProductos w-full h-full"
+            color={0x000000}
+            camera={{ position: [0, 0, 3] }}
+          >
+            <spotLight position={[5, 5, 0]} intensity={1} castShadow />
+            {/*<spotLight position={[-5, 5, 0]} intensity={1} castShadow />
+            <spotLight position={[-5, -5, 0]} intensity={1} castShadow />
+            <spotLight position={[5, -5, 0]} intensity={1} castShadow /> */}
+            <hemisphereLight
+              args={[0xffeeb1, 0x080820, 1]}
+              position={[5, 5, 0]}
+            />
+            <Suspense fallback={null}>
+              <Drone/>
+            </Suspense>
+          </Canvas>
         </div>
       </div>
     </section>

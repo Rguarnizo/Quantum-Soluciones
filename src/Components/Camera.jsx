@@ -30,8 +30,7 @@ export default function Camera() {
     })
 
     useFrame(()=>{
-      
-      
+
       gltf.scene.rotation.y += 0.01;
       
     })

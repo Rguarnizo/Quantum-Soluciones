@@ -1,6 +1,8 @@
-import React from "react";
+import React,{Suspense} from "react";
 import styled from "styled-components";
 import * as Icon from "react-feather";
+import { Canvas } from "@react-three/fiber";
+import Drone from "../Components/Drone";
 
 const titleClasses = `text-2xl xl:text-4xl font-bold tracking-tighter dark:text-blue-100 `;
 const menuClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-200 hover:text-blue-500 cursor-pointer`;
@@ -74,6 +76,7 @@ const Footer = () => {
           {
             //TODO: Animation/3D Model for footer.
           }
+          
         </div>
       </div>
       <div className="flex w-full justify-between md:px-12 px-5 py-16 border-t-2 border-gray-300 dark:border-white items-center">
