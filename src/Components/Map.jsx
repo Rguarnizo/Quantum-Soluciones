@@ -61,7 +61,7 @@ const Map = (props) => {
           lng={-74.05867751000919}
           text1="Centro de Alta Tecnología"
           text2="Local 2-64: Carrera 15 # 77-05"
-          image="Images/LogoLago.jpeg"
+          image="Images/LogoLago.jpg"
         />
         <AnyReactComponent
           lat={4.607711126602565}

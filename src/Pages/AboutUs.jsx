@@ -23,7 +23,7 @@ const AboutUs = () => {
           <Image
             width={"80%"}
             height={"100%"}
-            src="Images/Stock5.jpeg"
+            src="Images/Stock5.jpg"
             alt="img"
           ></Image>
         </div>
@@ -31,7 +31,7 @@ const AboutUs = () => {
           <Image
             width={"65%"}
             height={"100%"}
-            src="Images/Stock6.jpeg"
+            src="Images/Stock6.jpg"
             alt="img"
           ></Image>
         </div>
@@ -39,7 +39,7 @@ const AboutUs = () => {
           <Image
             width={"65%"}
             height={"100%"}
-            src="Images/Stock7.jpeg"
+            src="Images/Stock7.jpg"
             alt="img"
           ></Image>
         </div>

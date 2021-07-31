@@ -200,19 +200,19 @@ const Home = () => {
           <Cards className="cards">
             <Card htmlFor="item-1" id="song-1">
               <Image
-                src="Images/Stock.jpeg"
+                src="Images/Stock.jpg"
                 alt="img"
               ></Image>
             </Card>
             <Card htmlFor="item-2" id="song-2">
               <Image
-                src="Images/Stock4.jpeg"
+                src="Images/Stock4.jpg"
                 alt="img"
               ></Image>
             </Card>
             <Card htmlFor="item-3" id="song-3">
               <Image
-                src="Images/Stock3.jpeg"
+                src="Images/Stock3.jpg"
                 alt="img"
               ></Image>
             </Card>
