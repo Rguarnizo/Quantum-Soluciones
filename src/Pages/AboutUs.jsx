@@ -23,7 +23,7 @@ const AboutUs = () => {
           <Image
             width={"80%"}
             height={"100%"}
-            src="Images/Stock5.jpg"
+            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
             alt="img"
           ></Image>
         </div>
@@ -31,7 +31,7 @@ const AboutUs = () => {
           <Image
             width={"65%"}
             height={"100%"}
-            src="Images/Stock6.jpg"
+            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
             alt="img"
           ></Image>
         </div>
@@ -39,7 +39,7 @@ const AboutUs = () => {
           <Image
             width={"65%"}
             height={"100%"}
-            src="Images/Stock7.jpg"
+            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
             alt="img"
           ></Image>
         </div>

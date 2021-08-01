@@ -4,22 +4,14 @@ import * as THREE from "three";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import {MeshoptDecoder} from "three/examples/jsm/libs/meshopt_decoder.module.js"
-import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader"
 
 
 
-export default function Camera() {
-
-    const dracoLoader = new DRACOLoader();
-  
-    // const loader = new GLTFLoader();
-    // loader.setMeshoptDecoder(MeshoptDecoder);
-    // loader.setKTX2Loader(KTX2Loader);  
-    // loader.setDRACOLoader(dracoLoader);
+export default function Drone() {
+      
     
     let gltf = useLoader(GLTFLoader, "Models/Minidron/minidron.gltf",(loader)=>{
-      loader.setMeshoptDecoder(MeshoptDecoder);
-      loader.setDRACOLoader(dracoLoader);
+      loader.setMeshoptDecoder(MeshoptDecoder);  
     });
     const mixer = new THREE.AnimationMixer();
     const clock = new THREE.Clock();

@@ -200,19 +200,19 @@ const Home = () => {
           <Cards className="cards">
             <Card htmlFor="item-1" id="song-1">
               <Image
-                src="Images/Stock.jpg"
+                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
                 alt="img"
               ></Image>
             </Card>
             <Card htmlFor="item-2" id="song-2">
               <Image
-                src="Images/Stock4.jpg"
+                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
                 alt="img"
               ></Image>
             </Card>
             <Card htmlFor="item-3" id="song-3">
               <Image
-                src="Images/Stock3.jpg"
+                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
                 alt="img"
               ></Image>
             </Card>

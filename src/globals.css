@@ -10,3 +10,13 @@
 body{
     overflow-x: hidden;
 }  
+
+.scroll-horizontal{
+    width: fit-content;
+    overflow-x: hidden;
+}
+
+#maintenance{
+    height: 200%;
+}
+

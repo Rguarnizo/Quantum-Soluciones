@@ -4,26 +4,14 @@ import * as THREE from "three";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import {MeshoptDecoder} from "three/examples/jsm/libs/meshopt_decoder.module.js"
-import {DRACOLoader} from "three/examples/jsm/loaders/DRACOLoader"
-import Loader from "../utils/Loader";
-
-
 
 import gsap from "gsap";
 
 function Model() {
 
-  const dracoLoader = new DRACOLoader();
-
-  // const loader = new GLTFLoader();
-  // loader.setMeshoptDecoder(MeshoptDecoder);
-  // loader.setKTX2Loader(KTX2Loader);  
-  // loader.setDRACOLoader(dracoLoader);
   
   let gltf = useLoader(GLTFLoader, "Models/Dji/DJIDrone.gltf",(loader)=>{
-    console.log(loader);
     loader.setMeshoptDecoder(MeshoptDecoder);
-    loader.setDRACOLoader(dracoLoader);
   });
   
   const mixer = new THREE.AnimationMixer();
@@ -32,11 +20,9 @@ function Model() {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#maintenance",
-      scrub: 3,
+      scrub: 1,
       start: "top top",
-      pin: "#maintenance",
-      end: "+=400%",
-      markers:true
+      end: () => "+=" + 2*(document.querySelector(".part").offsetWidth),
     },
   });
 
@@ -89,7 +75,7 @@ export default function Scene() {
   return (<>
   
     
-    <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
+    <Canvas id="canvas" className="EscenaProductos " color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={5} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={5} castShadow />
       <spotLight position={[-5, -5, 0]} intensity={5} castShadow />
