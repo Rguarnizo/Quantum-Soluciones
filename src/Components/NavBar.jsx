@@ -3,9 +3,8 @@ import styled from "styled-components";
 import gsap from "gsap";
 
 const CompanyLogo = styled.img``;
-const NavMenu = styled.p`
+const NavMenu = styled.a`
   font-family: "DM Sans", sans-serif;
-  
 `;
 
 const NavBar = () => {
@@ -25,11 +24,11 @@ const NavBar = () => {
         <div className="flex items-center justify-end lg:hidden">
           <NavMenu  className={NavMenuClasses}>Menú</NavMenu>
         </div>
-        <div className="hidden lg:flex items-center justify-end">
-          <NavMenu  src="#Home" className={NavMenuClasses}>Inicio</NavMenu>
-          <NavMenu  src="#Services" className={NavMenuClasses}>Servicios</NavMenu>
-          <NavMenu  src="#Shop" className={NavMenuClasses}>Tienda</NavMenu>
-          <NavMenu  src="#AboutUs" className={NavMenuClasses}>Nosotros</NavMenu>
+        <div className="hidden lg:flex items-center justify-end">          
+          <NavMenu  href="#services" className={NavMenuClasses}>Servicios</NavMenu>
+          <NavMenu  href="#Shop" className={NavMenuClasses}>Tienda</NavMenu>
+          <NavMenu  href="#AboutUs" className={NavMenuClasses}>Nosotros</NavMenu>
+          <NavMenu  href="#CompanyLocations" className={NavMenuClasses}>Ubicación</NavMenu>
         </div>
       </div>
     </div>
