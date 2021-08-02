@@ -2,6 +2,7 @@ import React,{Suspense} from "react";
 import styled from "styled-components";
 import Camera from "../Components/Camera";
 import { Canvas } from "@react-three/fiber";
+import gsap from "gsap";
 import Loader from "../utils/Loader";
 
 const Catalog = () => {
@@ -25,13 +26,25 @@ const Catalog = () => {
 
     padding: 7%;
   `;
+
+  React.useEffect(()=>{
+    gsap.fromTo(".anim",{
+      alpha: 0,
+    },{
+      alpha: 1,
+      stagger: 0.4,
+      scrollTrigger:{
+        trigger: "#Catalog",
+        start: "top center",
+        toggleActions: "play none none reverse",        
+      }
+    })
+  });
+
   return (
-    <section className="h-screen px-5 md:px-16 dark:bg-gray-800">
+    <section id="Catalog" className="h-screen px-5 md:px-16 dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="img-wrapper">
-          {
-            //TODO: Here more resources, add an animation and a model for all the page :)
-          }
     <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
       <spotLight position={[5, 5, 0]} intensity={1} castShadow />
       <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
@@ -44,10 +57,10 @@ const Catalog = () => {
     </Canvas>
         </div>
         <div className="flex flex-col justify-center">
-          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-100">
+          <Text className="anim text-5xl font-bold tracking-tighter dark:text-blue-100">
             ¡Explora nuestro catálogo!
           </Text>
-          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-100">
+          <Text className="anim text-xl font-normal mt-5 max-w-md dark:text-blue-100">
             Tenemos a tu disposición equipos y accesorios de las mejores marcas{" "}
             <br />
             ¡Haz click en una para explorar!
@@ -55,7 +68,7 @@ const Catalog = () => {
           <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-7 gap-3 mt-10 justify-items-center shadow-xl p-5 rounded bg-gray-300 dark:bg-gray-800">
             {images.map((el) => {
               return (
-                <a href="#" className="flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800">
+                <a href="#" className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800">
                   <BrandImage src={el} key={el}></BrandImage>
                 </a>
               );

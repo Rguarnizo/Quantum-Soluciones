@@ -17,7 +17,7 @@ const AboutUs = () => {
   const descriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 mt-5`;
 
   return (
-    <section className=" md:px-16 px-5 dark:bg-gray-800">
+    <section id="AboutUs" className=" md:px-16 px-5 dark:bg-gray-800">
       <div className="grid grid-cols-3 grid-rows-2 max-h-screen py-10 ">
         <div className="flex py-8 md:py-16  justify-center h-2/3 md:h-full ">
           <Image

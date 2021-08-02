@@ -63,7 +63,7 @@ const MaintenanceServices = () => {
               equipos y accesorios profesionales
             </Text>
           </div>
-            <div className="flex flex-col md:flex-row md:w-screen mt-10 xl:mt-0 xl:pl-16 part">
+            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 xl:pl-16 part">
               <Text
                 className={
                   QuantumDescriptionClasses + "flex-col font-bold max-w-xl sm:text-xl lg:text-2xl"
@@ -76,7 +76,7 @@ const MaintenanceServices = () => {
                   cuerpos, diales, pantallas, actualizaciones de firmware,
                   obturador, baterias, entre muchas otras.
                 </Text>
-                <div className="flex space-x-4 md:space-x-16">
+                <div className="flex space-x-4 mt-10 md:space-x-16">
                   <img className="object-scale-down w-24 h-24" src={"Images/Camera2.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Camera1.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Camera3.png"} />
@@ -94,7 +94,7 @@ const MaintenanceServices = () => {
                   de baterias, reparación de motores, sensores, cabezales de
                   camara, actulizaciones de software, DJI Mavic, Phantom, Mini. Parrot, Yuneec.
               </Text>
-              <div className="flex space-x-4 md:space-x-16">
+              <div className="flex space-x-4 mt-10 md:space-x-16">
                   <img className="object-scale-down w-24 h-24" src={"Images/Dron1.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Dron2.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Dron3.png"} />
@@ -102,7 +102,7 @@ const MaintenanceServices = () => {
               </Text>
                 
             </div>
-            <div className="flex flex-col md:flex-row md:w-screen mt-10 xl:mt-0 xl:pl-16 part">
+            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 xl:pl-16 part">
               <Text
                 className={
                   QuantumDescriptionClasses + "flex flex-col font-bold max-w-xl sm:text-xl lg:text-2xl"
@@ -115,7 +115,7 @@ const MaintenanceServices = () => {
                   y de muchos otros tipos de Flashes. Reparación de sensores,
                   generadores, antorchas, reflectores, zapata, etc.
                 </Text>
-                <div className="flex space-x-4 md:space-x-16">
+                <div className="flex space-x-4 mt-10 md:space-x-16">
                   <img className="object-scale-down w-24 h-24" src={"Images/Flash1.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Flash2.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Flash3.png"} />
@@ -133,7 +133,7 @@ const MaintenanceServices = () => {
                   tipo: Lente Ojo de pez, Gran angular, Fijos, Zoom, Telefoto o
                   teleobjetivo, Macro, Tilt-shift.
                 </Text>
-                <div className="flex space-x-4 md:space-x-16">
+                <div className="flex space-x-4 mt-10 md:space-x-16">
                   <img className="object-scale-down w-24 h-24" src={"Images/Lens1.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Lens2.png"} />
                   <img className="object-scale-down w-24 h-24" src={"Images/Lens3.png"} />
@@ -141,9 +141,9 @@ const MaintenanceServices = () => {
               </Text>
             </div> 
     </section>
-    <div className="flex-none scene img-wrapper h-screen hidden md:block dark:bg-gray-800">
-              <Scene/>
-    </div>                       
+      <div className="flex-none scene img-wrapper h-screen hidden md:block dark:bg-gray-800">
+                <Scene/>
+      </div>                       
     </div>
   );
 };

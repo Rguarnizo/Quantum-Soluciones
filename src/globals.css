@@ -7,9 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
 
 
-body{
-    overflow-x: hidden;
-}  
 
 .scroll-horizontal{
     width: fit-content;
@@ -20,3 +17,10 @@ body{
     height: 200%;
 }
 
+@media (prefers-color-scheme: dark) {
+    body{
+        overflow-x: hidden;
+        --tw-bg-opacity: 1;
+            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+    }      
+}

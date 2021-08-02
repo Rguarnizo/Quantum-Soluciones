@@ -3,28 +3,41 @@ import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import Drone from "../Components/Drone";
 import Loader from "../utils/Loader";
+import gsap from "gsap";
 
 const Shop = () => {
   const Text = styled.span`
     font-family: "Montserrat", sans-serif;
   `;
 
+  React.useEffect(()=>{
+    gsap.fromTo(".text",{
+      alpha: 0,
+    },{
+      alpha: 1,
+      stagger: 0.4,
+      scrollTrigger:{
+        trigger: "#Shop",
+        start: "top center",
+        toggleActions: "play none none reverse",        
+      }
+    })
+  });
+
   return (
-    <section className="h-screen px-5 md:px-16 pt-10  dark:bg-gray-800">
+    <section id="Shop" className="h-screen px-5 md:px-16 pt-10  dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="flex flex-col justify-center">
-          <Text className="text-5xl font-bold tracking-tighter dark:text-blue-100">¡Conoce nuestra tienda!</Text>
-          <Text className="text-xl font-normal mt-5 max-w-md dark:text-blue-100">
+          <Text className="text text-5xl font-bold tracking-tighter dark:text-blue-100">¡Conoce nuestra tienda!</Text>
+          <Text className="text text-xl font-normal mt-5 max-w-md dark:text-blue-100">
             Tenemos a tu disposición cientos de equipos y accesorios de la mejor
             calidad y al mejor precio
           </Text>
-          <a href="#" className="text-lg text-blue-500 mt-5 font-semibold dark:text-white">
+          <a href="#" className="text text-lg text-blue-500 mt-5 font-semibold dark:text-white">
             Visita nuestra tienda
           </a>
         </div>
-        <div className="img-wrapper">
-           { //TODO: Here more resources, add an animation and a model for all the page :)
-           }
+        <div className="img-wrapper text">
            <Canvas
             id="canvas"
             className="EscenaProductos w-full h-full"

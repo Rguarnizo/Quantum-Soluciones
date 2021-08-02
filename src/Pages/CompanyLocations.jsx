@@ -20,7 +20,7 @@ const CompanyLocations = () => {
   `;
 
   return (
-    <section className="dark:bg-gray-800 ">
+    <section id="CompanyLocations" className="dark:bg-gray-800 ">
       <div className="grid grid-rows-2 md:px-12 px-5 py-16 md:py-0">
         <div className="grid grid-cols-3 info-wrapper gap-10  p-8 md:p-16 rounded-lg  md:m-16 bg-gradient-to-r  from-white to-blue-100 dark:from-gray-600 dark:to-gray-900 shadow-xl">
           <div className="col-span-3 xl:col-span-2 ">

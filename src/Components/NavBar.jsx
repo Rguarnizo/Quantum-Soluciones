@@ -26,10 +26,10 @@ const NavBar = () => {
           <NavMenu  className={NavMenuClasses}>Menú</NavMenu>
         </div>
         <div className="hidden lg:flex items-center justify-end">
-          <NavMenu  className={NavMenuClasses}>Inicio</NavMenu>
-          <NavMenu  className={NavMenuClasses}>Servicios</NavMenu>
-          <NavMenu  className={NavMenuClasses}>Tienda</NavMenu>
-          <NavMenu  className={NavMenuClasses}>Nosotros</NavMenu>
+          <NavMenu  src="#Home" className={NavMenuClasses}>Inicio</NavMenu>
+          <NavMenu  src="#Services" className={NavMenuClasses}>Servicios</NavMenu>
+          <NavMenu  src="#Shop" className={NavMenuClasses}>Tienda</NavMenu>
+          <NavMenu  src="#AboutUs" className={NavMenuClasses}>Nosotros</NavMenu>
         </div>
       </div>
     </div>

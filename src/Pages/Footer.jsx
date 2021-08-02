@@ -23,7 +23,7 @@ const Text = styled.span`
 
 const Footer = () => {
   return (
-    <section className="dark:bg-gray-800">
+    <section id="Footer" className="dark:bg-gray-800">
       <div className="grid grid-cols-12 md:px-12 px-5 py-20 gap-10 md:gap-0">
         <div className="flex flex-col col-span-5 md:col-span-3">
           <MenuText className="dark:text-white text-xl">Páginas</MenuText>

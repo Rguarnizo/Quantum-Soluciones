@@ -151,7 +151,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="grid lg:grid-cols-2 dark:bg-gray-800 h-screen">
+    <section id="Home" className="grid lg:grid-cols-2 dark:bg-gray-800 h-screen">
       <div className="flex items-center px-5 md:px-16">
         <div className="flex flex-col">
           <QuantumText className={QuantumSubtitleClasses}>

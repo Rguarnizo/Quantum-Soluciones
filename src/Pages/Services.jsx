@@ -205,7 +205,7 @@ const Services = () => {
   return (
     <section
       id={"services"}
-      className="flex align-middle items-center dark:bg-gray-800"
+      className="flex align-middle h-screen my-20 items-center dark:bg-gray-800"
     >
       <div className="wrapper mt-20">
         <div className="title md:px-16 px-5 title">
