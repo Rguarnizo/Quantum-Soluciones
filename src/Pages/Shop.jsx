@@ -11,7 +11,7 @@ const Shop = () => {
   `;
 
   React.useEffect(()=>{
-    gsap.fromTo(".text",{
+    gsap.fromTo(".shop",{
       alpha: 0,
     },{
       alpha: 1,
@@ -28,8 +28,8 @@ const Shop = () => {
     <section id="Shop" className="h-screen px-5 md:px-16 pt-10  dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="flex flex-col justify-center">
-          <Text className="text text-5xl font-bold tracking-tighter dark:text-blue-100">¡Conoce nuestra tienda!</Text>
-          <Text className="text text-xl font-normal mt-5 max-w-md dark:text-blue-100">
+          <Text className="shop text-5xl font-bold tracking-tighter dark:text-blue-100">¡Conoce nuestra tienda!</Text>
+          <Text className="shop text-xl font-normal mt-5 max-w-md dark:text-blue-100">
             Tenemos a tu disposición cientos de equipos y accesorios de la mejor
             calidad y al mejor precio
           </Text>
@@ -37,7 +37,7 @@ const Shop = () => {
             Visita nuestra tienda
           </a>
         </div>
-        <div className="img-wrapper text">
+        <div className="img-wrapper shop">
            <Canvas
             id="canvas"
             className="EscenaProductos w-full h-full"
