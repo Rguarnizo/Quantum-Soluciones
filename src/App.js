@@ -1,4 +1,4 @@
-import React,{Suspense} from "react";
+import React, { Suspense } from "react";
 import NavBar from "./Components/NavBar";
 import Home from "./Pages/Home";
 import Services from "./Pages/Services";
@@ -13,13 +13,11 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({
-  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" // notice "resize" isn't in the list
+  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load", // notice "resize" isn't in the list
 });
 
 const App = () => {
-
   const [setDark, setsetDark] = React.useState("");
-  
 
   return (
     <>
@@ -32,7 +30,7 @@ const App = () => {
       <AboutUs />
       <CompanyLocations />
       <Footer />
-   </>
+    </>
   );
 };
 

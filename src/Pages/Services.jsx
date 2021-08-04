@@ -144,12 +144,12 @@ const AnimationCard = (props) => {
       className={` w-full md:w-3/5  xl:w-4/5  lg:w-full animation-card relative h-full p-8 xl:p-0 shadow-xl flex flex-col justify-around rounded-lg mx-4 lg:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900 text-left`}
     >
       <div className="absolute bottom-0 left-0">
-        <Rocket id="rocket" src="assets/perspaleta2_0043.png"></Rocket>
+        {/* <Rocket id="rocket" src="assets/perspaleta2_0043.png"></Rocket> */}
       </div>
       <div className="absolute -bottom-20 right-5">
         <Sally id="sally" src="assets/Saly-1.png"></Sally>
       </div>
-      <div className="flex flex-col gap-10 lg:p-10">
+      <div className="flex flex-col gap-8 lg:p-10">
         <div className="flex justify-center items-center gap-5" id="stat1">
           <Text className="font-black text-4xl dark:text-blue-200">
             <span id="count1"> 0 </span>K+
@@ -205,7 +205,7 @@ const Services = () => {
   return (
     <section
       id={"services"}
-      className="flex align-middle h-screen my-20 items-center dark:bg-gray-800"
+      className="flex align-middle h-screen my-56 lg:my-20 items-center dark:bg-gray-800"
     >
       <div className="wrapper mt-20">
         <div className="title md:px-16 px-5 title">

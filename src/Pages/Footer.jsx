@@ -1,4 +1,4 @@
-import React,{Suspense} from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import * as Icon from "react-feather";
 import { Canvas } from "@react-three/fiber";
@@ -72,11 +72,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex xl:col-span-2 md:hidden">
-          {
-            //TODO: Animation/3D Model for footer.
-          }
-          
+        <div className="hidden 2xl:col-span-2 2xl:flex items-center justify-center">
+          <img src="assets/footer-animation.svg" alt="animation" className="h-full w-5/6" />
         </div>
       </div>
       <div className="flex w-full justify-between md:px-12 px-5 py-16 border-t-2 border-gray-300 dark:border-white items-center">
