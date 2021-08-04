@@ -4,6 +4,8 @@ import Scene from "../Components/Scene";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+
+
 const MaintenanceServices = () => {
   const Text = styled.span`
     font-family: "DM Sans", sans-serif;
@@ -12,6 +14,8 @@ const MaintenanceServices = () => {
   const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0 subtitle`;
   const QuantumTitleClasses = `font-bold text-5xl xl:text-6xl tracking-tighter mb-6 dark:text-blue-100 max-w-full title`;
   const QuantumDescriptionClasses = `font-normal  tracking-tighter dark:text-blue-100 description`;
+  
+ 
 
   React.useEffect(() => {
     
