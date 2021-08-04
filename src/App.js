@@ -10,6 +10,9 @@ import CompanyLocations from "./Pages/CompanyLocations";
 import Footer from "./Pages/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import {useStorage,useFirebaseApp} from "reactfire";
+import "firebase/firebase-storage";
+
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({
