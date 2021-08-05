@@ -16,6 +16,7 @@ const MaintenanceServices = () => {
   const QuantumDescriptionClasses = `font-normal tracking-tighter dark:text-blue-100 `;
 
   React.useEffect(() => {
+    console.log(document.querySelector(".part").offsetWidth);
     
     ScrollTrigger.matchMedia(
       {
@@ -37,7 +38,7 @@ const MaintenanceServices = () => {
               trigger: "#maintenance",
               start: "top top",
               pin: true,
-              end: () => "+=" + document.querySelector(".part").offsetWidth,
+              end: () => "+=" + (parseInt(document.querySelector(".part").offsetWidth)+400).toString() ,
             }
           })
         },
@@ -52,7 +53,7 @@ const MaintenanceServices = () => {
   return (
     <div id="maintenance" className="my-20 lg:my-0">
     <section  className="flex flex-col h-auto space-y-12 md:space-y-0 md:flex-row md:flex-nowrap px-5 pt-16 md:px-16 dark:bg-gray-800 scroll-horizontal">
-          <div className="flex flex-col md:px-24 md:w-screen mt-10 xl:mt-0 xl:pl-16 part">
+          <div className="flex flex-col md:px-24 md:w-screen mt-10 xl:mt-0  part">
             <Text className={QuantumSubtitleClasses}>SOLUCIONES QUANTUM</Text>
             <Text className={QuantumTitleClasses}>
               {" "}
@@ -65,7 +66,7 @@ const MaintenanceServices = () => {
               equipos y accesorios profesionales
             </Text>
           </div>
-            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 xl:pl-16 part gap-14 lg:gap-1">
+            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 part gap-14 lg:gap-1">
               <Text
                 className={
                   QuantumDescriptionClasses + "flex-col font-bold max-w-xl text-xl lg:text-2xl"
@@ -104,7 +105,7 @@ const MaintenanceServices = () => {
               </Text>
                 
             </div>
-            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 xl:pl-16 part gap-14 lg:gap-1">
+            <div className="flex flex-col md:flex-row justify-around md:w-screen mt-10 xl:mt-0 part gap-14 lg:gap-1">
               <Text
                 className={
                   QuantumDescriptionClasses + "flex flex-col font-bold max-w-xl text-xl lg:text-2xl"
