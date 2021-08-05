@@ -1,11 +1,12 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import DronDJI from "./DronDJI";
+import React, { useEffect,  useState } from "react";
+import { Canvas } from "@react-three/fiber";
+// import DronDJI from "./DronDJI";
 import {useStorage} from "reactfire";
 
 
 export default function Scene() {
   const storage = useStorage();
+  // eslint-disable-next-line no-unused-vars
   const [url,setUrl] = useState();
 
 

@@ -1,9 +1,9 @@
-import React,{Suspense} from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import Camera from "../Components/Camera";
 import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
-import Loader from "../utils/Loader";
+// import Loader from "../utils/Loader";
 
 const Catalog = () => {
   const Text = styled.span`
@@ -27,34 +27,46 @@ const Catalog = () => {
     padding: 7%;
   `;
 
-  React.useEffect(()=>{
-    gsap.fromTo(".anim",{
-      alpha: 0,
-    },{
-      alpha: 1,
-      stagger: 0.4,
-      scrollTrigger:{
-        trigger: "#Catalog",
-        start: "top center",
-        toggleActions: "play none none reverse",        
+  React.useEffect(() => {
+    gsap.fromTo(
+      ".anim",
+      {
+        alpha: 0,
+      },
+      {
+        alpha: 1,
+        stagger: 0.4,
+        scrollTrigger: {
+          trigger: "#Catalog",
+          start: "top center",
+          toggleActions: "play none none reverse",
+        },
       }
-    })
+    );
   });
 
   return (
     <section id="Catalog" className="h-screen px-5 md:px-16 dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="img-wrapper">
-    <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
-      <spotLight position={[5, 5, 0]} intensity={1} castShadow />
-      <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
-      <spotLight position={[-5, -5, 0]} intensity={1} castShadow />
-      <spotLight position={[5, -5, 0]} intensity={1} castShadow />
-      <hemisphereLight args={[0xffeeb1, 0x080820, 4]} position={[5, 5, 0]} />
-      <Suspense fallback={null}>
-        <Camera/>
-      </Suspense>
-    </Canvas>
+          <Canvas
+            id="canvas"
+            className="EscenaProductos w-full h-full"
+            color={0x000000}
+            camera={{ position: [0, 0, 3] }}
+          >
+            <spotLight position={[5, 5, 0]} intensity={1} castShadow />
+            <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
+            <spotLight position={[-5, -5, 0]} intensity={1} castShadow />
+            <spotLight position={[5, -5, 0]} intensity={1} castShadow />
+            <hemisphereLight
+              args={[0xffeeb1, 0x080820, 4]}
+              position={[5, 5, 0]}
+            />
+            <Suspense fallback={null}>
+              <Camera />
+            </Suspense>
+          </Canvas>
         </div>
         <div className="flex flex-col justify-center">
           <Text className="anim text-5xl font-bold tracking-tighter dark:text-blue-100">
@@ -68,7 +80,12 @@ const Catalog = () => {
           <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-7 gap-3 mt-10 justify-items-center shadow-xl p-5 rounded bg-gray-300 dark:bg-gray-800">
             {images.map((el) => {
               return (
-                <a href="#" className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800">
+                // TODO: Add link to each brand
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a
+                  href="#"
+                  className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800"
+                >
                   <BrandImage src={el} key={el}></BrandImage>
                 </a>
               );

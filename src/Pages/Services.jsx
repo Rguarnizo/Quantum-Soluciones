@@ -38,11 +38,11 @@ const ServiceCard = (props) => {
 };
 
 const AnimationCard = (props) => {
-  const Rocket = styled.img`
-    height: 13vh;
-    width: auto;
-    transform: rotate(45deg);
-  `;
+  // const Rocket = styled.img`
+  //   height: 13vh;
+  //   width: auto;
+  //   transform: rotate(45deg);
+  // `;
 
   const Sally = styled.img`
     height: 18vh;
@@ -80,7 +80,7 @@ const AnimationCard = (props) => {
       },
       effect: (targets, config) => {
         let tl = gsap.timeline();
-        let num = targets[0].innerText.replace(/\,/g, "");
+        let num = targets[0].innerText.replace(/,/g, "");
         targets[0].innerText = num;
 
         tl.to(

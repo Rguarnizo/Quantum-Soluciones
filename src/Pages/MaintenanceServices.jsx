@@ -79,9 +79,9 @@ const MaintenanceServices = () => {
                   obturador, baterias, entre muchas otras.
                 </Text>
                 <div className="flex space-x-4 mt-10 md:space-x-16">
-                  <img className="object-scale-down w-24 h-24" src={"Images/Camera2.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Camera1.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Camera3.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera2.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera1.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Camera3.png"} alt="resource"/>
                 </div>
               </Text>
               
@@ -97,9 +97,9 @@ const MaintenanceServices = () => {
                   camara, actulizaciones de software, DJI Mavic, Phantom, Mini. Parrot, Yuneec.
               </Text>
               <div className="flex space-x-4 mt-10 md:space-x-16">
-                  <img className="object-scale-down w-24 h-24" src={"Images/Dron1.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Dron2.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Dron3.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron1.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron2.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Dron3.png"} alt="resource"/>
                 </div>
               </Text>
                 
@@ -118,9 +118,9 @@ const MaintenanceServices = () => {
                   generadores, antorchas, reflectores, zapata, etc.
                 </Text>
                 <div className="flex space-x-4 mt-10 md:space-x-16">
-                  <img className="object-scale-down w-24 h-24" src={"Images/Flash1.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Flash2.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Flash3.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash1.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash2.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Flash3.png"} alt="resource"/>
                 </div>
               </Text>
 
@@ -136,9 +136,9 @@ const MaintenanceServices = () => {
                   teleobjetivo, Macro, Tilt-shift.
                 </Text>
                 <div className="flex space-x-4 mt-10 md:space-x-16">
-                  <img className="object-scale-down w-24 h-24" src={"Images/Lens1.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Lens2.png"} />
-                  <img className="object-scale-down w-24 h-24" src={"Images/Lens3.png"} />
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens1.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens2.png"} alt="resource"/>
+                  <img className="object-scale-down w-24 h-24" src={"Images/Lens3.png"} alt="resource"/>
                 </div>
               </Text>
             </div> 

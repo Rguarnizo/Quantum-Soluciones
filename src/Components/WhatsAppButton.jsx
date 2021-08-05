@@ -5,7 +5,10 @@ const WhatsAppButton = () => {
     <div
       className="wa-button "
       onClick={(e) => {
-        window.open("https://api.whatsapp.com/send?phone=573046382035&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+acerca+de+Soluciones+Quantum", "Contáctanos a través de WhatsApp")
+        window.open(
+          "https://api.whatsapp.com/send?phone=573102985467&text=%C2%A1Hola%21+Quisiera+saber+m%C3%A1s+acerca+de+Soluciones+Quantum",
+          "Contáctanos a través de WhatsApp"
+        );
       }}
     >
       <span class="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
