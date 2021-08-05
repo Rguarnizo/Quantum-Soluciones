@@ -1,6 +1,6 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect,  useState,Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-// import DronDJI from "./DronDJI";
+import DronDJI from "./DronDJI";
 import {useStorage} from "reactfire";
 
 
