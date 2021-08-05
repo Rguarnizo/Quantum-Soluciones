@@ -4,12 +4,12 @@ import Scene from "../Components/Scene";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-
+// Styled components
+const Text = styled.span`
+font-family: "DM Sans", sans-serif;
+`;
 
 const MaintenanceServices = () => {
-  const Text = styled.span`
-    font-family: "DM Sans", sans-serif;
-  `;
 
   const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0 subtitle`;
   const QuantumTitleClasses = `font-bold text-4xl xl:text-6xl tracking-tighter mb-6 dark:text-blue-100 max-w-full title`;

@@ -5,11 +5,19 @@ import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
 // import Loader from "../utils/Loader";
 
-const Catalog = () => {
-  const Text = styled.span`
-    font-family: "Montserrat", sans-serif;
-  `;
+// Styled components
+const Text = styled.span`
+  font-family: "Montserrat", sans-serif;
+`;
 
+const BrandImage = styled.img`
+  width: 70%;
+  height: auto;
+
+  padding: 7%;
+`;
+
+const Catalog = () => {
   const images = [
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fcanon_white.png?alt=media&token=d0125797-5944-49d0-8750-b14579f76735",
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fsony-logo-png-transparent-13_c.png?alt=media&token=5e8bab26-5452-4a0f-aefd-cfdd3da3f71e",
@@ -19,13 +27,6 @@ const Catalog = () => {
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fgopro_logo_PNG12.png?alt=media&token=8e381300-40c0-485b-918a-e6aaac18d6d0",
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5295857.png?alt=media&token=c8170945-dc21-4a56-8bdc-dd7ae39c1d23",
   ];
-
-  const BrandImage = styled.img`
-    width: 70%;
-    height: auto;
-
-    padding: 7%;
-  `;
 
   React.useEffect(() => {
     gsap.fromTo(
@@ -83,10 +84,11 @@ const Catalog = () => {
                 // TODO: Add link to each brand
                 // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
+                  key={el}
                   href="#"
                   className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800"
                 >
-                  <BrandImage src={el} key={el}></BrandImage>
+                  <BrandImage src={el}></BrandImage>
                 </a>
               );
             })}

@@ -3,35 +3,45 @@ import styled from "styled-components";
 import { gsap } from "gsap";
 
 const TitleClasses = `text-5xl xl:text-7xl font-bold tracking-tighter dark:text-blue-100`;
+
+//Styled components
 const Title = styled.span`
   font-family: "Montserrat", sans-serif;
 `;
 
-const ServiceCard = (props) => {
-  const Text = styled.span`
-    font-family: "Montserrat", sans-serif;
-  `;
+const Sally = styled.img`
+  height: 18vh;
+`;
 
+const Text = styled.span`
+  font-family: "DM Sans", sans-serif;
+`;
+
+const TextSC = styled.span`
+  font-family: "Montserrat", sans-serif;
+`;
+
+const ServiceCard = (props) => {
   return (
     <div
       id={`${props.id}`}
       className={`w-full md:w-3/5 lg:w-full xl:w-4/5 h-full  shadow-xl flex flex-col justify-around rounded-lg mx-4 xl:mx-8 my-2 ${props.className} self-center justify-center dark:bg-gray-900`}
     >
       <div className="w-full h-5/6 flex flex-col justify-around p-3">
-        <Text className="px-6 font-semibold text-2xl lg:text-4xl dark:text-blue-100">
+        <TextSC className="px-6 font-semibold text-2xl lg:text-4xl dark:text-blue-100">
           {props.title}
-        </Text>
-        <Text className="px-6 font-roboto text-base lg:text-lg font-normal dark:text-blue-100">
+        </TextSC>
+        <TextSC className="px-6 font-roboto text-base lg:text-lg font-normal dark:text-blue-100">
           {props.content}
-        </Text>
+        </TextSC>
       </div>
       <a
         href={`${props.url}`}
         className="border-gray-200 border-t-2 w-full h-1/6 justify-center flex flex-col p-8 group "
       >
-        <Text className="text-base lg:text-xl font-roboto font-bold text-gray-300 ">
+        <TextSC className="text-base lg:text-xl font-roboto font-bold text-gray-300 ">
           {props.link}
-        </Text>
+        </TextSC>
       </a>
     </div>
   );
@@ -44,28 +54,20 @@ const AnimationCard = (props) => {
   //   transform: rotate(45deg);
   // `;
 
-  const Sally = styled.img`
-    height: 18vh;
-  `;
-
-  const Text = styled.span`
-    font-family: "DM Sans", sans-serif;
-  `;
-
   const launchRocket = () => {
-    console.log(ref);
+    //console.log(ref);
 
-    gsap.to("#rocket", {
-      x: ref.current.offsetWidth - 100,
-      y: -ref.current.offsetHeight + 100,
-      duration: 4,
-      rotate: "65",
-      ease: "power2.out",
-    });
-    gsap.to("#rocket", {
-      opacity: "0",
-      duration: 4,
-    });
+    // gsap.to("#rocket", {
+    //   x: ref.current.offsetWidth - 100,
+    //   y: -ref.current.offsetHeight + 100,
+    //   duration: 4,
+    //   rotate: "65",
+    //   ease: "power2.out",
+    // });
+    // gsap.to("#rocket", {
+    //   opacity: "0",
+    //   duration: 4,
+    // });
   };
 
   const animateStats = () => {
@@ -114,7 +116,7 @@ const AnimationCard = (props) => {
         toggleActions: "play none none reset",
       },
     });
-    tl.from("#stat1", { opacity: 0,delay: 1});
+    tl.from("#stat1", { opacity: 0, delay: 1 });
     tl.counter("#count1", { end: 30, ease: "linear" }, "-=0.5");
     tl.from("#stat2", { opacity: 0 }, "+=0.5");
     tl.counter("#count2", { end: 40, increment: 2, duration: 1.6 }, "-=0.5");
@@ -181,14 +183,14 @@ const Services = () => {
         start: "top center",
         toggleActions: "play none none reverse",
       },
-    })
+    });
     tl.fromTo(
       ".title",
       { alpha: 0 },
       {
         alpha: 1,
         stagger: 0.4,
-        scrollTrigger: { trigger: "#services", start: "top center"},
+        scrollTrigger: { trigger: "#services", start: "top center" },
       }
     );
     tl.fromTo(
@@ -197,9 +199,9 @@ const Services = () => {
       {
         alpha: 1,
         stagger: 0.4,
-      },"+=0.5"
+      },
+      "+=0.5"
     );
-    
   });
 
   return (

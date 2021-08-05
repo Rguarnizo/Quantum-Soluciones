@@ -6,6 +6,8 @@ const titleClasses = `text-2xl xl:text-4xl font-bold tracking-tighter dark:text-
 const menuClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-200 hover:text-blue-500 cursor-pointer`;
 //const descriptionClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-500 `;
 
+
+// Styled components
 const MenuText = styled.span`
   font-family: "Montserrat", sans-serif;
   font-weight: bold;

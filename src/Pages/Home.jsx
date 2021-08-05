@@ -4,6 +4,8 @@ import "../Styles/Carrousel.scss";
 import * as Icon from "react-feather";
 import gsap from "gsap";
 
+
+// Styled components
 const QuantumText = styled.span`
   font-family: "Montserrat", sans-serif;
 `;

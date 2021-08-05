@@ -18,8 +18,8 @@ export default function Scene() {
       var xhr = new XMLHttpRequest();
       xhr.responseType = 'blob';
       xhr.onload = function(event) {
-        var blob = xhr.response;
-        console.log("blob:",blob);
+        // var blob = xhr.response;
+        // console.log("blob:",blob);
       };
       xhr.open('GET',downloadURL);
       xhr.send();

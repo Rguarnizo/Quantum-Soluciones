@@ -5,11 +5,12 @@ import Drone from "../Components/Drone";
 // import Loader from "../utils/Loader";
 import gsap from "gsap";
 
-const Shop = () => {
-  const Text = styled.span`
-    font-family: "Montserrat", sans-serif;
-  `;
+//Styled components
+const Text = styled.span`
+  font-family: "Montserrat", sans-serif;
+`;
 
+const Shop = () => {
   React.useEffect(() => {
     gsap.fromTo(
       ".shop",

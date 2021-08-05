@@ -21,7 +21,7 @@ export default function Drone() {
     gltf.scene.scale.set(0.3, 0.3, 0.3);
     gltf.scene.rotation.y = Math.PI / 6;
     gltf.scene.rotation.x = Math.PI / 8;
-    console.log(gltf);
+    //console.log(gltf);
     animation.current = mixer
       .clipAction(gltf.animations[0], gltf.scene)
       .startAt(2)

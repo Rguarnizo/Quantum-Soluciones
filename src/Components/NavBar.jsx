@@ -9,7 +9,7 @@ const NavMenu = styled.a`
 
 const MenuNavBar = (props) => {
   const NavMenuClasses = `font-extrabold text-3xl text-white cursor-pointer hover:text-blue-200 dark:text-gray-200`;
-  console.log(props);
+  // console.log(props);
   return (
     <div className="w-screen h-screen z-10 bg-black opacity-90 absolute top-0 left-0 lg:hidden">
       <div className="flex flex-col h-full w-full justify-center items-center gap-8">

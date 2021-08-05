@@ -10,7 +10,7 @@ import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
 
 export default function DronDJI({ url }) {
-  console.log(url);
+  //console.log(url);
   let gltf = useLoader(GLTFLoader, url, (loader) => {
     loader.setMeshoptDecoder(MeshoptDecoder);
   });
