@@ -1,13 +1,13 @@
-import React,{Suspense} from "react";
+import React from "react";
 import styled from "styled-components";
 import * as Icon from "react-feather";
-import { Canvas } from "@react-three/fiber";
-import Drone from "../Components/Drone";
 
 const titleClasses = `text-2xl xl:text-4xl font-bold tracking-tighter dark:text-blue-100 `;
 const menuClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-200 hover:text-blue-500 cursor-pointer`;
-const descriptionClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-500 `;
+//const descriptionClasses = ` text-lg xl:text-xl tracking-tighter dark:text-blue-500 `;
 
+
+// Styled components
 const MenuText = styled.span`
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -65,18 +65,53 @@ const Footer = () => {
               </Text>
             </div>
             <div className="flex mt-7 gap-8">
-              <Icon.Facebook color="#93C5FD" size={20} />
-              <Icon.Instagram color="#93C5FD" size={20} />
-              <Icon.Twitter color="#93C5FD" size={20} />
-              <Icon.Youtube color="#93C5FD" size={20} />
+              <a
+                href="https://www.facebook.com/SolucionesQuantum01"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon.Facebook
+                  color="#93C5FD"
+                  className="cursor-pointer"
+                  size={20}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/quantum_serviciotecnicocamaras/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon.Instagram
+                  color="#93C5FD"
+                  className="cursor-pointer"
+                  size={20}
+                />
+              </a>
+              <Icon.Twitter
+                color="#93C5FD"
+                className="cursor-pointer"
+                size={20}
+              />
+              <a
+                href="https://www.youtube.com/channel/UCSk3_g71oDvJKY2c1d6wN4w"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon.Youtube
+                  color="#93C5FD"
+                  className="cursor-pointer"
+                  size={20}
+                />
+              </a>
             </div>
           </div>
         </div>
-        <div className="flex xl:col-span-2 md:hidden">
-          {
-            //TODO: Animation/3D Model for footer.
-          }
-          
+        <div className="hidden 2xl:col-span-2 2xl:flex items-center justify-center">
+          <img
+            src="assets/footer-animation.svg"
+            alt="animation"
+            className="h-full w-5/6"
+          />
         </div>
       </div>
       <div className="flex w-full justify-between md:px-12 px-5 py-16 border-t-2 border-gray-300 dark:border-white items-center">

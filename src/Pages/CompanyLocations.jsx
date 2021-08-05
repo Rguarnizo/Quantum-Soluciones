@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import * as Icon from "react-feather";
 import Map from "../Components/Map";
+
+// Styled components
+const Text = styled.span`
+font-family: "Montserrat", sans-serif;
+`;
+
 const CompanyLocations = () => {
   const defaultProps = {
     center: {
@@ -15,9 +21,7 @@ const CompanyLocations = () => {
 
   const titleClasses = `text-4xl xl:text-6xl font-bold tracking-tighter dark:text-blue-100`;
   const descriptionClasses = ` text-lg xl:text-2xl tracking-tighter dark:text-blue-100`;
-  const Text = styled.span`
-    font-family: "Montserrat", sans-serif;
-  `;
+ 
 
   return (
     <section id="CompanyLocations" className="dark:bg-gray-800 ">

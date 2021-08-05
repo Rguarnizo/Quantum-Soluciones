@@ -1,9 +1,11 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import "../Styles/Carrousel.scss";
 import * as Icon from "react-feather";
 import gsap from "gsap";
 
+
+// Styled components
 const QuantumText = styled.span`
   font-family: "Montserrat", sans-serif;
 `;
@@ -99,14 +101,20 @@ const Image = styled.img`
 `;
 
 const Home = () => {
+  const carrouselRefs = React.useRef([
+    React.createRef(),
+    React.createRef(),
+    React.createRef(),
+  ]);
+
   const QuantumSubtitleClasses = `text-xl xl:text-2xl font-semibold uppercase dark:text-blue-100 tracking-wider antialiased mb-6 xl:mb-12 mt-16 xl:mt-0 text`;
   const QuantumTitleClasses = `font-bold text-5xl xl:text-7xl tracking-tighter mb-6 dark:text-blue-100 max-w-xl text`;
   const QuantumDescriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 text`;
 
   useEffect(() => {
-    gsap.fromTo(".text",{alpha:0},{alpha:1,stagger:0.4,delay:2});
-    gsap.fromTo(".icon",{alpha:0},{alpha:1,stagger:0.2,delay:2});
-  },[]);
+    gsap.fromTo(".text", { alpha: 0 }, { alpha: 1, stagger: 0.4, delay: 2 });
+    gsap.fromTo(".icon", { alpha: 0 }, { alpha: 1, stagger: 0.2, delay: 2 });
+  }, []);
 
   const [showLetters, setshowLetters] = React.useState("");
 
@@ -145,13 +153,27 @@ const Home = () => {
     }
   };
 
+  const renderCarrousel = async () => {
+    // carrouselRefs.current[0].current.checked = true;
+    while (true) {
+      for (let item of carrouselRefs.current) {
+        item.current.checked = true;
+        await wait(15000);
+      }
+    }
+  };
+
   React.useEffect(() => {
     renderWords();
+    renderCarrousel();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <section id="Home" className="grid lg:grid-cols-2 dark:bg-gray-800 h-screen">
+    <section
+      id="Home"
+      className="grid lg:grid-cols-2 dark:bg-gray-800 h-screen"
+    >
       <div className="flex items-center px-5 md:px-16">
         <div className="flex flex-col">
           <QuantumText className={QuantumSubtitleClasses}>
@@ -168,10 +190,45 @@ const Home = () => {
             </QuantumAltText>
           </QuantumText>
           <div className="flex mt-7 gap-5 ">
-            <Icon.Facebook  className="icon"color="#93C5FD" size={30} />
-            <Icon.Instagram className="icon"color="#93C5FD" size={30} />
-            <Icon.Twitter   className="icon"color="#93C5FD" size={30} />
-            <Icon.Youtube   className="icon"color="#93C5FD" size={30} />
+            <a
+              href="https://www.facebook.com/SolucionesQuantum01"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon.Facebook
+                className="icon cursor-pointer"
+                color="#93C5FD"
+                size={30}
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/quantum_serviciotecnicocamaras/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon.Instagram
+                className="icon cursor-pointer"
+                color="#93C5FD"
+                size={30}
+              />
+            </a>
+            <Icon.Twitter
+              className="icon cursor-pointer"
+              color="#93C5FD"
+              size={30}
+            />
+            <a
+              href="https://www.youtube.com/channel/UCSk3_g71oDvJKY2c1d6wN4w"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <Icon.Youtube
+                className="icon cursor-pointer"
+                color="#93C5FD"
+                size={30}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -183,18 +240,21 @@ const Home = () => {
             id="item-1"
             defaultChecked
             style={{ display: "none" }}
+            ref={carrouselRefs.current[0]}
           />
           <input
             type="radio"
             name="slider"
             id="item-2"
             style={{ display: "none" }}
+            ref={carrouselRefs.current[1]}
           />
           <input
             type="radio"
             name="slider"
             id="item-3"
             style={{ display: "none" }}
+            ref={carrouselRefs.current[2]}
           />
 
           <Cards className="cards">
@@ -206,13 +266,13 @@ const Home = () => {
             </Card>
             <Card htmlFor="item-2" id="song-2">
               <Image
-                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDSC05649.jpg?alt=media&token=3759de40-714c-4196-86de-49842da6d397"
                 alt="img"
               ></Image>
             </Card>
             <Card htmlFor="item-3" id="song-3">
               <Image
-                src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                src="https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDSC05612.jpg?alt=media&token=60965d35-cec3-4813-8d9e-7b7f8d1f0d8e"
                 alt="img"
               ></Image>
             </Card>

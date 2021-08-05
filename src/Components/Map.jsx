@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import styled from "styled-components";
 
-const AnyReactComponent = ({ text1, text2, image }) => (
+const CardComponent = ({ text1, text2, image }) => (
   // <div className="card-location w-72 bg-white rounded h-12 p-2">
   //   <p className="montserrat-normal-shark-12px">{text1}</p>
   //   <p className="montserrat-normal-shark-12px">{text2}</p>
@@ -20,9 +20,9 @@ const AnyReactComponent = ({ text1, text2, image }) => (
         className="absolute inset-0 w-64 h-20 object-cover rounded-t-lg object-center "
       />
     </div>
-    <span class="flex absolute h-4 w-4 top-0 left-0 -mt-1 -mr-1">
-      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
-      <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+    <span className="flex absolute h-4 w-4 top-0 left-0 -mt-1 -mr-1">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
     </span>
     <form className="flex-auto p-6 ">
       <div className="flex flex-wrap mt-20">
@@ -56,14 +56,14 @@ const Map = (props) => {
         zoom={props.zoom}
         mapId="cba9cfc2eadf14f0"
       >
-        <AnyReactComponent
+        <CardComponent
           lat={4.66430205309855}
           lng={-74.05867751000919}
           text1="Centro de Alta Tecnología"
           text2="Local 2-64: Carrera 15 # 77-05"
           image="Images/LogoLago.jpg"
         />
-        <AnyReactComponent
+        <CardComponent
           lat={4.607711126602565}
           lng={-74.14074388887656}
           text1="Barrio Carvajal Osorio"

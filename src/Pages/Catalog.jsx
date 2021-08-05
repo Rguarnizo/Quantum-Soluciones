@@ -1,15 +1,23 @@
-import React,{Suspense} from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import Camera from "../Components/Camera";
 import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
-import Loader from "../utils/Loader";
+// import Loader from "../utils/Loader";
+
+// Styled components
+const Text = styled.span`
+  font-family: "Montserrat", sans-serif;
+`;
+
+const BrandImage = styled.img`
+  width: 70%;
+  height: auto;
+
+  padding: 7%;
+`;
 
 const Catalog = () => {
-  const Text = styled.span`
-    font-family: "Montserrat", sans-serif;
-  `;
-
   const images = [
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fcanon_white.png?alt=media&token=d0125797-5944-49d0-8750-b14579f76735",
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2Fsony-logo-png-transparent-13_c.png?alt=media&token=5e8bab26-5452-4a0f-aefd-cfdd3da3f71e",
@@ -20,41 +28,46 @@ const Catalog = () => {
     "https://firebasestorage.googleapis.com/v0/b/quantum-68439.appspot.com/o/resources%2FDaco_5295857.png?alt=media&token=c8170945-dc21-4a56-8bdc-dd7ae39c1d23",
   ];
 
-  const BrandImage = styled.img`
-    width: 70%;
-    height: auto;
-
-    padding: 7%;
-  `;
-
-  React.useEffect(()=>{
-    gsap.fromTo(".anim",{
-      alpha: 0,
-    },{
-      alpha: 1,
-      stagger: 0.4,
-      scrollTrigger:{
-        trigger: "#Catalog",
-        start: "top center",
-        toggleActions: "play none none reverse",        
+  React.useEffect(() => {
+    gsap.fromTo(
+      ".anim",
+      {
+        alpha: 0,
+      },
+      {
+        alpha: 1,
+        stagger: 0.4,
+        scrollTrigger: {
+          trigger: "#Catalog",
+          start: "top center",
+          toggleActions: "play none none reverse",
+        },
       }
-    })
+    );
   });
 
   return (
     <section id="Catalog" className="h-screen px-5 md:px-16 dark:bg-gray-800">
       <div className="grid xl:grid-cols-2 h-full">
         <div className="img-wrapper">
-    <Canvas id="canvas" className="EscenaProductos w-full h-full" color={0x000000} camera={{position:[0,0,3]}}>
-      <spotLight position={[5, 5, 0]} intensity={1} castShadow />
-      <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
-      <spotLight position={[-5, -5, 0]} intensity={1} castShadow />
-      <spotLight position={[5, -5, 0]} intensity={1} castShadow />
-      <hemisphereLight args={[0xffeeb1, 0x080820, 4]} position={[5, 5, 0]} />
-      <Suspense fallback={null}>
-        <Camera/>
-      </Suspense>
-    </Canvas>
+          <Canvas
+            id="canvas"
+            className="EscenaProductos w-full h-full"
+            color={0x000000}
+            camera={{ position: [0, 0, 3] }}
+          >
+            <spotLight position={[5, 5, 0]} intensity={1} castShadow />
+            <spotLight position={[-5, 5, 0]} intensity={1} castShadow />
+            <spotLight position={[-5, -5, 0]} intensity={1} castShadow />
+            <spotLight position={[5, -5, 0]} intensity={1} castShadow />
+            <hemisphereLight
+              args={[0xffeeb1, 0x080820, 4]}
+              position={[5, 5, 0]}
+            />
+            <Suspense fallback={null}>
+              <Camera />
+            </Suspense>
+          </Canvas>
         </div>
         <div className="flex flex-col justify-center">
           <Text className="anim text-5xl font-bold tracking-tighter dark:text-blue-100">
@@ -68,8 +81,14 @@ const Catalog = () => {
           <div className="grid grid-cols-4 md:grid-cols-8 xl:grid-cols-7 gap-3 mt-10 justify-items-center shadow-xl p-5 rounded bg-gray-300 dark:bg-gray-800">
             {images.map((el) => {
               return (
-                <a href="#" className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800">
-                  <BrandImage src={el} key={el}></BrandImage>
+                // TODO: Add link to each brand
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a
+                  key={el}
+                  href="#"
+                  className="anim flex items-center justify-center hover:bg-gray-400 rounded-xl dark:hover:bg-gray-900 dark:bg-gray-800"
+                >
+                  <BrandImage src={el}></BrandImage>
                 </a>
               );
             })}

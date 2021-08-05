@@ -1,0 +1,21 @@
+.wa-button {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  height: 55.6px;
+  width: 55.6px;
+  border-radius: 100%;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  color: white;
+  z-index: 30;
+
+  & > img {
+    transform: scale(0.568);
+    filter: brightness(0) invert(1);
+  }
+  &:hover {
+    cursor: pointer;
+
+    scale: 2;
+  }
+}

@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const AboutUs = () => {
-  const Image = styled.img`
-    border-radius: 10px;
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
-    object-fit: cover;
-  `;
 
-  const titleClasses = `text-5xl xl:text-7xl font-bold tracking-tighter dark:text-blue-100`;
-  const Text = styled.span`
+// Styled components
+
+const Image = styled.img`
+border-radius: 10px;
+width: ${(props) => props.width};
+height: ${(props) => props.height};
+object-fit: cover;
+`;
+
+const Text = styled.span`
     font-family: "Montserrat", sans-serif;
   `;
 
+const AboutUs = () => {
+  const titleClasses = `text-5xl xl:text-7xl font-bold tracking-tighter dark:text-blue-100`;
   const descriptionClasses = `font-normal text-lg xl:text-2xl tracking-tighter dark:text-blue-100 mt-5`;
 
   return (
